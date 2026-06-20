@@ -102,7 +102,7 @@ export default function PETUnitDetail({ unit, completedSections, onSectionComple
       </div>
 
       {/* Content */}
-      <div className="max-w-5xl mx-auto px-4 py-8">
+      <div className="max-w-5xl mx-auto px-3 sm:px-4 py-5 sm:py-8">
         {/* Section header */}
         <div className="mb-6">
           {(() => {

@@ -99,7 +99,7 @@ export default function MissionPractice({ unit, equippedAccessory, onMissionSucc
       {!isFinished ? (
         <div className="px-4 py-4">
           {/* Tabs */}
-          <div className="grid grid-cols-5 gap-2 mb-4">
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mb-4">
             {TABS.map(tab => {
               const isActive = activeTab === tab.index;
               const isDone = completedTabs[tab.index];
@@ -183,7 +183,7 @@ export default function MissionPractice({ unit, equippedAccessory, onMissionSucc
       )}
 
       {/* Floating Mascot */}
-      <div className="fixed bottom-6 left-6 z-50 pointer-events-none drop-shadow-2xl">
+      <div className="fixed bottom-6 left-6 z-50 pointer-events-none drop-shadow-2xl hidden sm:block">
         <div className="relative">
           <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-violet-500/20 blur-xl rounded-[100%]" />
           <div className="w-24 h-24 bg-slate-900 border-4 border-violet-500/30 rounded-full flex items-center justify-center text-5xl relative animate-float shadow-[0_0_30px_rgba(139,92,246,0.3)]">

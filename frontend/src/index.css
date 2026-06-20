@@ -181,3 +181,44 @@ body {
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
 }
+
+/* ===== MOBILE / TABLET RESPONSIVE ===== */
+
+/* Safe area for devices with notch (iPhone, iPad) */
+@supports (padding: env(safe-area-inset-bottom)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Touch-friendly: hide scrollbar on mobile for horizontal scrolling tabs */
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Mobile: ensure inputs and buttons are at least 44px touch targets */
+@media (max-width: 1023px) {
+  button, input, select, textarea {
+    min-height: 44px;
+  }
+  
+  /* Prevent iOS zoom on input focus */
+  input[type="text"], input[type="email"], input[type="password"],
+  textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+/* Use dynamic viewport height when available */
+@supports (height: 100dvh) {
+  .h-screen { height: 100dvh !important; }
+  .min-h-screen { min-height: 100dvh !important; }
+}
+
+/* On mobile, hide collapsed sidebar completely */
+@media (max-width: 1023px) {
+  .sidebar-gradient {
+    width: 280px !important;
+  }
+}

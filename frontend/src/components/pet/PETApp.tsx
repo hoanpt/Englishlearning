@@ -96,7 +96,7 @@ export default function PETApp({ userName, onLogout }: Props) {
     <div className="min-h-screen bg-[#0F172A] text-white">
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-slate-800 bg-[#0F172A]/95 backdrop-blur">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-4">
+        <div className="max-w-6xl mx-auto px-3 sm:px-6 py-3 flex items-center gap-2 sm:gap-4 flex-wrap">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 flex items-center justify-center font-black text-sm">PET</div>
             <div className="hidden sm:block">
@@ -135,7 +135,7 @@ export default function PETApp({ userName, onLogout }: Props) {
         </div>
       </header>
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+      <main className="max-w-6xl mx-auto px-3 sm:px-6 py-6 sm:py-8 space-y-6 sm:space-y-8">
         {activeView === 'units' ? (
           <>
             {/* Stats row */}

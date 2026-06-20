@@ -189,7 +189,7 @@ function PassagePlayer({ passage, onDone }: { passage: Passage; onDone: () => vo
     : { emoji: '💪', label: 'Cố thêm nhé!', color: 'text-rose-600' };
 
   return (
-    <div className="flex gap-4 min-h-0" style={{ minHeight: 'calc(100vh - 280px)' }}>
+    <div className="flex flex-col lg:flex-row gap-4 min-h-0 lg:min-h-[calc(100vh-280px)]">
       {/* Left: Audio + Transcript */}
       <div className="flex-1 flex flex-col gap-3 min-w-0">
         {/* Player card */}
@@ -277,7 +277,7 @@ function PassagePlayer({ passage, onDone }: { passage: Passage; onDone: () => vo
       </div>
 
       {/* Right: Questions */}
-      <div className="w-80 flex-shrink-0 flex flex-col gap-3" style={{ maxHeight: 'calc(100vh - 280px)', overflowY: 'auto' }}>
+      <div className="w-full lg:w-80 lg:flex-shrink-0 flex flex-col gap-3 lg:max-h-[calc(100vh-280px)] lg:overflow-y-auto">
         <div className="sticky top-0 z-10 bg-[#FFF8F0] pb-1">
           <div className="bg-white rounded-2xl border-2 border-gray-100 px-4 py-3 flex items-center justify-between shadow-sm">
             <p className="font-black text-gray-700 flex items-center gap-2">

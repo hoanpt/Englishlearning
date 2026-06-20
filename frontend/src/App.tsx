@@ -38,7 +38,7 @@ export default function App() {
   const [courseLevel, setCourseLevel] = useState<'prestarter' | 'roundup' | 'pet' | null>(null);
 
   // Sidebar
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(() => window.innerWidth >= 1024);
   const [selectedUnitId, setSelectedUnitId] = useState<number | null>(null);
 
   // Modals / views
@@ -262,7 +262,7 @@ export default function App() {
             <h1 className="text-3xl font-black text-white">Choose Your Course</h1>
             <p className="text-slate-400 font-semibold">Xin chào, <span className="text-blue-400">{astronaut.name}</span>! Chọn giáo trình phù hợp với bạn:</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {/* Pre Starter (Làm quen) */}
             <button
               onClick={() => { localStorage.setItem('course_level', 'prestarter'); setCourseLevel('prestarter'); }}
@@ -366,7 +366,7 @@ export default function App() {
     );
   }
 
-  const sidebarWidth = sidebarOpen ? 280 : 72;
+  const sidebarWidth = sidebarOpen && window.innerWidth >= 1024 ? 280 : 0;
   const passedRevisions = astronaut!.passedRevisions || [];
 
   // ─────────── REVISION TEST VIEW ───────────
@@ -387,7 +387,7 @@ export default function App() {
   // ─────────── PRACTICE VIEW ───────────
   if (isPracticing && selectedUnit) {
     return (
-      <div style={{ marginLeft: sidebarWidth, minHeight: '100vh', background: '#FFF8F0', transition: 'margin 0.3s' }}>
+      <div style={{ marginLeft: window.innerWidth >= 1024 ? sidebarWidth : 0, minHeight: '100vh', background: '#FFF8F0', transition: 'margin 0.3s' }}>
         <Sidebar
           units={curriculumData.map(u => ({ unit_id: u.unit_id, unit_title: u.unit_title }))}
           selectedUnitId={selectedUnitId}
@@ -429,18 +429,27 @@ export default function App() {
       {/* Main content area */}
       <main
         className="flex-1 flex flex-col overflow-y-auto transition-all duration-300"
-        style={{ marginLeft: sidebarWidth }}
+        style={{ marginLeft: window.innerWidth >= 1024 ? (sidebarOpen ? 280 : 72) : 0 }}
       >
         {/* Top Header */}
-        <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm px-6 py-3 flex items-center justify-between gap-4">
-          <div>
-            <h1 className="font-black text-gray-800 text-lg">
-              {currentView === 'map' ? '📚 Bài Học' : currentView === 'creative' ? '🎨 Sáng Tạo' : currentView === 'shop' ? '🛒 Cửa Hàng' : '🏆 Bảng Xếp Hạng'}
-            </h1>
-            <p className="text-xs text-gray-400 font-semibold">
-              Xin chào, <span className="text-violet-600 font-black">{astronaut!.name}</span>! 
-              Đã hoàn thành {astronaut!.completedPlanets.length}/25 bài · Vượt {passedRevisions.length}/6 Revision
-            </p>
+        <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm px-4 sm:px-6 py-3 flex items-center justify-between gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 min-w-0">
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setSidebarOpen(p => !p)}
+              className="lg:hidden p-2 -ml-1 rounded-xl bg-violet-100 text-violet-600 hover:bg-violet-200 transition-colors flex-shrink-0"
+            >
+              ☰
+            </button>
+            <div className="min-w-0">
+              <h1 className="font-black text-gray-800 text-base sm:text-lg truncate">
+                {currentView === 'map' ? '📚 Bài Học' : currentView === 'creative' ? '🎨 Sáng Tạo' : currentView === 'shop' ? '🛒 Cửa Hàng' : '🏆 Bảng Xếp Hạng'}
+              </h1>
+              <p className="text-[10px] sm:text-xs text-gray-400 font-semibold truncate">
+                Xin chào, <span className="text-violet-600 font-black">{astronaut!.name}</span>! 
+                Đã hoàn thành {astronaut!.completedPlanets.length}/25 bài
+              </p>
+            </div>
           </div>
           <div className="flex items-center gap-3">
             {/* Stars */}
@@ -467,7 +476,7 @@ export default function App() {
         </header>
 
         {/* Content */}
-        <div className="flex-1 p-6">
+        <div className="flex-1 p-3 sm:p-6">
           {currentView === 'creative' ? (
             <CreativeLab astronaut={astronaut!} onUpdateAstronaut={u => { const a = u as Astronaut; if (!a.passedRevisions) a.passedRevisions = []; setAstronaut(a); }} offlineMode={offlineMode} />
           ) : currentView === 'shop' ? (

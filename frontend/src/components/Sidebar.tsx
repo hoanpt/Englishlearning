@@ -96,11 +96,32 @@ export default function Sidebar({
 }: SidebarProps) {
   const unitMap = new Map(units.map(u => [u.unit_id, u]));
 
+  const handleSelectUnit = (id: number) => {
+    onSelectUnit(id);
+    // Auto-close on mobile
+    if (window.innerWidth < 1024 && isOpen) onToggle();
+  };
+
+  const handleStartRevision = (beltId: number) => {
+    onStartRevision(beltId);
+    if (window.innerWidth < 1024 && isOpen) onToggle();
+  };
+
   return (
-    <aside
-      className="fixed left-0 top-0 h-screen z-40 flex flex-col transition-all duration-300 shadow-2xl sidebar-gradient"
-      style={{ width: isOpen ? '280px' : '72px' }}
-    >
+    <>
+      {/* Mobile backdrop overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[39] lg:hidden"
+          onClick={onToggle}
+        />
+      )}
+      <aside
+        className={`fixed left-0 top-0 h-screen z-40 flex flex-col transition-all duration-300 shadow-2xl sidebar-gradient
+          ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+        `}
+        style={{ width: isOpen ? '280px' : '72px' }}
+      >
       {/* Logo Header */}
       <div className="flex items-center gap-3 px-4 py-5 border-b border-white/20 flex-shrink-0">
         <button
@@ -151,7 +172,7 @@ export default function Sidebar({
                 return (
                   <button
                     key={unitId}
-                    onClick={() => unlocked && onSelectUnit(unitId)}
+                    onClick={() => unlocked && handleSelectUnit(unitId)}
                     className={`group relative flex items-center gap-3 rounded-2xl transition-all duration-200 w-full
                       ${isOpen ? 'px-4 py-3' : 'px-0 py-3 justify-center'}
                       ${isActive ? 'sidebar-item-active scale-[1.02]' : ''}
@@ -191,7 +212,7 @@ export default function Sidebar({
               {/* Revision Gate after each belt */}
               {belt.revisionAfter && (
                 <button
-                  onClick={() => allBeltDone && !revPassed && onStartRevision(belt.beltId)}
+                  onClick={() => allBeltDone && !revPassed && handleStartRevision(belt.beltId)}
                   disabled={revPassed || !allBeltDone}
                   className={`group relative flex items-center gap-3 rounded-2xl transition-all duration-200 w-full mt-1
                     ${isOpen ? 'px-4 py-3' : 'px-0 py-3 justify-center'}
@@ -254,6 +275,7 @@ export default function Sidebar({
           </button>
         )}
       </div>
-    </aside>
+      </aside>
+    </>
   );
 }
