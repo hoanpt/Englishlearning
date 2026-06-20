@@ -1,0 +1,781 @@
+{
+  "units": [
+    {
+      "unit_id": 1,
+      "unit_title": "Animals",
+      "emoji": "🦁🐶",
+      "color": "from-emerald-400 to-teal-600",
+      "items": [
+        {
+          "id": "dog",
+          "word": "Dog",
+          "vietnamese": "Con chó",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=dog",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/26/Dog_barking.ogg",
+          "image_url": "https://img.icons8.com/color/256/dog.png"
+        },
+        {
+          "id": "cat",
+          "word": "Cat",
+          "vietnamese": "Con mèo",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=cat",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Domestic_cat_meowing_or_purring.ogg",
+          "image_url": "https://img.icons8.com/color/256/cat.png"
+        },
+        {
+          "id": "bird",
+          "word": "Bird",
+          "vietnamese": "Con chim",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=bird",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Bird_chirping.ogg",
+          "image_url": "https://img.icons8.com/color/256/bird.png"
+        },
+        {
+          "id": "monkey",
+          "word": "Monkey",
+          "vietnamese": "Con khỉ",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=monkey",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Chimpanzee_vocalizations.ogg",
+          "image_url": "https://img.icons8.com/color/256/year-of-monkey.png"
+        },
+        {
+          "id": "elephant",
+          "word": "Elephant",
+          "vietnamese": "Con voi",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=elephant",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/5/55/Elephant_trumpet.ogg",
+          "image_url": "https://img.icons8.com/color/256/elephant.png"
+        },
+        {
+          "id": "lion",
+          "word": "Lion",
+          "vietnamese": "Sư tử",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=lion",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_growl.ogg",
+          "image_url": "https://img.icons8.com/color/256/lion.png"
+        },
+        {
+          "id": "duck",
+          "word": "Duck",
+          "vietnamese": "Con vịt",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=duck",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Quack.ogg",
+          "image_url": "https://img.icons8.com/color/256/duck.png"
+        },
+        {
+          "id": "pig",
+          "word": "Pig",
+          "vietnamese": "Con heo",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=pig",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/3/30/Grunt-grunt.ogg",
+          "image_url": "https://img.icons8.com/color/256/pig.png"
+        },
+        {
+          "id": "frog",
+          "word": "Frog",
+          "vietnamese": "Con ếch",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=frog",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Rana_temporaria_2011-03-20.ogg",
+          "image_url": "https://img.icons8.com/color/256/frog.png"
+        },
+        {
+          "id": "cow",
+          "word": "Cow",
+          "vietnamese": "Con bò",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=cow",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Cow_mooing.ogg",
+          "image_url": "https://img.icons8.com/color/256/cow.png"
+        },
+        {
+          "id": "chicken",
+          "word": "Chicken",
+          "vietnamese": "Con gà",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=chicken",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Rooster_crowing.ogg",
+          "image_url": "https://img.icons8.com/color/256/chicken.png"
+        },
+        {
+          "id": "rabbit",
+          "word": "Rabbit",
+          "vietnamese": "Con thỏ",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=rabbit",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/df/Spring_boing.ogg",
+          "image_url": "https://img.icons8.com/color/256/rabbit.png"
+        },
+        {
+          "id": "bear",
+          "word": "Bear",
+          "vietnamese": "Con gấu",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=bear",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/0/08/Grizzly_Bear_Growl.ogg",
+          "image_url": "https://img.icons8.com/color/256/bear.png"
+        },
+        {
+          "id": "tiger",
+          "word": "Tiger",
+          "vietnamese": "Con hổ",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=tiger",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Tiger_growl_3.ogg",
+          "image_url": "https://img.icons8.com/emoji/256/tiger.png"
+        },
+        {
+          "id": "sheep",
+          "word": "Sheep",
+          "vietnamese": "Con cừu",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=sheep",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Sheep_bleating.ogg",
+          "image_url": "https://img.icons8.com/color/256/sheep.png"
+        },
+        {
+          "id": "horse",
+          "word": "Horse",
+          "vietnamese": "Con ngựa",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=horse",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Horse_whinny.ogg",
+          "image_url": "https://img.icons8.com/color/256/horse.png"
+        },
+        {
+          "id": "snake",
+          "word": "Snake",
+          "vietnamese": "Con rắn",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=snake",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/4/41/Rattlesnake.ogg",
+          "image_url": "https://img.icons8.com/color/256/snake.png"
+        },
+        {
+          "id": "mouse",
+          "word": "Mouse",
+          "vietnamese": "Con chuột",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=mouse",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Mice_squeak.ogg",
+          "image_url": "https://img.icons8.com/color/256/mouse.png"
+        }
+      ],
+      "simon_actions": [
+        {
+          "command": "Fly like a bird!",
+          "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Simon%20says...%20Fly%20like%20a%20bird!",
+          "gif_url": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHIybDJ5cmRycDdtMTdsNWpxYm40aDRndHBwczhhajVnNWV5azR6ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26FPC35b0p4qV0mXm/giphy.gif"
+        },
+        {
+          "command": "Jump like a rabbit!",
+          "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Simon%20says...%20Jump%20like%20a%20rabbit!",
+          "gif_url": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3B5aTNkM2lrbjYwZWF6MmVwdDdsZ3lhcGk2aW55dDljOHZhdHF6OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/L3KuD3vMvlG6v95l7j/giphy.gif"
+        },
+        {
+          "command": "Swim like a fish!",
+          "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Simon%20says...%20Swim%20like%20a%20fish!",
+          "gif_url": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjd1aGJ1MGF1eDFjOXE1NG5nNHB4cWFmdmd1MWdmeWNsdm50ZHd2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VeaH2yC5SgqEQLsT4G/giphy.gif"
+        }
+      ]
+    },
+    {
+      "unit_id": 2,
+      "unit_title": "Colors",
+      "emoji": "🎈🎨",
+      "color": "from-amber-400 to-orange-500",
+      "items": [
+        {
+          "id": "red",
+          "word": "Red",
+          "vietnamese": "Màu đỏ",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Red",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/apple.png"
+        },
+        {
+          "id": "blue",
+          "word": "Blue",
+          "vietnamese": "Màu xanh dương",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Blue",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/whale.png"
+        },
+        {
+          "id": "yellow",
+          "word": "Yellow",
+          "vietnamese": "Màu vàng",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Yellow",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/banana.png"
+        },
+        {
+          "id": "green",
+          "word": "Green",
+          "vietnamese": "Màu xanh lá",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Green",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/frog.png"
+        },
+        {
+          "id": "pink",
+          "word": "Pink",
+          "vietnamese": "Màu hồng",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Pink",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/pig.png"
+        },
+        {
+          "id": "orange",
+          "word": "Orange",
+          "vietnamese": "Màu cam",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Orange",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/orange.png"
+        },
+        {
+          "id": "purple",
+          "word": "Purple",
+          "vietnamese": "Màu tím",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Purple",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/grapes.png"
+        },
+        {
+          "id": "brown",
+          "word": "Brown",
+          "vietnamese": "Màu nâu",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Brown",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/bear.png"
+        },
+        {
+          "id": "black",
+          "word": "Black",
+          "vietnamese": "Màu đen",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Black",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/black-cat.png"
+        },
+        {
+          "id": "white",
+          "word": "White",
+          "vietnamese": "Màu trắng",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=White",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/cloud.png"
+        },
+        {
+          "id": "gray",
+          "word": "Gray",
+          "vietnamese": "Màu xám",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20gray%20balloon",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "/images/words/gray.svg"
+        },
+        {
+          "id": "silver",
+          "word": "Silver",
+          "vietnamese": "Màu bạc",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20silver%20balloon",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/2/21/Balloon_pop_sound_effect.ogg",
+          "image_url": "/images/words/silver.svg"
+        }
+      ],
+      "simon_actions": [
+        {
+          "command": "Touch something Red!",
+          "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Simon%20says...%20Touch%20something%20Red!",
+          "gif_url": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMThjZjkwM2o5YTN5NHAybmdkOHYzbDZndjZldmswb3prOW5iZDN6OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/43GP397b91931yU1H5/giphy.gif"
+        },
+        {
+          "command": "Touch something Blue!",
+          "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Simon%20says...%20Touch%20something%20Blue!",
+          "gif_url": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXlpbjVscWRyd28zbjN5Mjd6OHVsbTZpdzBhMXE1eG9ubXExbDRyeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/t3nsw8tJ6v0tN8a17G/giphy.gif"
+        }
+      ]
+    },
+    {
+      "unit_id": 3,
+      "unit_title": "Fruits",
+      "emoji": "🍎🍒",
+      "color": "from-rose-400 to-pink-500",
+      "items": [
+        {
+          "id": "apple",
+          "word": "Apple",
+          "vietnamese": "Quả táo",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=An%20apple",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/apple.png"
+        },
+        {
+          "id": "banana",
+          "word": "Banana",
+          "vietnamese": "Quả chuối",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20banana",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/banana.png"
+        },
+        {
+          "id": "orange",
+          "word": "Orange",
+          "vietnamese": "Quả cam",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=An%20orange",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/orange.png"
+        },
+        {
+          "id": "grapes",
+          "word": "Grapes",
+          "vietnamese": "Quả nho",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Some%20grapes",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/grapes.png"
+        },
+        {
+          "id": "strawberry",
+          "word": "Strawberry",
+          "vietnamese": "Quả dâu tây",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20strawberry",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/strawberry.png"
+        },
+        {
+          "id": "watermelon",
+          "word": "Watermelon",
+          "vietnamese": "Dưa hấu",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20watermelon",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/watermelon.png"
+        },
+        {
+          "id": "mango",
+          "word": "Mango",
+          "vietnamese": "Quả xoài",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20mango",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/mango.png"
+        },
+        {
+          "id": "pineapple",
+          "word": "Pineapple",
+          "vietnamese": "Quả dứa",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20pineapple",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/pineapple.png"
+        },
+        {
+          "id": "cherry",
+          "word": "Cherry",
+          "vietnamese": "Quả anh đào",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20cherry",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/cherry.png"
+        },
+        {
+          "id": "pear",
+          "word": "Pear",
+          "vietnamese": "Quả lê",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20pear",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/pear.png"
+        },
+        {
+          "id": "peach",
+          "word": "Peach",
+          "vietnamese": "Quả đào",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20peach",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/peach.png"
+        },
+        {
+          "id": "coconut",
+          "word": "Coconut",
+          "vietnamese": "Quả dừa",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20coconut",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/coconut.png"
+        }
+      ],
+      "simon_actions": [
+        {
+          "command": "Peel a banana!",
+          "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Simon%20says...%20Peel%20a%20banana!",
+          "gif_url": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMThjZjkwM2o5YTN5NHAybmdkOHYzbDZndjZldmswb3prOW5iZDN6OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/43GP397b91931yU1H5/giphy.gif"
+        },
+        {
+          "command": "Eat an apple!",
+          "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Simon%20says...%20Eat%20an%20apple!",
+          "gif_url": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXlpbjVscWRyd28zbjN5Mjd6OHVsbTZpdzBhMXE1eG9ubXExbDRyeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/t3nsw8tJ6v0tN8a17G/giphy.gif"
+        }
+      ]
+    },
+    {
+      "unit_id": 4,
+      "unit_title": "Action Verbs",
+      "emoji": "🏃🏃‍♀️",
+      "color": "from-sky-400 to-blue-500",
+      "items": [
+        {
+          "id": "run",
+          "word": "Run",
+          "vietnamese": "Chạy",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Let's%20run!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Footsteps_on_cement.ogg",
+          "image_url": "https://img.icons8.com/color/256/running.png"
+        },
+        {
+          "id": "jump",
+          "word": "Jump",
+          "vietnamese": "Nhảy",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Let's%20jump!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/df/Spring_boing.ogg",
+          "image_url": "https://img.icons8.com/color/256/jump-rope.png"
+        },
+        {
+          "id": "dance",
+          "word": "Dance",
+          "vietnamese": "Nhảy múa",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Let's%20dance!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Soundhelix-song-1-snippet.mp3",
+          "image_url": "https://img.icons8.com/color/256/dancing.png"
+        },
+        {
+          "id": "sleep",
+          "word": "Sleep",
+          "vietnamese": "Ngủ",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Time%20to%20sleep!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Snoring.ogg",
+          "image_url": "https://img.icons8.com/color/256/sleeping-in-bed.png"
+        },
+        {
+          "id": "swim",
+          "word": "Swim",
+          "vietnamese": "Bơi",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Let's%20swim!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Splash-sound.ogg",
+          "image_url": "https://img.icons8.com/color/256/swimming.png"
+        },
+        {
+          "id": "walk",
+          "word": "Walk",
+          "vietnamese": "Đi bộ",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Let's%20walk!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Walking_on_gravel.ogg",
+          "image_url": "https://img.icons8.com/color/256/walking.png"
+        },
+        {
+          "id": "fly",
+          "word": "Fly",
+          "vietnamese": "Bay",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Let's%20fly!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/5/50/Wind_blowing.ogg",
+          "image_url": "https://img.icons8.com/color/256/flying-duck.png"
+        },
+        {
+          "id": "sing",
+          "word": "Sing",
+          "vietnamese": "Hát",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Let's%20sing!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Chime_sound_effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/microphone.png"
+        },
+        {
+          "id": "climb",
+          "word": "Climb",
+          "vietnamese": "Leo trèo",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Let's%20climb!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/climbing.png"
+        },
+        {
+          "id": "eat",
+          "word": "Eat",
+          "vietnamese": "Ăn",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Time%20to%20eat!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Eating_crunchy_food.ogg",
+          "image_url": "https://img.icons8.com/color/256/hamburger.png"
+        },
+        {
+          "id": "throw",
+          "word": "Throw",
+          "vietnamese": "Ném",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Let's%20throw!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/5/50/Wind_blowing.ogg",
+          "image_url": "/images/words/throw.svg"
+        },
+        {
+          "id": "catch",
+          "word": "Catch",
+          "vietnamese": "Bắt",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Let's%20catch!",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "/images/words/catch.svg"
+        }
+      ],
+      "simon_actions": [
+        {
+          "command": "Run fast!",
+          "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Simon%20says...%20Run%20fast!",
+          "gif_url": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXlpbjVscWRyd28zbjN5Mjd6OHVsbTZpdzBhMXE1eG9ubXExbDRyeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/t3nsw8tJ6v0tN8a17G/giphy.gif"
+        },
+        {
+          "command": "Sleep like a baby!",
+          "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Simon%20says...%20Sleep%20like%20a%20baby!",
+          "gif_url": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMThjZjkwM2o5YTN5NHAybmdkOHYzbDZndjZldmswb3prOW5iZDN6OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/43GP397b91931yU1H5/giphy.gif"
+        }
+      ]
+    },
+    {
+      "unit_id": 5,
+      "unit_title": "Numbers",
+      "emoji": "🔢",
+      "color": "from-indigo-400 to-violet-500",
+      "items": [
+        {
+          "id": "one",
+          "word": "One",
+          "vietnamese": "Số 1",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=One",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/1-circle.png"
+        },
+        {
+          "id": "two",
+          "word": "Two",
+          "vietnamese": "Số 2",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Two",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/2-circle.png"
+        },
+        {
+          "id": "three",
+          "word": "Three",
+          "vietnamese": "Số 3",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Three",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/3-circle.png"
+        },
+        {
+          "id": "four",
+          "word": "Four",
+          "vietnamese": "Số 4",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Four",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/4-circle.png"
+        },
+        {
+          "id": "five",
+          "word": "Five",
+          "vietnamese": "Số 5",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Five",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/5-circle.png"
+        },
+        {
+          "id": "six",
+          "word": "Six",
+          "vietnamese": "Số 6",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Six",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/6-circle.png"
+        },
+        {
+          "id": "seven",
+          "word": "Seven",
+          "vietnamese": "Số 7",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Seven",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/7-circle.png"
+        },
+        {
+          "id": "eight",
+          "word": "Eight",
+          "vietnamese": "Số 8",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Eight",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/8-circle.png"
+        },
+        {
+          "id": "nine",
+          "word": "Nine",
+          "vietnamese": "Số 9",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Nine",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/9-circle.png"
+        },
+        {
+          "id": "ten",
+          "word": "Ten",
+          "vietnamese": "Số 10",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Ten",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "/images/words/ten.svg"
+        }
+      ],
+      "simon_actions": []
+    },
+    {
+      "unit_id": 6,
+      "unit_title": "Shapes",
+      "emoji": "⭐🔺",
+      "color": "from-pink-400 to-rose-500",
+      "items": [
+        {
+          "id": "circle",
+          "word": "Circle",
+          "vietnamese": "Hình tròn",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20circle",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/emoji/256/red-circle-emoji.png"
+        },
+        {
+          "id": "square",
+          "word": "Square",
+          "vietnamese": "Hình vuông",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20square",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "/images/words/square.svg"
+        },
+        {
+          "id": "triangle",
+          "word": "Triangle",
+          "vietnamese": "Hình tam giác",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20triangle",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "/images/words/triangle.svg"
+        },
+        {
+          "id": "star",
+          "word": "Star",
+          "vietnamese": "Ngôi sao",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20star",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/emoji/256/star-emoji.png"
+        },
+        {
+          "id": "heart",
+          "word": "Heart",
+          "vietnamese": "Trái tim",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=A%20heart",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/emoji/256/red-heart.png"
+        }
+      ],
+      "simon_actions": []
+    },
+    {
+      "unit_id": 7,
+      "unit_title": "Family",
+      "emoji": "👨‍👩‍👧‍👦",
+      "color": "from-orange-400 to-amber-500",
+      "items": [
+        {
+          "id": "father",
+          "word": "Father",
+          "vietnamese": "Bố",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Father",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/father.png"
+        },
+        {
+          "id": "mother",
+          "word": "Mother",
+          "vietnamese": "Mẹ",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Mother",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/mother.png"
+        },
+        {
+          "id": "brother",
+          "word": "Brother",
+          "vietnamese": "Anh/Em trai",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Brother",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/boy.png"
+        },
+        {
+          "id": "sister",
+          "word": "Sister",
+          "vietnamese": "Chị/Em gái",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Sister",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/girl.png"
+        },
+        {
+          "id": "baby",
+          "word": "Baby",
+          "vietnamese": "Em bé",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Baby",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/baby.png"
+        },
+        {
+          "id": "grandfather",
+          "word": "Grandfather",
+          "vietnamese": "Ông",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Grandfather",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "/images/words/grandfather.svg"
+        },
+        {
+          "id": "grandmother",
+          "word": "Grandmother",
+          "vietnamese": "Bà",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Grandmother",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "/images/words/grandmother.svg"
+        }
+      ],
+      "simon_actions": []
+    },
+    {
+      "unit_id": 8,
+      "unit_title": "Underwater",
+      "emoji": "🐬🐠",
+      "color": "from-cyan-400 to-blue-500",
+      "items": [
+        {
+          "id": "fish",
+          "word": "Fish",
+          "vietnamese": "Con cá",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Fish",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Splash-sound.ogg",
+          "image_url": "https://img.icons8.com/color/256/fish.png"
+        },
+        {
+          "id": "shark",
+          "word": "Shark",
+          "vietnamese": "Cá mập",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Shark",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Splash-sound.ogg",
+          "image_url": "https://img.icons8.com/color/256/shark.png"
+        },
+        {
+          "id": "dolphin",
+          "word": "Dolphin",
+          "vietnamese": "Cá heo",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Dolphin",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Splash-sound.ogg",
+          "image_url": "https://img.icons8.com/color/256/dolphin.png"
+        },
+        {
+          "id": "crab",
+          "word": "Crab",
+          "vietnamese": "Con cua",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Crab",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ding_Sound_Effect.ogg",
+          "image_url": "https://img.icons8.com/color/256/crab.png"
+        },
+        {
+          "id": "octopus",
+          "word": "Octopus",
+          "vietnamese": "Bạch tuộc",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Octopus",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Splash-sound.ogg",
+          "image_url": "https://img.icons8.com/color/256/octopus.png"
+        },
+        {
+          "id": "turtle",
+          "word": "Turtle",
+          "vietnamese": "Con rùa",
+          "audio_word": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Turtle",
+          "audio_effect": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Splash-sound.ogg",
+          "image_url": "https://img.icons8.com/color/256/turtle.png"
+        }
+      ],
+      "simon_actions": []
+    }
+  ]
+}

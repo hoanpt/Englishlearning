@@ -10,6 +10,7 @@ import WizardShop from './components/WizardShop';
 import ParentDashboard from './components/ParentDashboard';
 import JourneyMap from './components/JourneyMap';
 import PETApp from './components/pet/PETApp';
+import PreStarterApp from './components/prestarter/PreStarterApp';
 
 interface Astronaut {
   name: string;
@@ -34,7 +35,7 @@ export default function App() {
   const [loginName, setLoginName] = useState('');
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
-  const [courseLevel, setCourseLevel] = useState<'roundup' | 'pet' | null>(null);
+  const [courseLevel, setCourseLevel] = useState<'prestarter' | 'roundup' | 'pet' | null>(null);
 
   // Sidebar
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -56,10 +57,10 @@ export default function App() {
   // Auto-login from cache
   useEffect(() => {
     const cachedName = localStorage.getItem('astronaut_name');
-    const cachedLevel = localStorage.getItem('course_level') as 'roundup' | 'pet' | null;
+    const cachedLevel = localStorage.getItem('course_level') as 'prestarter' | 'roundup' | 'pet' | null;
     if (cachedName && cachedLevel) {
       setCourseLevel(cachedLevel);
-      if (cachedLevel === 'roundup') loadProfile(cachedName);
+      if (cachedLevel === 'roundup' || cachedLevel === 'prestarter') loadProfile(cachedName);
     } else if (cachedName) {
       // Has name but no level — will show level selection after login
     }
@@ -255,13 +256,36 @@ export default function App() {
   if (astronaut && !courseLevel) {
     return (
       <div className="min-h-screen flex items-center justify-center p-4" style={{ background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)' }}>
-        <div className="w-full max-w-2xl space-y-6">
+        <div className="w-full max-w-4xl space-y-6">
           <div className="text-center space-y-2">
             <div className="text-4xl mb-3">🎓</div>
             <h1 className="text-3xl font-black text-white">Choose Your Course</h1>
             <p className="text-slate-400 font-semibold">Xin chào, <span className="text-blue-400">{astronaut.name}</span>! Chọn giáo trình phù hợp với bạn:</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {/* Pre Starter (Làm quen) */}
+            <button
+              onClick={() => { localStorage.setItem('course_level', 'prestarter'); setCourseLevel('prestarter'); }}
+              className="group relative text-left bg-[#1E293B] border-2 border-emerald-800/50 hover:border-emerald-500 rounded-3xl p-6 transition-all hover:scale-[1.02] overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-teal-900/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative space-y-3">
+                <div className="text-4xl">🐯</div>
+                <div>
+                  <p className="text-[10px] font-black text-emerald-400 uppercase tracking-widest">Pre-Starter</p>
+                  <h2 className="text-xl font-black text-white">Làm Quen</h2>
+                  <p className="text-xs text-emerald-300 font-bold bg-emerald-900/40 px-2 py-0.5 rounded-full inline-block mt-1">Dành cho bé 4–6 tuổi</p>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Làm quen tiếng Anh vui nhộn qua 8 chủ đề gần gũi. Học nghe phát âm tự nhiên, chơi ghép hình, ghép bóng sinh động!
+                </p>
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {['🐾 Thảo cầm viên', '🔍 Tìm bạn', '🧩 Ghép bóng', '✂️ Xếp hình'].map(tag => (
+                    <span key={tag} className="text-[10px] font-bold bg-slate-800 text-slate-400 px-2 py-0.5 rounded-full">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </button>
             {/* Round Up */}
             <button
               onClick={() => { localStorage.setItem('course_level', 'roundup'); setCourseLevel('roundup'); }}
@@ -323,6 +347,21 @@ export default function App() {
       <PETApp
         userName={astronaut.name}
         onLogout={() => { localStorage.removeItem('astronaut_name'); localStorage.removeItem('course_level'); setCourseLevel(null); setAstronaut(null); }}
+      />
+    );
+  }
+
+  // ─────────── PRESTARTER APP VIEW ───────────
+  if (courseLevel === 'prestarter' && astronaut) {
+    return (
+      <PreStarterApp
+        astronaut={astronaut}
+        onUpdateAstronaut={setAstronaut}
+        offlineMode={offlineMode}
+        onSwitchLevel={() => {
+          localStorage.removeItem('course_level');
+          setCourseLevel(null);
+        }}
       />
     );
   }
