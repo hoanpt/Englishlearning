@@ -73,12 +73,13 @@ function buildPassages(story: Story | undefined, dialogue: Dialogue, grammar: { 
   const dialogueSentences = dialogue.lines.map(l =>
     `${l.speaker}: ${l.text.replace('_____', l.missingWord)}`
   );
+  const linesWithChoices = dialogue.lines.filter(l => l.choices && l.choices.length > 0);
   passages.push({
     id: 2,
     emoji: '💬',
     title: dialogue.title,
     sentences: dialogueSentences,
-    questions: dialogue.lines.slice(0, 5).map((l, i) => ({
+    questions: linesWithChoices.slice(0, 5).map((l, i) => ({
       id: i + 1,
       type: 'mc',
       question: l.text.replace('_____', '___?'),

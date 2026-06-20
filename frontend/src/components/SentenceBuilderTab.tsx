@@ -32,7 +32,7 @@ function speakText(text: string) {
 }
 
 /** Build sentences from grammar examples + dialogue */
-function buildSentences(grammar: GrammarData, dialogue: { lines: DialogueLine[] }, vocab: VocabItem[]): Sentence[] {
+function buildSentences(grammar: GrammarData, dialogue: { lines: DialogueLine[] }): Sentence[] {
   const sentences: Sentence[] = [];
 
   // From grammar examples
@@ -52,21 +52,11 @@ function buildSentences(grammar: GrammarData, dialogue: { lines: DialogueLine[] 
     }
   });
 
-  // From vocab in sentences
-  vocab.slice(0, 5).forEach((v, i) => {
-    const template = `I can ${v.word} very well.`;
-    sentences.push({
-      id: 200 + i,
-      words: template.split(' '),
-      hint: `Tôi có thể ${v.meaning} rất giỏi.`,
-    });
-  });
-
   return sentences.slice(0, 15);
 }
 
-export default function SentenceBuilderTab({ grammar, vocabulary, dialogue, onComplete }: Props) {
-  const [sentences] = useState<Sentence[]>(() => buildSentences(grammar, dialogue, vocabulary));
+export default function SentenceBuilderTab({ grammar, dialogue, onComplete }: Props) {
+  const [sentences] = useState<Sentence[]>(() => buildSentences(grammar, dialogue));
   const [currentIdx, setCurrentIdx] = useState(0);
   const [wordBank, setWordBank] = useState<{ word: string; id: number; used: boolean }[]>([]);
   const [answer, setAnswer] = useState<{ word: string; id: number }[]>([]);
@@ -158,11 +148,11 @@ export default function SentenceBuilderTab({ grammar, vocabulary, dialogue, onCo
       <div className="rounded-2xl p-4 text-center bg-gradient-to-r from-violet-50 to-purple-50 border-2 border-violet-100 min-h-[96px] flex flex-col items-center justify-center">
         {!showHint ? (
           <button onClick={() => setShowHint(true)} className="px-5 py-2.5 bg-white text-violet-600 border-2 border-violet-200 rounded-xl font-black text-sm hover:bg-violet-100 active:scale-95 transition-all">
-            💡 Xem gợi ý nghĩa Tiếng Việt
+            💡 Xem câu mẫu
           </button>
         ) : (
           <div className="animate-bounce-in">
-            <p className="text-purple-600 text-xs font-bold uppercase tracking-wider mb-1">💡 Gợi ý nghĩa:</p>
+            <p className="text-purple-600 text-xs font-bold uppercase tracking-wider mb-1">💡 Câu mẫu:</p>
             <p className="text-gray-700 font-black text-base">{current.hint}</p>
             {status === 'correct' && (
               <button
