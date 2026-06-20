@@ -1,0 +1,505 @@
+import { useState, useEffect } from 'react';
+import { Star, LogOut, Trophy, Loader2 } from 'lucide-react';
+import curriculumData from './data/units.json';
+import Sidebar, { BELTS, isUnitUnlocked, isRevisionUnlocked } from './components/Sidebar';
+import MissionModal from './components/MissionModal';
+import MissionPractice from './components/MissionPractice';
+import RevisionTest from './components/RevisionTest';
+import CreativeLab from './components/CreativeLab';
+import WizardShop from './components/WizardShop';
+import ParentDashboard from './components/ParentDashboard';
+import JourneyMap from './components/JourneyMap';
+import PETApp from './components/pet/PETApp';
+
+interface Astronaut {
+  name: string;
+  stars: number;
+  completedPlanets: number[];
+  badges: string[];
+  accessories: string[];
+  equippedAccessory: string;
+  passedRevisions: number[];  // belt ids where revision has been passed
+}
+
+interface LeaderboardEntry {
+  name: string;
+  stars: number;
+  completedPlanetsCount: number;
+}
+
+
+
+export default function App() {
+  const [astronaut, setAstronaut] = useState<Astronaut | null>(null);
+  const [loginName, setLoginName] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+  const [courseLevel, setCourseLevel] = useState<'roundup' | 'pet' | null>(null);
+
+  // Sidebar
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [selectedUnitId, setSelectedUnitId] = useState<number | null>(null);
+
+  // Modals / views
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPracticing, setIsPracticing] = useState(false);
+  const [revisionBeltId, setRevisionBeltId] = useState<number | null>(null);
+  const [isParentDashboardOpen, setIsParentDashboardOpen] = useState(false);
+
+  // Other views
+  const [currentView, setCurrentView] = useState<'map' | 'leaderboard' | 'creative' | 'shop'>('map');
+  const [offlineMode, setOfflineMode] = useState(false);
+  const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
+
+  const selectedUnit = curriculumData.find(u => u.unit_id === selectedUnitId) ?? null;
+
+  // Auto-login from cache
+  useEffect(() => {
+    const cachedName = localStorage.getItem('astronaut_name');
+    const cachedLevel = localStorage.getItem('course_level') as 'roundup' | 'pet' | null;
+    if (cachedName && cachedLevel) {
+      setCourseLevel(cachedLevel);
+      if (cachedLevel === 'roundup') loadProfile(cachedName);
+    } else if (cachedName) {
+      // Has name but no level — will show level selection after login
+    }
+  }, []);
+
+  const loadProfile = async (name: string) => {
+    setLoading(true);
+    setErrorMsg('');
+    try {
+      const res = await fetch('http://localhost:5000/api/astronaut/profile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name }),
+      });
+      if (!res.ok) throw new Error('Backend unavailable');
+      const data = await res.json();
+      if (!data.passedRevisions) data.passedRevisions = [];
+      setAstronaut(data);
+      setOfflineMode(false);
+    } catch {
+      setOfflineMode(true);
+      const stored = localStorage.getItem(`astronaut_profile_${name}`);
+      if (stored) {
+        const parsed: Astronaut = JSON.parse(stored);
+        if (!parsed.passedRevisions) parsed.passedRevisions = [];
+        setAstronaut(parsed);
+      } else {
+        const fresh: Astronaut = {
+          name, stars: 0, completedPlanets: [], badges: [],
+          accessories: [], equippedAccessory: '', passedRevisions: [],
+        };
+        localStorage.setItem(`astronaut_profile_${name}`, JSON.stringify(fresh));
+        setAstronaut(fresh);
+      }
+    } finally {
+      setLoading(false);
+      localStorage.setItem('astronaut_name', name);
+    }
+  };
+
+  const saveLocally = (updated: Astronaut) => {
+    localStorage.setItem(`astronaut_profile_${updated.name}`, JSON.stringify(updated));
+    setAstronaut(updated);
+  };
+
+  // Complete a unit mission
+  const handleMissionSuccess = async (starsEarned: number) => {
+    if (!astronaut || !selectedUnit) return;
+    const planetNum = selectedUnit.unit_id;
+    const nextCompleted = [...astronaut.completedPlanets];
+    if (!nextCompleted.includes(planetNum)) nextCompleted.push(planetNum);
+    const nextStars = astronaut.stars + starsEarned;
+    const nextBadges = [...astronaut.badges];
+
+    if (nextCompleted.length >= 1 && !nextBadges.includes('space_rookie')) nextBadges.push('space_rookie');
+    if (nextCompleted.includes(6) && !nextBadges.includes('grammar_hero')) nextBadges.push('grammar_hero');
+    if (nextCompleted.includes(14) && !nextBadges.includes('time_traveler')) nextBadges.push('time_traveler');
+    if (nextCompleted.length >= 25 && !nextBadges.includes('galaxy_master')) nextBadges.push('galaxy_master');
+
+    const updated: Astronaut = { ...astronaut, stars: nextStars, completedPlanets: nextCompleted, badges: nextBadges };
+
+    if (!offlineMode) {
+      try {
+        const res = await fetch('http://localhost:5000/api/astronaut/complete-mission', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: astronaut.name, planetNumber: planetNum, earnedStars: starsEarned }),
+        });
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        if (!data.astronaut.passedRevisions) data.astronaut.passedRevisions = [];
+        setAstronaut(data.astronaut);
+      } catch {
+        saveLocally(updated);
+      }
+    } else {
+      saveLocally(updated);
+    }
+    setIsPracticing(false);
+    setSelectedUnitId(null);
+
+    // Check if revision is now unlocked for a belt
+    const belt = BELTS.find(b => b.unitIds.includes(planetNum));
+    if (belt && isRevisionUnlocked(belt.beltId, nextCompleted)) {
+      // Show a hint that revision is available
+      const msg = `🎉 Bạn đã hoàn thành ${belt.beltName}! Hãy thử thách Revision ${belt.beltId} để mở dải tiếp theo!`;
+      setTimeout(() => alert(msg), 800);
+    }
+  };
+
+  // Pass a revision
+  const handleRevisionPass = async (score: number) => {
+    if (!astronaut || revisionBeltId === null) return;
+    const nextRevisions = [...(astronaut.passedRevisions || [])];
+    if (!nextRevisions.includes(revisionBeltId)) nextRevisions.push(revisionBeltId);
+    const nextBadges = [...astronaut.badges];
+    const badgeKey = `revision_${revisionBeltId}`;
+    if (!nextBadges.includes(badgeKey)) nextBadges.push(badgeKey);
+    const bonusStars = Math.round(score / 5);  // up to 20 bonus stars
+    const updated: Astronaut = { ...astronaut, passedRevisions: nextRevisions, badges: nextBadges, stars: astronaut.stars + bonusStars };
+
+    if (!offlineMode) {
+      try {
+        const res = await fetch('http://localhost:5000/api/astronaut/pass-revision', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: astronaut.name, beltId: revisionBeltId, score }),
+        });
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        // Backend returns astronaut object under data.astronaut
+        const updatedAstronaut = data.astronaut;
+        if (!updatedAstronaut.passedRevisions) updatedAstronaut.passedRevisions = [];
+        setAstronaut(updatedAstronaut);
+      } catch {
+        saveLocally(updated);
+      }
+    } else {
+      saveLocally(updated);
+    }
+
+    setRevisionBeltId(null);
+    alert(`🏆 Xuất sắc! Bạn đã vượt Revision ${revisionBeltId} với ${score}%! +${bonusStars} Sao Sáng và mở khóa dải mới!`);
+  };
+
+  const loadLeaderboard = async () => {
+    setLeaderboard([
+      { name: astronaut?.name || 'Bé', stars: astronaut?.stars || 0, completedPlanetsCount: astronaut?.completedPlanets.length || 0 },
+      { name: 'Phi hành gia Bi', stars: 250, completedPlanetsCount: 15 },
+      { name: 'Phi hành gia Tôm', stars: 120, completedPlanetsCount: 8 },
+    ].sort((a, b) => b.stars - a.stars));
+  };
+
+  useEffect(() => {
+    if (currentView === 'leaderboard') loadLeaderboard();
+  }, [currentView]);
+
+  // ─────────── LOGIN ───────────
+  if (!astronaut && courseLevel !== 'pet') {
+    if (!loginName && !localStorage.getItem('astronaut_name')) {
+      // Show login
+    }
+  }
+
+  if (!astronaut && courseLevel !== 'pet') {
+    return (
+      <div className="min-h-screen bg-[#FFF8F0] flex items-center justify-center p-4">
+        <div className="w-full max-w-md bg-white rounded-3xl border-2 border-gray-100 shadow-xl overflow-hidden">
+          <div className="p-8 text-center" style={{ background: 'linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)' }}>
+            <div className="text-5xl mb-3 animate-float">🌟</div>
+            <h1 className="text-2xl font-black text-white">Round Up 2</h1>
+            <p className="text-purple-200 text-sm font-semibold mt-1">Học Tiếng Anh Cùng Bé</p>
+          </div>
+          <div className="p-8">
+            <form onSubmit={e => { e.preventDefault(); if (loginName.trim()) loadProfile(loginName); else setErrorMsg('Nhập tên nhé bé!'); }}>
+              <label className="block text-xs font-black text-gray-500 uppercase tracking-wider mb-2">Tên của bé:</label>
+              <input
+                type="text"
+                placeholder="Ví dụ: Tom, Anna, Minh..."
+                value={loginName}
+                onChange={e => setLoginName(e.target.value)}
+                className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3 text-gray-800 font-bold focus:outline-none focus:border-violet-400 transition-colors mb-3"
+              />
+              {errorMsg && <p className="text-rose-500 text-sm font-bold mb-3">{errorMsg}</p>}
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full py-3.5 text-white font-black rounded-2xl flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-98"
+                style={{ background: 'linear-gradient(135deg, #7C3AED, #2563EB)' }}
+              >
+                {loading ? <><Loader2 size={18} className="animate-spin" /> Đang tải...</> : '🚀 Bắt đầu học!'}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ─────────── PET SHORTCUT: logged-in name exists but as PET level ───────────
+  // If user chose PET but hasn't chosen Round Up yet (astronaut may be null)
+  if (courseLevel === 'pet' && !astronaut) {
+    const petName = loginName || localStorage.getItem('astronaut_name') || 'Student';
+    return (
+      <PETApp
+        userName={petName}
+        onLogout={() => { localStorage.removeItem('astronaut_name'); localStorage.removeItem('course_level'); setCourseLevel(null); }}
+      />
+    );
+  }
+
+  // ─────────── LEVEL SELECTION (after login, before entering app) ───────────
+  if (astronaut && !courseLevel) {
+    return (
+      <div className="min-h-screen flex items-center justify-center p-4" style={{ background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)' }}>
+        <div className="w-full max-w-2xl space-y-6">
+          <div className="text-center space-y-2">
+            <div className="text-4xl mb-3">🎓</div>
+            <h1 className="text-3xl font-black text-white">Choose Your Course</h1>
+            <p className="text-slate-400 font-semibold">Xin chào, <span className="text-blue-400">{astronaut.name}</span>! Chọn giáo trình phù hợp với bạn:</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {/* Round Up */}
+            <button
+              onClick={() => { localStorage.setItem('course_level', 'roundup'); setCourseLevel('roundup'); }}
+              className="group relative text-left bg-[#1E293B] border-2 border-violet-800/50 hover:border-violet-500 rounded-3xl p-6 transition-all hover:scale-[1.02] overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 to-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative space-y-3">
+                <div className="text-4xl">🚀</div>
+                <div>
+                  <p className="text-[10px] font-black text-violet-400 uppercase tracking-widest">New Round Up 2</p>
+                  <h2 className="text-xl font-black text-white">Mover Level</h2>
+                  <p className="text-xs text-violet-300 font-bold bg-violet-900/40 px-2 py-0.5 rounded-full inline-block mt-1">Dành cho lớp 3–4</p>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Học tiếng Anh thông qua hành trình khám phá vũ trụ. Flashcard, mini-game, và Mascot phi hành gia sôi động!
+                </p>
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {['🌟 Sao Sáng', '🤸‍♀️ Mini-game', '🚀 Mascot', '🎴 Flashcard'].map(tag => (
+                    <span key={tag} className="text-[10px] font-bold bg-slate-800 text-slate-400 px-2 py-0.5 rounded-full">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </button>
+            {/* PET */}
+            <button
+              onClick={() => { localStorage.setItem('course_level', 'pet'); localStorage.setItem('astronaut_name', astronaut.name); setCourseLevel('pet'); }}
+              className="group relative text-left bg-[#1E293B] border-2 border-blue-800/50 hover:border-blue-500 rounded-3xl p-6 transition-all hover:scale-[1.02] overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-teal-900/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative space-y-3">
+                <div className="text-4xl">📚</div>
+                <div>
+                  <p className="text-[10px] font-black text-blue-400 uppercase tracking-widest">Complete PET 2020</p>
+                  <h2 className="text-xl font-black text-white">B1 Preliminary</h2>
+                  <p className="text-xs text-blue-300 font-bold bg-blue-900/40 px-2 py-0.5 rounded-full inline-block mt-1">Dành cho lớp 5+</p>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Ôn luyện thi PET với 12 chủ đề thực tế. Reading, Grammar, Sentence Transformation, Cloze Test!
+                </p>
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {['📝 Writing', '📖 Reading', '⚡ Grammar', '🎯 Cloze Test'].map(tag => (
+                    <span key={tag} className="text-[10px] font-bold bg-slate-800 text-slate-400 px-2 py-0.5 rounded-full">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </button>
+          </div>
+          <p className="text-center text-xs text-slate-600">
+            Bạn có thể đổi giáo trình bất kỳ lúc nào bằng cách đăng xuất.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // ─────────── PET APP VIEW ───────────
+  if (courseLevel === 'pet' && astronaut) {
+    return (
+      <PETApp
+        userName={astronaut.name}
+        onLogout={() => { localStorage.removeItem('astronaut_name'); localStorage.removeItem('course_level'); setCourseLevel(null); setAstronaut(null); }}
+      />
+    );
+  }
+
+  const sidebarWidth = sidebarOpen ? 280 : 72;
+  const passedRevisions = astronaut!.passedRevisions || [];
+
+  // ─────────── REVISION TEST VIEW ───────────
+  if (revisionBeltId !== null) {
+    const belt = BELTS.find(b => b.beltId === revisionBeltId)!;
+    const revUnits = curriculumData.filter(u => belt.unitIds.includes(u.unit_id));
+    return (
+      <RevisionTest
+        revisionNumber={revisionBeltId}
+        beltName={belt.beltName}
+        units={revUnits}
+        onPass={handleRevisionPass}
+        onClose={() => setRevisionBeltId(null)}
+      />
+    );
+  }
+
+  // ─────────── PRACTICE VIEW ───────────
+  if (isPracticing && selectedUnit) {
+    return (
+      <div style={{ marginLeft: sidebarWidth, minHeight: '100vh', background: '#FFF8F0', transition: 'margin 0.3s' }}>
+        <Sidebar
+          units={curriculumData.map(u => ({ unit_id: u.unit_id, unit_title: u.unit_title }))}
+          selectedUnitId={selectedUnitId}
+          completedPlanets={astronaut!.completedPlanets}
+          passedRevisions={passedRevisions}
+          onSelectUnit={id => { setSelectedUnitId(id); setIsPracticing(false); }}
+          onStartRevision={setRevisionBeltId}
+          isOpen={sidebarOpen}
+          onToggle={() => setSidebarOpen(p => !p)}
+          stars={astronaut!.stars}
+          onOpenParentDashboard={() => setIsParentDashboardOpen(true)}
+        />
+        <MissionPractice
+          unit={selectedUnit!}
+          equippedAccessory={astronaut!.equippedAccessory}
+          onMissionSuccess={handleMissionSuccess}
+          onCancel={() => { setIsPracticing(false); setSelectedUnitId(null); }}
+        />
+      </div>
+    );
+  }
+
+  // ─────────── MAIN LAYOUT ───────────
+  return (
+    <div className="flex h-screen overflow-hidden" style={{ background: '#FFF8F0' }}>
+      <Sidebar
+        units={curriculumData.map(u => ({ unit_id: u.unit_id, unit_title: u.unit_title }))}
+        selectedUnitId={selectedUnitId}
+        completedPlanets={astronaut!.completedPlanets}
+        passedRevisions={passedRevisions}
+        onSelectUnit={id => { setSelectedUnitId(id); setCurrentView('map'); setIsModalOpen(true); }}
+        onStartRevision={setRevisionBeltId}
+        isOpen={sidebarOpen}
+        onToggle={() => setSidebarOpen(p => !p)}
+        stars={astronaut!.stars}
+        onOpenParentDashboard={() => setIsParentDashboardOpen(true)}
+      />
+
+      {/* Main content area */}
+      <main
+        className="flex-1 flex flex-col overflow-y-auto transition-all duration-300"
+        style={{ marginLeft: sidebarWidth }}
+      >
+        {/* Top Header */}
+        <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm px-6 py-3 flex items-center justify-between gap-4">
+          <div>
+            <h1 className="font-black text-gray-800 text-lg">
+              {currentView === 'map' ? '📚 Bài Học' : currentView === 'creative' ? '🎨 Sáng Tạo' : currentView === 'shop' ? '🛒 Cửa Hàng' : '🏆 Bảng Xếp Hạng'}
+            </h1>
+            <p className="text-xs text-gray-400 font-semibold">
+              Xin chào, <span className="text-violet-600 font-black">{astronaut!.name}</span>! 
+              Đã hoàn thành {astronaut!.completedPlanets.length}/25 bài · Vượt {passedRevisions.length}/6 Revision
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            {/* Stars */}
+            <div className="flex items-center gap-1.5 px-4 py-2 rounded-full border-2 border-amber-200 bg-amber-50 text-amber-600 font-black text-sm">
+              <Star size={16} fill="currentColor" className="animate-pulse" />
+              {astronaut!.stars}
+            </div>
+            {/* Nav */}
+            <div className="hidden sm:flex bg-gray-100 rounded-xl p-0.5 gap-0.5">
+              {(['map', 'creative', 'shop', 'leaderboard'] as const).map(v => (
+                <button
+                  key={v}
+                  onClick={() => setCurrentView(v)}
+                  className={`px-3 py-1.5 text-xs font-black rounded-lg transition-all ${currentView === v ? 'bg-white text-violet-700 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+                >
+                  {v === 'map' ? '📚 Bài Học' : v === 'creative' ? '🎨 Sáng Tạo' : v === 'shop' ? '🛒 Cửa Hàng' : '🏆 Bảng Xếp Hạng'}
+                </button>
+              ))}
+            </div>
+            <button onClick={() => { localStorage.removeItem('astronaut_name'); localStorage.removeItem('course_level'); setAstronaut(null); setCourseLevel(null); }} className="p-2 text-gray-400 hover:text-rose-500 transition-colors" title="Đăng xuất">
+              <LogOut size={18} />
+            </button>
+          </div>
+        </header>
+
+        {/* Content */}
+        <div className="flex-1 p-6">
+          {currentView === 'creative' ? (
+            <CreativeLab astronaut={astronaut!} onUpdateAstronaut={u => { const a = u as Astronaut; if (!a.passedRevisions) a.passedRevisions = []; setAstronaut(a); }} offlineMode={offlineMode} />
+          ) : currentView === 'shop' ? (
+            <WizardShop astronaut={astronaut!} onUpdateAstronaut={u => { const a = u as Astronaut; if (!a.passedRevisions) a.passedRevisions = []; setAstronaut(a); }} offlineMode={offlineMode} />
+          ) : currentView === 'leaderboard' ? (
+            <LeaderboardView leaderboard={leaderboard} myName={astronaut!.name} />
+          ) : (
+            // MAP / Home: Show journey map
+            <JourneyMap
+              astronautName={astronaut!.name}
+              equippedAccessory={astronaut!.equippedAccessory}
+              completedPlanets={astronaut!.completedPlanets}
+              passedRevisions={passedRevisions}
+              onSelectUnit={id => { setSelectedUnitId(id); setIsModalOpen(true); }}
+              onStartRevision={setRevisionBeltId}
+            />
+          )}
+        </div>
+      </main>
+
+      {/* Mission Modal */}
+      {selectedUnit && isModalOpen && (
+        <MissionModal
+          unit={selectedUnit}
+          isOpen={isModalOpen}
+          onClose={() => { setIsModalOpen(false); setSelectedUnitId(null); }}
+          isUnlocked={isUnitUnlocked(selectedUnit.unit_id, astronaut!.completedPlanets, passedRevisions)}
+          isCompleted={astronaut!.completedPlanets.includes(selectedUnit.unit_id)}
+          onStartMission={() => { setIsModalOpen(false); setIsPracticing(true); }}
+        />
+      )}
+
+      {/* Parent Dashboard Modal */}
+      <ParentDashboard
+        astronaut={astronaut!}
+        isOpen={isParentDashboardOpen}
+        onClose={() => setIsParentDashboardOpen(false)}
+      />
+    </div>
+  );
+}
+
+// ─────────── LEADERBOARD ───────────
+function LeaderboardView({ leaderboard, myName }: { leaderboard: LeaderboardEntry[]; myName: string }) {
+  return (
+    <div className="max-w-xl mx-auto bg-white rounded-3xl border-2 border-gray-100 shadow-lg overflow-hidden">
+      <div className="px-6 py-5 text-center" style={{ background: 'linear-gradient(135deg, #7C3AED, #2563EB)' }}>
+        <Trophy size={28} className="text-amber-300 mx-auto mb-2" />
+        <h2 className="text-xl font-black text-white">Bảng Vàng Sao Sáng</h2>
+      </div>
+      <div className="p-6 space-y-3">
+        {leaderboard.map((u, i) => (
+          <div
+            key={i}
+            className={`flex items-center justify-between p-4 rounded-2xl border-2 transition-all ${u.name === myName ? 'border-violet-300 bg-violet-50' : 'border-gray-100 bg-gray-50'}`}
+          >
+            <div className="flex items-center gap-3">
+              <span className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-black border-2 ${i === 0 ? 'bg-amber-400 text-white border-amber-300' : i === 1 ? 'bg-gray-300 text-gray-700 border-gray-200' : i === 2 ? 'bg-amber-700 text-white border-amber-600' : 'bg-gray-100 text-gray-500 border-gray-200'}`}>
+                {i + 1}
+              </span>
+              <div>
+                <p className="font-black text-gray-800">{u.name}</p>
+                <p className="text-xs text-gray-400 font-semibold">Đã mở: {u.completedPlanetsCount} bài</p>
+              </div>
+            </div>
+            <span className="flex items-center gap-1.5 font-black text-amber-500">
+              <Star size={16} fill="currentColor" /> {u.stars}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

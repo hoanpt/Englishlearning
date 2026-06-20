@@ -1,0 +1,867 @@
+[
+  {
+    "unit_id": 1,
+    "unit_title": "My Life and Home",
+    "topic": "Home & Daily Life",
+    "color": "#3B82F6",
+    "vocabulary": [
+      { "word": "furniture", "definition": "objects such as chairs, tables, and beds that are put in rooms", "example": "The furniture in my room is quite modern.", "partOfSpeech": "noun (U)" },
+      { "word": "comfortable", "definition": "making you feel relaxed and free from pain", "example": "This sofa is very comfortable to sit on.", "partOfSpeech": "adjective" },
+      { "word": "occasionally", "definition": "sometimes but not regularly", "example": "I occasionally visit my grandparents at the weekend.", "partOfSpeech": "adverb" },
+      { "word": "reasonable", "definition": "fair and sensible; not too expensive", "example": "The rent for this flat is very reasonable.", "partOfSpeech": "adjective" },
+      { "word": "duvet", "definition": "a thick soft cover filled with feathers that you sleep under", "example": "I bought a new duvet for my bed last winter.", "partOfSpeech": "noun (C)" },
+      { "word": "microwave", "definition": "an electric oven that cooks or heats food very quickly", "example": "She heated the soup in the microwave.", "partOfSpeech": "noun (C)" },
+      { "word": "hardly ever", "definition": "almost never", "example": "I hardly ever watch TV these days.", "partOfSpeech": "adverb phrase" },
+      { "word": "chest of drawers", "definition": "a piece of furniture with drawers for keeping clothes", "example": "He kept his shirts in the chest of drawers.", "partOfSpeech": "noun (C)" },
+      { "word": "convenient", "definition": "easy to use or situated nearby", "example": "Living close to school is very convenient.", "partOfSpeech": "adjective" },
+      { "word": "household", "definition": "relating to the home and the people who live in it", "example": "We share household chores equally.", "partOfSpeech": "adjective" },
+      { "word": "routine", "definition": "the usual order in which you do things", "example": "My morning routine includes exercise.", "partOfSpeech": "noun (C/U)" },
+      { "word": "terraced house", "definition": "a house that is part of a row of houses joined together", "example": "They live in a terraced house in the city centre.", "partOfSpeech": "noun (C)" },
+      { "word": "spacious", "definition": "having a lot of space; large in area", "example": "The living room is very spacious.", "partOfSpeech": "adjective" },
+      { "word": "suburb", "definition": "an area on the edge of a large town or city where people live", "example": "We moved to a quiet suburb last year.", "partOfSpeech": "noun (C)" },
+      { "word": "balcony", "definition": "a platform attached to the outside of a building above ground level", "example": "We have breakfast on the balcony in summer.", "partOfSpeech": "noun (C)" }
+    ],
+    "grammar": {
+      "topic": "Present Simple vs Present Continuous",
+      "explanation": "Use Present Simple for habits, routines, and permanent states. Use Present Continuous for actions happening now or temporary situations.",
+      "rules": [
+        "Present Simple: I/You/We/They + base verb; He/She/It + verb+s",
+        "Present Continuous: am/is/are + verb+ing",
+        "State verbs (know, love, believe) DON'T use continuous"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "She _____ (usually/make) her bed every morning.", "answer": "usually makes", "options": ["usually makes", "is usually making", "usually make", "has usually made"], "explanation": "Habit → Present Simple. 'She' needs 3rd person -s." },
+        { "id": 2, "sentence": "Be quiet! The baby _____ (sleep) right now.", "answer": "is sleeping", "options": ["sleeps", "is sleeping", "has slept", "slept"], "explanation": "Happening now → Present Continuous." },
+        { "id": 3, "sentence": "I _____ (not/understand) why she is upset.", "answer": "don't understand", "options": ["don't understand", "am not understanding", "haven't understood", "didn't understand"], "explanation": "'Understand' is a state verb — no continuous form." },
+        { "id": 4, "sentence": "My parents _____ (renovate) our kitchen this week.", "answer": "are renovating", "options": ["renovate", "are renovating", "have renovated", "renovated"], "explanation": "Temporary situation now → Present Continuous." },
+        { "id": 5, "sentence": "Water _____ (boil) at 100 degrees Celsius.", "answer": "boils", "options": ["boils", "is boiling", "has boiled", "boil"], "explanation": "Scientific fact → Present Simple." },
+        { "id": 6, "sentence": "She _____ (always/leave) her keys on the table.", "answer": "always leaves", "options": ["always leaves", "is always leaving", "always left", "has always left"], "explanation": "Habit → Present Simple (though 'is always leaving' is also possible to show annoyance)." }
+      ]
+    },
+    "reading": {
+      "title": "My Unusual Home",
+      "text": "My name is Sonia and I live in a very unusual place — a houseboat on the River Thames in London. Most people are surprised when I tell them this, because they imagine living on a boat must be very uncomfortable. In fact, my home is quite spacious inside: it has two bedrooms, a kitchen, a bathroom and a living room with large windows that look out onto the river.\n\nThe best thing about living on the water is waking up and seeing the river every morning. I love watching the boats go past while I have my breakfast. The neighbourhood is also very friendly. I know all my neighbours well, and we occasionally have barbecues on the riverside together.\n\nOf course, there are some disadvantages. The boat moves a little in rough weather, which some guests find frightening. Parking is also a problem — I have to walk quite far to get to my car. However, I wouldn't swap my houseboat for a house on land. It's my perfect home.",
+      "questions": [
+        {
+          "id": 1,
+          "question": "How do most people react when Sonia tells them where she lives?",
+          "options": ["A. They are jealous", "B. They are surprised", "C. They are frightened", "D. They are interested"],
+          "answer": "B",
+          "explanation": "The text says 'Most people are surprised when I tell them this.'"
+        },
+        {
+          "id": 2,
+          "question": "What does Sonia enjoy doing in the mornings?",
+          "options": ["A. Swimming in the river", "B. Talking to her neighbours", "C. Watching boats while having breakfast", "D. Walking to her car"],
+          "answer": "C",
+          "explanation": "'I love watching the boats go past while I have my breakfast.'"
+        },
+        {
+          "id": 3,
+          "question": "What is one disadvantage of living on a houseboat?",
+          "options": ["A. It is too small", "B. It moves in bad weather", "C. The neighbours are unfriendly", "D. There are no windows"],
+          "answer": "B",
+          "explanation": "'The boat moves a little in rough weather, which some guests find frightening.'"
+        },
+        {
+          "id": 4,
+          "question": "Overall, how does Sonia feel about her home?",
+          "options": ["A. She wishes she lived on land", "B. She finds it too expensive", "C. She is very happy with it", "D. She wants a bigger home"],
+          "answer": "C",
+          "explanation": "'I wouldn't swap my houseboat for a house on land. It's my perfect home.'"
+        }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "It's a long time since I last visited my grandparents.", "key_word": "for", "answer": "I haven't visited my grandparents for a long time.", "hint": "haven't + visited + for" },
+      { "id": 2, "original": "Living in the suburbs is cheaper than living in the city.", "key_word": "expensive", "answer": "Living in the city is more expensive than living in the suburbs.", "hint": "more expensive than" },
+      { "id": 3, "original": "My sister usually goes to bed at 10 pm.", "key_word": "bed", "answer": "My sister usually goes to bed at 10 pm.", "hint": "No change needed — note the structure 'goes to bed'" },
+      { "id": 4, "original": "They started building the new house three years ago.", "key_word": "been", "answer": "They have been building the new house for three years.", "hint": "have been building for" }
+    ],
+    "cloze": {
+      "title": "Urban vs Rural Living",
+      "text": "Many young people today are choosing to (1)_____ in cities rather than in the countryside. There are many reasons for this. City life (2)_____ a wide range of job opportunities, and public transport makes it easy to (3)_____ around. However, life in a busy city can (4)_____ be stressful and expensive. Rent prices are much (5)_____ in cities than in rural areas. On the other hand, the countryside (6)_____ fresh air and a quieter lifestyle, which many people find (7)_____.",
+      "gaps": [
+        { "id": 1, "answer": "live", "options": ["live", "stay", "remain", "be"] },
+        { "id": 2, "answer": "offers", "options": ["offers", "makes", "provides", "gives"] },
+        { "id": 3, "answer": "get", "options": ["get", "go", "move", "travel"] },
+        { "id": 4, "answer": "also", "options": ["also", "still", "even", "yet"] },
+        { "id": 5, "answer": "higher", "options": ["higher", "bigger", "more", "greater"] },
+        { "id": 6, "answer": "provides", "options": ["provides", "brings", "carries", "holds"] },
+        { "id": 7, "answer": "appealing", "options": ["appealing", "boring", "difficult", "strange"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 2,
+    "unit_title": "At School",
+    "topic": "Education & Learning",
+    "color": "#8B5CF6",
+    "vocabulary": [
+      { "word": "compulsory", "definition": "required by law or rules; not optional", "example": "Education is compulsory for children aged 5–16.", "partOfSpeech": "adjective" },
+      { "word": "curriculum", "definition": "all the subjects included in a course of study", "example": "The school has a very broad curriculum.", "partOfSpeech": "noun (C/U)" },
+      { "word": "assignment", "definition": "a piece of work that you are given to do", "example": "I have three assignments due this week.", "partOfSpeech": "noun (C)" },
+      { "word": "concentrate", "definition": "to give all your attention to something", "example": "It's hard to concentrate when it's noisy.", "partOfSpeech": "verb" },
+      { "word": "equipment", "definition": "tools or machines needed for a particular purpose", "example": "The science lab has excellent equipment.", "partOfSpeech": "noun (U)" },
+      { "word": "scholarship", "definition": "money given to a student to pay for their education", "example": "She won a scholarship to study abroad.", "partOfSpeech": "noun (C)" },
+      { "word": "revise", "definition": "to study again in preparation for an exam", "example": "I need to revise for my maths test.", "partOfSpeech": "verb" },
+      { "word": "graduate", "definition": "to successfully complete a university or school course", "example": "She graduated from university last summer.", "partOfSpeech": "verb" },
+      { "word": "achieve", "definition": "to succeed in doing something after effort", "example": "He achieved excellent results in his exams.", "partOfSpeech": "verb" },
+      { "word": "knowledge", "definition": "facts and information that you know", "example": "Her knowledge of history is impressive.", "partOfSpeech": "noun (U)" },
+      { "word": "discipline", "definition": "training that makes people obey rules; a subject of study", "example": "Discipline is important in a classroom environment.", "partOfSpeech": "noun (U)" },
+      { "word": "timetable", "definition": "a list showing when events or activities are planned to happen", "example": "I checked my timetable to see when PE was.", "partOfSpeech": "noun (C)" },
+      { "word": "optional", "definition": "not required; available for you to choose", "example": "Music is an optional subject at our school.", "partOfSpeech": "adjective" },
+      { "word": "qualify", "definition": "to pass exams needed for a professional job", "example": "It takes years to qualify as a doctor.", "partOfSpeech": "verb" },
+      { "word": "progress", "definition": "the process of improving or developing", "example": "She's making excellent progress in English.", "partOfSpeech": "noun (U)" }
+    ],
+    "grammar": {
+      "topic": "Countable and Uncountable Nouns",
+      "explanation": "Countable nouns have singular and plural forms and can be used with 'a/an'. Uncountable nouns have no plural form and cannot be used with 'a/an'.",
+      "rules": [
+        "Countable: a book, two books, several students",
+        "Uncountable: information, advice, homework, furniture, knowledge, equipment",
+        "Some quantifiers work with both: some, any, a lot of, enough, no",
+        "Much/little = uncountable; Many/few = countable"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "The teacher gave us too much _____.", "answer": "homework", "options": ["homework", "homeworks", "a homework", "the homeworks"], "explanation": "'Homework' is uncountable — no plural, no article." },
+        { "id": 2, "sentence": "Can you give me some _____ about the course?", "answer": "information", "options": ["information", "informations", "an information", "the informations"], "explanation": "'Information' is uncountable." },
+        { "id": 3, "sentence": "We don't have _____ time before the exam.", "answer": "much", "options": ["much", "many", "few", "a few"], "explanation": "'Time' is uncountable → use 'much'." },
+        { "id": 4, "sentence": "There are _____ students in my class.", "answer": "a few", "options": ["a few", "a little", "much", "less"], "explanation": "'Students' is countable → 'a few'." },
+        { "id": 5, "sentence": "The school has bought new _____ for the science lab.", "answer": "equipment", "options": ["equipment", "equipments", "an equipment", "piece of equipments"], "explanation": "'Equipment' is uncountable. Use 'pieces of equipment' for quantity." },
+        { "id": 6, "sentence": "She gave me a very useful piece of _____.", "answer": "advice", "options": ["advice", "advices", "an advice", "advising"], "explanation": "'Advice' is uncountable — use 'a piece of advice'." }
+      ]
+    },
+    "reading": {
+      "title": "A School in the Cloud",
+      "text": "In 1999, scientist Sugata Mitra conducted an unusual experiment. He placed a computer in a wall in a slum area of Delhi and left it for children to discover. He returned a few months later to find that the children had not only learned how to use the computer, but had also taught themselves basic English in order to use it more effectively.\n\nThis experiment led Mitra to develop his 'Hole in the Wall' project and, later, the concept of 'Self-Organised Learning Environments' (SOLEs). His idea is simple: give children access to the internet and a 'big question' to explore, and they will learn collaboratively without a teacher telling them what to do.\n\nMitra won the prestigious TED Prize in 2013 for his work and used the prize money to set up Schools in the Cloud around the world. These are not traditional classrooms — they are spaces where children can connect with each other and with mentors via video call. The results suggest that children are naturally curious and can motivate themselves to learn when given the right environment.",
+      "questions": [
+        { "id": 1, "question": "What did Mitra discover when he returned to the experiment?", "options": ["A. The computer had been stolen", "B. The children had taught themselves to use it", "C. The children were not interested in computers", "D. Adults had been using the computer"], "answer": "B", "explanation": "The text says children 'had learned how to use the computer'." },
+        { "id": 2, "question": "What is the key principle of Mitra's SOLE approach?", "options": ["A. Teachers guide students step by step", "B. Students work alone with textbooks", "C. Students learn collaboratively with internet access", "D. Schools must have modern equipment"], "answer": "C", "explanation": "Children 'learn collaboratively without a teacher telling them what to do'." },
+        { "id": 3, "question": "What did Mitra use the TED Prize money for?", "options": ["A. To build traditional schools", "B. To fund more experiments in Delhi", "C. To create Schools in the Cloud", "D. To pay teachers' salaries"], "answer": "C", "explanation": "'He used the prize money to set up Schools in the Cloud.'" },
+        { "id": 4, "question": "What does the article suggest about children?", "options": ["A. They need strict discipline to learn", "B. They learn best in traditional classrooms", "C. They are naturally curious and self-motivated", "D. They prefer to learn from computers only"], "answer": "C", "explanation": "'Children are naturally curious and can motivate themselves to learn.'" }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "There are very few students who enjoy exams.", "key_word": "hardly", "answer": "Hardly any students enjoy exams.", "hint": "Hardly any + noun" },
+      { "id": 2, "original": "It wasn't necessary for him to study all night.", "key_word": "need", "answer": "He didn't need to study all night.", "hint": "didn't need to" },
+      { "id": 3, "original": "The last time she studied French was three years ago.", "key_word": "studied", "answer": "She hasn't studied French for three years.", "hint": "hasn't studied for" },
+      { "id": 4, "original": "Despite being tired, she finished her homework.", "key_word": "although", "answer": "Although she was tired, she finished her homework.", "hint": "Although she was..." }
+    ],
+    "cloze": {
+      "title": "The Benefits of Reading",
+      "text": "Reading is one of the most (1)_____ skills a student can develop. It not only helps you (2)_____ your vocabulary, but it also improves your ability to concentrate and think critically. Research (3)_____ that students who read regularly tend to (4)_____ better in all subjects, not just English. This is because reading (5)_____ you with knowledge about a wide range of topics. Teachers often recommend that students (6)_____ at least 30 minutes every day, even if it is just reading a magazine or website. The important thing is to make it a regular (7)_____.",
+      "gaps": [
+        { "id": 1, "answer": "valuable", "options": ["valuable", "expensive", "popular", "difficult"] },
+        { "id": 2, "answer": "expand", "options": ["expand", "improve", "increase", "grow"] },
+        { "id": 3, "answer": "shows", "options": ["shows", "tells", "says", "explains"] },
+        { "id": 4, "answer": "perform", "options": ["perform", "do", "make", "achieve"] },
+        { "id": 5, "answer": "provides", "options": ["provides", "gives", "offers", "brings"] },
+        { "id": 6, "answer": "read", "options": ["read", "study", "learn", "practise"] },
+        { "id": 7, "answer": "habit", "options": ["habit", "routine", "practice", "activity"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 3,
+    "unit_title": "Having Fun",
+    "topic": "Hobbies & Free Time",
+    "color": "#10B981",
+    "vocabulary": [
+      { "word": "enthusiastic", "definition": "showing great excitement and interest", "example": "She is enthusiastic about learning new things.", "partOfSpeech": "adjective" },
+      { "word": "recreation", "definition": "activities done for enjoyment in spare time", "example": "The park provides space for recreation.", "partOfSpeech": "noun (U)" },
+      { "word": "amateur", "definition": "doing something for enjoyment, not as a profession", "example": "He is an amateur photographer.", "partOfSpeech": "adjective/noun" },
+      { "word": "competitive", "definition": "having a strong desire to be more successful than others", "example": "She is very competitive at sports.", "partOfSpeech": "adjective" },
+      { "word": "worthwhile", "definition": "worth the time, money, or effort spent", "example": "Learning a musical instrument is worthwhile.", "partOfSpeech": "adjective" },
+      { "word": "commitment", "definition": "the willingness to give your time and energy to something", "example": "Playing in a team requires real commitment.", "partOfSpeech": "noun (U/C)" },
+      { "word": "tournament", "definition": "a competition with several rounds", "example": "Our school entered the regional tennis tournament.", "partOfSpeech": "noun (C)" },
+      { "word": "accomplish", "definition": "to succeed in doing something difficult", "example": "She accomplished her goal of running a marathon.", "partOfSpeech": "verb" },
+      { "word": "leisure", "definition": "free time when you are not working or studying", "example": "How do you spend your leisure time?", "partOfSpeech": "noun (U)" },
+      { "word": "dedicate", "definition": "to give a lot of time and effort to something", "example": "He dedicates hours to practising guitar.", "partOfSpeech": "verb" },
+      { "word": "passionate", "definition": "having very strong feelings about something", "example": "She is passionate about environmental issues.", "partOfSpeech": "adjective" },
+      { "word": "exhibition", "definition": "a public display of art, products, or information", "example": "We visited an exhibition of modern photography.", "partOfSpeech": "noun (C)" },
+      { "word": "adventurous", "definition": "willing to try new and exciting experiences", "example": "Kayaking is for adventurous people.", "partOfSpeech": "adjective" },
+      { "word": "boredom", "definition": "the feeling of being bored", "example": "He reads to escape boredom.", "partOfSpeech": "noun (U)" },
+      { "word": "creative", "definition": "producing original ideas or things", "example": "Painting is a very creative hobby.", "partOfSpeech": "adjective" }
+    ],
+    "grammar": {
+      "topic": "Past Simple vs Present Perfect",
+      "explanation": "Use Past Simple for completed actions at a specific time in the past. Use Present Perfect for actions with a connection to the present, or when no specific time is given.",
+      "rules": [
+        "Past Simple: yesterday, last week, in 2020, when I was...",
+        "Present Perfect: ever, never, already, yet, just, recently, for, since",
+        "Present Perfect: result in the present is important",
+        "Have/has + past participle (gone, seen, done, played)"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "I _____ (never/try) surfing before.", "answer": "have never tried", "options": ["have never tried", "never tried", "never try", "had never tried"], "explanation": "'Never' + experience → Present Perfect." },
+        { "id": 2, "sentence": "She _____ (win) the gold medal at the 2022 championships.", "answer": "won", "options": ["won", "has won", "had won", "wins"], "explanation": "Specific time (2022) → Past Simple." },
+        { "id": 3, "sentence": "_____ you ever _____ (play) chess?", "answer": "Have / played", "options": ["Have / played", "Did / play", "Do / play", "Had / played"], "explanation": "'Ever' + experience → Present Perfect." },
+        { "id": 4, "sentence": "We _____ (just/finish) our art project.", "answer": "have just finished", "options": ["have just finished", "just finished", "just finish", "had just finished"], "explanation": "'Just' typically goes with Present Perfect." },
+        { "id": 5, "sentence": "He _____ (start) his photography hobby when he _____ (be) twelve.", "answer": "started / was", "options": ["started / was", "has started / was", "started / has been", "has started / has been"], "explanation": "Specific time in past (when he was) → Past Simple both." },
+        { "id": 6, "sentence": "I _____ (not/see) that film yet. Is it good?", "answer": "haven't seen", "options": ["haven't seen", "didn't see", "don't see", "hadn't seen"], "explanation": "'Yet' → Present Perfect." }
+      ]
+    },
+    "reading": {
+      "title": "The Rise of Esports",
+      "text": "For many years, sport meant physical activity — running, swimming, or playing team games. However, in recent years, a new type of competition has emerged: esports, or competitive video gaming. Today, millions of people worldwide watch professional gamers compete in tournaments, and prize money can reach into the millions of dollars.\n\nEsports fans argue that gaming requires just as much skill, strategy, and teamwork as traditional sports. Top players train for hours every day, developing fast reactions and detailed knowledge of complex game mechanics. Some universities in the USA now even offer esports scholarships to attract talented students.\n\nCritics, however, point out that spending too much time in front of a screen can have negative health effects, including poor posture and eyesight problems. There are also concerns about the social isolation that excessive gaming can cause.\n\nDespite these concerns, the esports industry continues to grow rapidly. Major brands are investing in teams and events, and the question is no longer whether esports is a real sport, but how large it will become.",
+      "questions": [
+        { "id": 1, "question": "What does the article say has recently changed about sport?", "options": ["A. Traditional sports are becoming less popular", "B. A new form of competition has developed", "C. Prize money for all sports has increased", "D. Physical training has become more important"], "answer": "B", "explanation": "'A new type of competition has emerged: esports.'" },
+        { "id": 2, "question": "How do esports supporters justify calling it a sport?", "options": ["A. It is watched by millions of people", "B. Players earn a lot of money", "C. It requires skill, strategy, and teamwork", "D. Universities offer scholarships"], "answer": "C", "explanation": "'Gaming requires just as much skill, strategy, and teamwork as traditional sports.'" },
+        { "id": 3, "question": "What concern do critics raise?", "options": ["A. Games are too expensive", "B. Professional players earn too much", "C. Too much screen time harms health", "D. Esports lacks proper rules"], "answer": "C", "explanation": "'Too much time in front of a screen can have negative health effects.'" },
+        { "id": 4, "question": "What does the article predict about esports?", "options": ["A. It will replace traditional sports", "B. It will continue to grow", "C. It will lose popularity soon", "D. It will become an Olympic sport"], "answer": "B", "explanation": "'The esports industry continues to grow rapidly.'" }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "She started learning the guitar two years ago.", "key_word": "for", "answer": "She has been learning the guitar for two years.", "hint": "has been learning for" },
+      { "id": 2, "original": "It's ages since I last went to the cinema.", "key_word": "been", "answer": "I haven't been to the cinema for ages.", "hint": "haven't been for ages" },
+      { "id": 3, "original": "This is the most exciting game I have ever played.", "key_word": "exciting", "answer": "I have never played such an exciting game.", "hint": "never played such an exciting" },
+      { "id": 4, "original": "My hobby is more interesting than I expected.", "key_word": "than", "answer": "My hobby is more interesting than I expected.", "hint": "Comparative: more...than" }
+    ],
+    "cloze": {
+      "title": "The Benefits of Hobbies",
+      "text": "Having a hobby is important for your (1)_____ wellbeing. When you spend time doing something you enjoy, your stress levels go (2)_____ and you feel happier. Hobbies also help you develop new (3)_____ and meet people who share similar interests. Some hobbies, like sport or dancing, can also (4)_____ your physical health. Experts recommend choosing a hobby that (5)_____ you a sense of achievement. Whether it's painting, coding, or learning a musical (6)_____, the key is to find something you are (7)_____ about and commit to it regularly.",
+      "gaps": [
+        { "id": 1, "answer": "mental", "options": ["mental", "physical", "emotional", "personal"] },
+        { "id": 2, "answer": "down", "options": ["down", "up", "away", "off"] },
+        { "id": 3, "answer": "skills", "options": ["skills", "abilities", "talents", "knowledge"] },
+        { "id": 4, "answer": "improve", "options": ["improve", "increase", "benefit", "help"] },
+        { "id": 5, "answer": "gives", "options": ["gives", "brings", "makes", "provides"] },
+        { "id": 6, "answer": "instrument", "options": ["instrument", "tool", "device", "hobby"] },
+        { "id": 7, "answer": "passionate", "options": ["passionate", "enthusiastic", "interested", "keen"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 4,
+    "unit_title": "On Holiday",
+    "topic": "Travel & Tourism",
+    "color": "#F59E0B",
+    "vocabulary": [
+      { "word": "destination", "definition": "the place you are travelling to", "example": "Paris is a popular tourist destination.", "partOfSpeech": "noun (C)" },
+      { "word": "itinerary", "definition": "a detailed plan of a journey", "example": "Our tour guide gave us a full itinerary.", "partOfSpeech": "noun (C)" },
+      { "word": "accommodation", "definition": "a place to stay, especially when travelling", "example": "Have you booked your accommodation?", "partOfSpeech": "noun (U)" },
+      { "word": "excursion", "definition": "a short trip, especially for pleasure", "example": "We went on an excursion to the mountains.", "partOfSpeech": "noun (C)" },
+      { "word": "sightseeing", "definition": "visiting famous or interesting places as a tourist", "example": "We spent the morning sightseeing in Rome.", "partOfSpeech": "noun (U)" },
+      { "word": "budget", "definition": "the amount of money available for spending", "example": "We planned our trip on a tight budget.", "partOfSpeech": "noun (C)" },
+      { "word": "spectacular", "definition": "very impressive or dramatic", "example": "The view from the summit was spectacular.", "partOfSpeech": "adjective" },
+      { "word": "souvenir", "definition": "an object you buy as a reminder of a place", "example": "She bought a small souvenir from the market.", "partOfSpeech": "noun (C)" },
+      { "word": "customs", "definition": "the place at a border where officials check your luggage", "example": "We had to queue at customs for 30 minutes.", "partOfSpeech": "noun (plural)" },
+      { "word": "currency", "definition": "the type of money used in a country", "example": "You'll need to exchange your currency before you go.", "partOfSpeech": "noun (C/U)" },
+      { "word": "sunscreen", "definition": "a cream you put on your skin to protect it from the sun", "example": "Don't forget to apply sunscreen on the beach.", "partOfSpeech": "noun (U)" },
+      { "word": "breathtaking", "definition": "extremely impressive or beautiful", "example": "The waterfall was absolutely breathtaking.", "partOfSpeech": "adjective" },
+      { "word": "local", "definition": "relating to the area you are in", "example": "We ate at a local restaurant recommended by a guide.", "partOfSpeech": "adjective" },
+      { "word": "guidebook", "definition": "a book that gives information for visitors", "example": "I read the guidebook before our trip.", "partOfSpeech": "noun (C)" },
+      { "word": "transit", "definition": "the process of travelling through a place on the way to another", "example": "We had a 4-hour transit in Istanbul.", "partOfSpeech": "noun (U)" }
+    ],
+    "grammar": {
+      "topic": "Comparative and Superlative Adjectives",
+      "explanation": "Comparatives compare two things; superlatives compare one thing to all others in a group.",
+      "rules": [
+        "Short adj: cheaper, bigger, hotter; the cheapest, the biggest",
+        "Long adj: more comfortable, less expensive; the most comfortable",
+        "Irregular: good/better/best; bad/worse/worst; far/further/furthest",
+        "As...as: 'This hotel is as expensive as that one' (equal comparison)"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "Travelling by train is _____ than flying.", "answer": "more relaxing", "options": ["more relaxing", "relaxinger", "most relaxing", "relaxing more"], "explanation": "2-syllable+ adj → 'more + adjective'." },
+        { "id": 2, "sentence": "This is _____ beach I've ever visited.", "answer": "the most beautiful", "options": ["the most beautiful", "the more beautiful", "the beautifulest", "most beautiful"], "explanation": "Superlative: 'the most + adjective'." },
+        { "id": 3, "sentence": "The weather in Spain is _____ than in England.", "answer": "much hotter", "options": ["much hotter", "much more hot", "far most hot", "hotter more"], "explanation": "Short adj: 'hotter'; 'much' intensifies comparative." },
+        { "id": 4, "sentence": "This trip wasn't _____ our last one.", "answer": "as exciting as", "options": ["as exciting as", "more exciting than", "the most exciting of", "exciting as"], "explanation": "Negative equal comparison: 'not as...as'." },
+        { "id": 5, "sentence": "Which is _____ country in the world?", "answer": "the smallest", "options": ["the smallest", "smallest", "more small", "the most small"], "explanation": "Superlative with 'the'." },
+        { "id": 6, "sentence": "The _____ we booked, the _____ the prices were.", "answer": "earlier / cheaper", "options": ["earlier / cheaper", "earlier / more cheap", "more early / cheaper", "sooner / most cheap"], "explanation": "Double comparative: 'The + comparative, the + comparative'." }
+      ]
+    },
+    "reading": {
+      "title": "Staycations: The New Holiday Trend",
+      "text": "In recent years, a growing number of people have chosen to stay at home for their holidays rather than travelling abroad. This trend, known as a 'staycation', has become increasingly popular due to rising travel costs and environmental concerns.\n\nProponents of staycations argue that there are many advantages to exploring your own country. Firstly, it is significantly cheaper — you avoid expensive flights, airport taxes, and foreign currency costs. Secondly, you are likely to discover hidden gems close to home that you might never have noticed before. Many people are surprised by how much there is to see and do in their own region.\n\nHowever, others feel that travelling abroad offers experiences that a staycation simply cannot match. Immersing yourself in a different culture, hearing a foreign language, and tasting unfamiliar food are all experiences that broaden your mind and perspective.\n\nRegardless of which option you prefer, the most important thing is to take a break. Research consistently shows that holidays — whether at home or abroad — significantly improve mental health and productivity.",
+      "questions": [
+        { "id": 1, "question": "Why have staycations become more popular?", "options": ["A. People prefer their own culture", "B. Flights have become unreliable", "C. Travel costs and environmental worries have increased", "D. Foreign holidays are no longer available"], "answer": "C", "explanation": "'Due to rising travel costs and environmental concerns.'" },
+        { "id": 2, "question": "What is one benefit of a staycation mentioned in the article?", "options": ["A. You can speak a foreign language", "B. You might discover places you didn't know about", "C. The food is more varied", "D. You can travel further"], "answer": "B", "explanation": "'You are likely to discover hidden gems close to home.'" },
+        { "id": 3, "question": "What do supporters of foreign travel say?", "options": ["A. It is cheaper than staying at home", "B. It helps you understand different cultures", "C. There is no culture in your own country", "D. Staycations are boring"], "answer": "B", "explanation": "'Immersing yourself in a different culture...broadens your mind.'" },
+        { "id": 4, "question": "What does research show about holidays in general?", "options": ["A. They are too expensive", "B. Only foreign holidays are beneficial", "C. They improve mental health and productivity", "D. People prefer not to take them"], "answer": "C", "explanation": "'Holidays significantly improve mental health and productivity.'" }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "No other hotel in the city is as luxurious as this one.", "key_word": "most", "answer": "This is the most luxurious hotel in the city.", "hint": "the most luxurious" },
+      { "id": 2, "original": "The journey took longer than we expected.", "key_word": "as", "answer": "The journey wasn't as short as we expected.", "hint": "wasn't as short as" },
+      { "id": 3, "original": "She has never been to a hotter country.", "key_word": "hottest", "answer": "It is the hottest country she has ever been to.", "hint": "the hottest...she has ever" },
+      { "id": 4, "original": "Travelling by bus is cheaper, but it takes more time.", "key_word": "although", "answer": "Although travelling by bus is cheaper, it takes more time.", "hint": "Although + clause" }
+    ],
+    "cloze": {
+      "title": "Packing Tips for Travellers",
+      "text": "One of the most common (1)_____ travellers make is packing too much. When you are preparing for a holiday, it is tempting to (2)_____ everything you might possibly need. However, a heavy suitcase can (3)_____ your journey much more stressful. Experienced travellers (4)_____ to pack light, choosing versatile clothing items that can be (5)_____ in different ways. It is also a good idea to keep a list of (6)_____ items so you never forget anything important, such as your passport or travel insurance (7)_____.",
+      "gaps": [
+        { "id": 1, "answer": "mistakes", "options": ["mistakes", "errors", "problems", "faults"] },
+        { "id": 2, "answer": "pack", "options": ["pack", "bring", "carry", "take"] },
+        { "id": 3, "answer": "make", "options": ["make", "do", "get", "cause"] },
+        { "id": 4, "answer": "recommend", "options": ["recommend", "suggest", "advise", "tell"] },
+        { "id": 5, "answer": "worn", "options": ["worn", "used", "dressed", "matched"] },
+        { "id": 6, "answer": "essential", "options": ["essential", "important", "necessary", "useful"] },
+        { "id": 7, "answer": "documents", "options": ["documents", "papers", "cards", "books"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 5,
+    "unit_title": "Different Feelings",
+    "topic": "Emotions & Well-being",
+    "color": "#EC4899",
+    "vocabulary": [
+      { "word": "anxious", "definition": "worried and nervous, especially about something uncertain", "example": "She felt anxious before the interview.", "partOfSpeech": "adjective" },
+      { "word": "overwhelmed", "definition": "having too much of something to deal with", "example": "He felt overwhelmed by the amount of work.", "partOfSpeech": "adjective" },
+      { "word": "relieved", "definition": "feeling happy because a worry has gone", "example": "She was relieved when the exam was over.", "partOfSpeech": "adjective" },
+      { "word": "empathy", "definition": "the ability to understand how others feel", "example": "Good friends show empathy towards each other.", "partOfSpeech": "noun (U)" },
+      { "word": "frustrated", "definition": "annoyed because you cannot do something or achieve a goal", "example": "He felt frustrated when he kept making the same mistake.", "partOfSpeech": "adjective" },
+      { "word": "confident", "definition": "feeling sure about your abilities", "example": "She was confident going into the speaking exam.", "partOfSpeech": "adjective" },
+      { "word": "mood", "definition": "the way you feel at a particular time", "example": "He was in a really good mood this morning.", "partOfSpeech": "noun (C)" },
+      { "word": "cope", "definition": "to deal with a difficult situation", "example": "She found it hard to cope with the pressure.", "partOfSpeech": "verb" },
+      { "word": "optimistic", "definition": "believing that good things will happen", "example": "Try to stay optimistic about the future.", "partOfSpeech": "adjective" },
+      { "word": "jealous", "definition": "unhappy because someone else has something you want", "example": "He felt jealous of his friend's success.", "partOfSpeech": "adjective" },
+      { "word": "embarrassed", "definition": "feeling uncomfortable because of something silly you did", "example": "She was embarrassed about forgetting his name.", "partOfSpeech": "adjective" },
+      { "word": "grief", "definition": "great sadness, especially after losing someone", "example": "She went through a period of grief after her loss.", "partOfSpeech": "noun (U)" },
+      { "word": "resilient", "definition": "able to recover quickly from difficulties", "example": "Children are often more resilient than adults think.", "partOfSpeech": "adjective" },
+      { "word": "self-esteem", "definition": "confidence in your own worth and abilities", "example": "Praise can greatly improve a child's self-esteem.", "partOfSpeech": "noun (U)" },
+      { "word": "comfort", "definition": "a state of ease; to make someone feel better", "example": "She called her friend for comfort.", "partOfSpeech": "noun (U) / verb" }
+    ],
+    "grammar": {
+      "topic": "Modal Verbs (must, should, can, might, need to)",
+      "explanation": "Modal verbs express necessity, obligation, possibility, ability, and advice. They are always followed by the base form of the verb.",
+      "rules": [
+        "must / have to = obligation or necessity",
+        "should / ought to = advice or recommendation",
+        "can / could = ability or possibility",
+        "might / may = possibility (less certain)",
+        "mustn't = prohibition (not allowed); don't have to = not necessary"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "You _____ tell anyone about this — it's a secret.", "answer": "mustn't", "options": ["mustn't", "don't have to", "shouldn't have", "needn't"], "explanation": "'Mustn't' = prohibition (not allowed to do it)." },
+        { "id": 2, "sentence": "I'm not sure, but she _____ be at the library.", "answer": "might", "options": ["might", "must", "should", "will"], "explanation": "'Might' expresses uncertain possibility." },
+        { "id": 3, "sentence": "You _____ bring your passport — it's the law.", "answer": "must", "options": ["must", "should", "might", "could"], "explanation": "'Must' = strong necessity/obligation." },
+        { "id": 4, "sentence": "You look tired. You _____ take a break.", "answer": "should", "options": ["should", "must", "might", "can"], "explanation": "'Should' = advice/recommendation." },
+        { "id": 5, "sentence": "She _____ speak three languages — she's very talented.", "answer": "can", "options": ["can", "should", "must", "might"], "explanation": "'Can' = ability." },
+        { "id": 6, "sentence": "He _____ pass his driving test yesterday. He's so happy!", "answer": "managed to", "options": ["managed to", "could", "was able to pass", "must have"], "explanation": "'Managed to' or 'was able to' = succeeded at a specific past event. 'Could' is for general past ability." }
+      ]
+    },
+    "reading": {
+      "title": "The Science of Happiness",
+      "text": "Happiness is something most people wish they had more of, but what exactly is it? According to psychologists, happiness is not just about feeling good in the moment — it is about having a sense of purpose and meaning in your life.\n\nResearch consistently shows that people who maintain close relationships tend to be happier than those who are more isolated. Having friends and family to support you during difficult times significantly improves your ability to cope with stress. Interestingly, studies show that giving to others — whether through charity, time, or kind words — actually makes the giver feel happier too.\n\nAnother key factor in happiness is gratitude. People who regularly take time to appreciate what they have, rather than focusing on what they lack, report higher levels of life satisfaction. Keeping a gratitude journal, where you write down three things you are thankful for each day, is a simple technique that researchers have found to be genuinely effective.\n\nFinally, physical activity plays an important role. Exercise releases chemicals in the brain that improve mood and reduce anxiety. Even a 20-minute walk can have a significant positive effect on how you feel.",
+      "questions": [
+        { "id": 1, "question": "How do psychologists define happiness?", "options": ["A. Feeling good all the time", "B. Having purpose and meaning in life", "C. Being free from stress", "D. Having many possessions"], "answer": "B", "explanation": "'Happiness is not just about feeling good — it is about having a sense of purpose.'" },
+        { "id": 2, "question": "What does research show about relationships and happiness?", "options": ["A. They cause more stress", "B. Close relationships help people cope better", "C. Online friendships are most beneficial", "D. Relationships don't affect happiness"], "answer": "B", "explanation": "'Having friends and family to support you significantly improves your ability to cope.'" },
+        { "id": 3, "question": "What is a gratitude journal used for?", "options": ["A. Writing complaints", "B. Recording daily exercise", "C. Appreciating what you have", "D. Planning future goals"], "answer": "C", "explanation": "'You write down three things you are thankful for each day.'" },
+        { "id": 4, "question": "Why is exercise mentioned as a factor in happiness?", "options": ["A. It makes you look better", "B. It helps you meet new people", "C. It releases brain chemicals that improve mood", "D. It reduces appetite"], "answer": "C", "explanation": "'Exercise releases chemicals in the brain that improve mood.'" }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "It isn't necessary for you to come if you don't feel well.", "key_word": "have", "answer": "You don't have to come if you don't feel well.", "hint": "don't have to" },
+      { "id": 2, "original": "My advice is to talk to someone you trust.", "key_word": "should", "answer": "You should talk to someone you trust.", "hint": "You should..." },
+      { "id": 3, "original": "I'm certain she is telling the truth.", "key_word": "must", "answer": "She must be telling the truth.", "hint": "must be + -ing" },
+      { "id": 4, "original": "Perhaps the event was cancelled because of the weather.", "key_word": "might", "answer": "The event might have been cancelled because of the weather.", "hint": "might have been" }
+    ],
+    "cloze": {
+      "title": "Managing Exam Stress",
+      "text": "Many students (1)_____ anxious about exams, particularly when the pressure to (2)_____ well is very high. However, there are (3)_____ steps you can take to manage this stress. Firstly, make sure you start revising (4)_____ — leaving everything to the last minute only increases anxiety. Secondly, take regular breaks (5)_____ studying, as your brain needs rest to retain information. Getting enough sleep is (6)_____ important, as tiredness can seriously affect your (7)_____ to focus and think clearly.",
+      "gaps": [
+        { "id": 1, "answer": "feel", "options": ["feel", "become", "get", "are"] },
+        { "id": 2, "answer": "perform", "options": ["perform", "do", "make", "achieve"] },
+        { "id": 3, "answer": "several", "options": ["several", "many", "much", "a lot"] },
+        { "id": 4, "answer": "early", "options": ["early", "soon", "quickly", "first"] },
+        { "id": 5, "answer": "while", "options": ["while", "during", "when", "after"] },
+        { "id": 6, "answer": "equally", "options": ["equally", "also", "too", "as well"] },
+        { "id": 7, "answer": "ability", "options": ["ability", "skill", "talent", "capacity"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 6,
+    "unit_title": "That's Entertainment!",
+    "topic": "Media & Entertainment",
+    "color": "#EF4444",
+    "vocabulary": [
+      { "word": "broadcast", "definition": "to send out programmes on radio or television", "example": "The match was broadcast live around the world.", "partOfSpeech": "verb/noun" },
+      { "word": "documentary", "definition": "a film or programme that shows real events", "example": "I watched a fascinating documentary about climate change.", "partOfSpeech": "noun (C)" },
+      { "word": "audience", "definition": "the people watching or listening to a performance", "example": "The audience applauded at the end of the show.", "partOfSpeech": "noun (C)" },
+      { "word": "subscription", "definition": "payment for regular access to a service", "example": "I have a monthly subscription to a streaming service.", "partOfSpeech": "noun (C)" },
+      { "word": "sequel", "definition": "a book, film, or programme that continues the story of an earlier one", "example": "The sequel was even better than the original.", "partOfSpeech": "noun (C)" },
+      { "word": "soundtrack", "definition": "the music played during a film or show", "example": "The film's soundtrack was composed by Hans Zimmer.", "partOfSpeech": "noun (C)" },
+      { "word": "overrated", "definition": "considered better than it really is", "example": "Many critics say the film was overrated.", "partOfSpeech": "adjective" },
+      { "word": "gripping", "definition": "very exciting and interesting", "example": "The novel is absolutely gripping from start to finish.", "partOfSpeech": "adjective" },
+      { "word": "celebrity", "definition": "a famous person, especially in entertainment", "example": "She became a celebrity after appearing on TV.", "partOfSpeech": "noun (C)" },
+      { "word": "stream", "definition": "to watch or listen to media online without downloading it", "example": "We streamed the concert from home.", "partOfSpeech": "verb" },
+      { "word": "review", "definition": "a report that gives an opinion about a book, film, etc.", "example": "The play received excellent reviews from critics.", "partOfSpeech": "noun (C)" },
+      { "word": "genre", "definition": "a particular type of art, music, film, or literature", "example": "My favourite film genre is science fiction.", "partOfSpeech": "noun (C)" },
+      { "word": "plot", "definition": "the main story of a film, book, or play", "example": "The plot of the film is quite complex.", "partOfSpeech": "noun (C)" },
+      { "word": "critic", "definition": "a person who gives professional opinions about art, films, etc.", "example": "The film was praised by critics but not audiences.", "partOfSpeech": "noun (C)" },
+      { "word": "censorship", "definition": "the practice of officially examining material and removing unsuitable content", "example": "There is debate about censorship of online content.", "partOfSpeech": "noun (U)" }
+    ],
+    "grammar": {
+      "topic": "Relative Clauses (who, which, that, where, whose)",
+      "explanation": "Relative clauses give more information about a noun. Defining relative clauses identify which person or thing you mean. Non-defining clauses add extra information (use commas).",
+      "rules": [
+        "who = people; which = things; that = people or things (defining only)",
+        "where = places; whose = possession",
+        "Defining: no commas — 'The film that won the Oscar was brilliant'",
+        "Non-defining: commas — 'The director, who is French, won an award'"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "The actress _____ won the Oscar gave a brilliant speech.", "answer": "who", "options": ["who", "which", "whose", "where"], "explanation": "Person → 'who'." },
+        { "id": 2, "sentence": "This is the cinema _____ I saw my first film.", "answer": "where", "options": ["where", "which", "who", "that"], "explanation": "Place → 'where'." },
+        { "id": 3, "sentence": "The novel, _____ was written in 1960, is still popular today.", "answer": "which", "options": ["which", "who", "that", "whose"], "explanation": "Thing, non-defining clause → 'which'." },
+        { "id": 4, "sentence": "I know a director _____ films have won many awards.", "answer": "whose", "options": ["whose", "who", "which", "where"], "explanation": "Possession → 'whose'." },
+        { "id": 5, "sentence": "The song _____ played at the concert was beautiful.", "answer": "that / which", "options": ["that / which", "who", "whose", "where"], "explanation": "Thing, defining clause → 'that' or 'which'." },
+        { "id": 6, "sentence": "She is the person _____ recommended this documentary to me.", "answer": "who", "options": ["who", "which", "whose", "that"], "explanation": "Person → 'who' (or 'that' in informal defining clause)." }
+      ]
+    },
+    "reading": {
+      "title": "The Podcast Revolution",
+      "text": "Over the past decade, podcasts have transformed the way millions of people consume media. A podcast is an audio programme that can be downloaded or streamed on demand, covering almost any topic imaginable — from true crime and history to comedy and science.\n\nThe appeal of podcasts lies in their flexibility. Unlike television, which requires you to sit and watch, podcasts can be listened to while commuting, exercising, or doing household chores. This makes them perfect for busy people who want to keep learning and entertained throughout their day.\n\nAnother reason for the podcasting boom is the low barrier to entry. Anyone with a microphone and an internet connection can start their own podcast. This has led to an explosion of diverse voices and perspectives that traditional media often fails to represent. Independent creators can build loyal audiences of thousands — or even millions — without the backing of a major broadcasting company.\n\nHowever, the sheer volume of content available can be overwhelming. With millions of podcasts to choose from, finding quality content requires time and effort. Critics also point out that without editorial oversight, misinformation can spread easily in the podcasting world.",
+      "questions": [
+        { "id": 1, "question": "What makes podcasts different from television?", "options": ["A. They cover more interesting topics", "B. They can be listened to while doing other things", "C. They are produced by professionals only", "D. They are available 24 hours a day"], "answer": "B", "explanation": "'Podcasts can be listened to while commuting, exercising, or doing household chores.'" },
+        { "id": 2, "question": "Why has podcasting grown so rapidly?", "options": ["A. Large companies are investing heavily in it", "B. Traditional media has become less popular", "C. Anyone can easily start a podcast", "D. Podcasts are free to listen to"], "answer": "C", "explanation": "'Anyone with a microphone and an internet connection can start their own podcast.'" },
+        { "id": 3, "question": "What problem do critics identify with podcasting?", "options": ["A. Too much professional control", "B. Lack of variety in topics", "C. Misinformation can spread easily", "D. Poor sound quality"], "answer": "C", "explanation": "'Without editorial oversight, misinformation can spread easily.'" },
+        { "id": 4, "question": "What is described as a disadvantage for listeners?", "options": ["A. The content is too short", "B. It costs too much to subscribe", "C. There is too much content to choose from", "D. Podcasts are hard to find online"], "answer": "C", "explanation": "'The sheer volume of content available can be overwhelming.'" }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "The film was so boring that I fell asleep.", "key_word": "enough", "answer": "The film wasn't interesting enough to keep me awake.", "hint": "wasn't interesting enough to" },
+      { "id": 2, "original": "I last watched a film at the cinema three months ago.", "key_word": "been", "answer": "I haven't been to the cinema for three months.", "hint": "haven't been for" },
+      { "id": 3, "original": "The director made the actors rehearse every day.", "key_word": "made", "answer": "The actors were made to rehearse every day.", "hint": "were made to rehearse" },
+      { "id": 4, "original": "Despite the poor reviews, we enjoyed the show.", "key_word": "even", "answer": "We enjoyed the show even though it had poor reviews.", "hint": "even though" }
+    ],
+    "cloze": {
+      "title": "Music Streaming",
+      "text": "The music industry has changed (1)_____ in the past 20 years. Before streaming services existed, people (2)_____ buy CDs or download songs individually. Now, for a monthly (3)_____, listeners can access millions of songs instantly. This has been great for consumers, but many artists (4)_____ that streaming pays them far less than CD sales once did. A musician needs millions of (5)_____ to earn the same amount they would have earned selling a few thousand albums. Despite this (6)_____, streaming services continue to (7)_____ in popularity, with hundreds of millions of subscribers worldwide.",
+      "gaps": [
+        { "id": 1, "answer": "dramatically", "options": ["dramatically", "completely", "seriously", "greatly"] },
+        { "id": 2, "answer": "would", "options": ["would", "used to", "had to", "could"] },
+        { "id": 3, "answer": "fee", "options": ["fee", "payment", "cost", "subscription"] },
+        { "id": 4, "answer": "argue", "options": ["argue", "say", "claim", "complain"] },
+        { "id": 5, "answer": "streams", "options": ["streams", "plays", "listens", "views"] },
+        { "id": 6, "answer": "controversy", "options": ["controversy", "problem", "issue", "debate"] },
+        { "id": 7, "answer": "grow", "options": ["grow", "increase", "rise", "expand"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 7,
+    "unit_title": "Getting Around",
+    "topic": "Transport & Travel",
+    "color": "#06B6D4",
+    "vocabulary": [
+      { "word": "commute", "definition": "to travel regularly between home and work or school", "example": "She commutes by train every day.", "partOfSpeech": "verb/noun" },
+      { "word": "congestion", "definition": "too much traffic causing slow movement", "example": "Congestion in the city centre is a major problem.", "partOfSpeech": "noun (U)" },
+      { "word": "infrastructure", "definition": "the basic systems that support a society (roads, water, etc.)", "example": "The government is investing in transport infrastructure.", "partOfSpeech": "noun (U)" },
+      { "word": "emission", "definition": "gas or other substance released into the air", "example": "Electric cars produce zero direct emissions.", "partOfSpeech": "noun (C, usually plural)" },
+      { "word": "pedestrian", "definition": "a person who is walking on a street", "example": "There are dedicated lanes for pedestrians in the city.", "partOfSpeech": "noun (C)" },
+      { "word": "fare", "definition": "the money you pay to travel on a bus, train, etc.", "example": "The bus fare has increased this year.", "partOfSpeech": "noun (C)" },
+      { "word": "navigate", "definition": "to find your way, especially using a map or technology", "example": "I use my phone to navigate in unfamiliar cities.", "partOfSpeech": "verb" },
+      { "word": "punctual", "definition": "arriving or leaving at the expected time", "example": "The trains are rarely punctual in this country.", "partOfSpeech": "adjective" },
+      { "word": "bypass", "definition": "a road built to avoid a town centre", "example": "A new bypass was built to reduce traffic in the village.", "partOfSpeech": "noun/verb" },
+      { "word": "suburb", "definition": "a residential area on the edge of a city", "example": "Many families prefer to live in the suburbs.", "partOfSpeech": "noun (C)" },
+      { "word": "detour", "definition": "a longer route taken to avoid a blocked route", "example": "We had to take a detour because of roadworks.", "partOfSpeech": "noun (C)" },
+      { "word": "sustainable", "definition": "using methods that don't damage the environment long-term", "example": "Cycling is a more sustainable form of transport.", "partOfSpeech": "adjective" },
+      { "word": "junction", "definition": "a place where roads or railway lines meet", "example": "Turn left at the next junction.", "partOfSpeech": "noun (C)" },
+      { "word": "terminal", "definition": "a building at an airport or port where passengers depart or arrive", "example": "Our flight leaves from Terminal 2.", "partOfSpeech": "noun (C)" },
+      { "word": "priority", "definition": "something that is more important than other things", "example": "Buses should be given priority over private cars.", "partOfSpeech": "noun (C/U)" }
+    ],
+    "grammar": {
+      "topic": "The Passive Voice",
+      "explanation": "The passive voice is used when the action is more important than who does it, or when we don't know who did it. Form: be + past participle.",
+      "rules": [
+        "Active: Someone builds the road. Passive: The road is being built.",
+        "All tenses: is done, was done, has been done, will be done, is being done",
+        "By + agent (optional): The road was built by engineers.",
+        "Use passive in formal writing, science, and news"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "The new metro line _____ (build) next year.", "answer": "will be built", "options": ["will be built", "will build", "is building", "builds"], "explanation": "Future passive: will + be + past participle." },
+        { "id": 2, "sentence": "The accident _____ (cause) by a reckless driver.", "answer": "was caused", "options": ["was caused", "caused", "has been caused", "is caused"], "explanation": "Past passive: was + past participle." },
+        { "id": 3, "sentence": "Traffic lights _____ (install) in cities to reduce accidents.", "answer": "are installed", "options": ["are installed", "install", "are installing", "were installing"], "explanation": "Present passive (general fact): are + past participle." },
+        { "id": 4, "sentence": "Passengers _____ (inform) about the delay through an announcement.", "answer": "were informed", "options": ["were informed", "informed", "have informed", "are informing"], "explanation": "Past event → past passive." },
+        { "id": 5, "sentence": "The bridge _____ (repair) at the moment, so expect delays.", "answer": "is being repaired", "options": ["is being repaired", "is repairing", "has been repaired", "was repaired"], "explanation": "Happening now → present continuous passive: is being + past participle." },
+        { "id": 6, "sentence": "Several new cycling routes _____ (create) in the city recently.", "answer": "have been created", "options": ["have been created", "were created", "are created", "had been created"], "explanation": "'Recently' → present perfect passive: have been + past participle." }
+      ]
+    },
+    "reading": {
+      "title": "The Electric Revolution in Transport",
+      "text": "The global push to combat climate change has accelerated the development of electric vehicles (EVs). Governments around the world are setting ambitious targets — some countries have announced plans to ban the sale of new petrol and diesel cars by 2035. In response, car manufacturers are investing billions into EV technology.\n\nFor consumers, the main attraction of electric vehicles is lower running costs. Electricity is significantly cheaper than petrol, and EVs require less maintenance because they have fewer moving parts. However, the higher upfront cost of purchasing an EV remains a barrier for many buyers.\n\nOne of the biggest challenges facing the widespread adoption of electric vehicles is charging infrastructure. Unlike petrol stations, which are found everywhere, public charging points are still relatively rare in many areas. Long-distance travellers often worry about running out of charge — a concern known as 'range anxiety'.\n\nDespite these challenges, sales of electric vehicles have risen sharply in recent years. Analysts predict that by 2030, EVs could account for more than half of all new car sales globally. As battery technology improves and prices fall, the electric future seems increasingly inevitable.",
+      "questions": [
+        { "id": 1, "question": "Why are governments promoting electric vehicles?", "options": ["A. They are cheaper to produce", "B. They reduce climate change", "C. They are more comfortable", "D. They require no maintenance"], "answer": "B", "explanation": "'The global push to combat climate change has accelerated the development of EVs.'" },
+        { "id": 2, "question": "What is 'range anxiety'?", "options": ["A. Fear of long journeys", "B. Worry about the cost of charging", "C. Concern about running out of battery charge", "D. Anxiety about driving in cities"], "answer": "C", "explanation": "'Worry about running out of charge — a concern known as range anxiety.'" },
+        { "id": 3, "question": "What makes EVs cheaper to run?", "options": ["A. They are built by cheaper manufacturers", "B. The government subsidises them", "C. Electricity is cheaper than petrol", "D. They don't need tyres"], "answer": "C", "explanation": "'Electricity is significantly cheaper than petrol.'" },
+        { "id": 4, "question": "What does the article predict for 2030?", "options": ["A. All petrol cars will be banned", "B. EVs may make up half of new car sales", "C. Charging infrastructure will be complete", "D. Battery prices will double"], "answer": "B", "explanation": "'EVs could account for more than half of all new car sales globally.'" }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "They are building a new road outside the city.", "key_word": "being", "answer": "A new road is being built outside the city.", "hint": "is being built" },
+      { "id": 2, "original": "Someone stole her bicycle last night.", "key_word": "was", "answer": "Her bicycle was stolen last night.", "hint": "was stolen" },
+      { "id": 3, "original": "No one has ever discovered a faster route.", "key_word": "ever", "answer": "A faster route has never been discovered.", "hint": "has never been discovered" },
+      { "id": 4, "original": "They will announce the results tomorrow.", "key_word": "announced", "answer": "The results will be announced tomorrow.", "hint": "will be announced" }
+    ],
+    "cloze": {
+      "title": "Cycling in the City",
+      "text": "Many cities are now (1)_____ cycling as a greener alternative to driving. Dedicated cycle lanes have been (2)_____ on major roads to make it safer for cyclists. In some cities, bike-sharing (3)_____ allow people to hire a bicycle for short trips. This reduces the (4)_____ of private cars on the road, which helps to lower pollution levels. However, cyclists still face challenges such as (5)_____ drivers and poorly maintained roads. Safety (6)_____, such as helmets and high-visibility jackets, are strongly recommended. Overall, cycling is not only good for the (7)_____, but also for your physical health.",
+      "gaps": [
+        { "id": 1, "answer": "promoting", "options": ["promoting", "encouraging", "supporting", "helping"] },
+        { "id": 2, "answer": "built", "options": ["built", "created", "installed", "made"] },
+        { "id": 3, "answer": "schemes", "options": ["schemes", "systems", "plans", "projects"] },
+        { "id": 4, "answer": "number", "options": ["number", "amount", "quantity", "total"] },
+        { "id": 5, "answer": "careless", "options": ["careless", "reckless", "dangerous", "irresponsible"] },
+        { "id": 6, "answer": "gear", "options": ["gear", "equipment", "clothing", "tools"] },
+        { "id": 7, "answer": "environment", "options": ["environment", "planet", "world", "nature"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 8,
+    "unit_title": "Influencers",
+    "topic": "Social Media & Digital World",
+    "color": "#F97316",
+    "vocabulary": [
+      { "word": "influence", "definition": "the power to affect someone's decisions or behaviour", "example": "Social media has a huge influence on young people.", "partOfSpeech": "noun (U) / verb" },
+      { "word": "authentic", "definition": "real and genuine; not fake or copied", "example": "Audiences value authentic content from creators.", "partOfSpeech": "adjective" },
+      { "word": "collaborate", "definition": "to work with someone to create something", "example": "Two artists collaborated on the album.", "partOfSpeech": "verb" },
+      { "word": "engagement", "definition": "the level of interaction from an audience (likes, comments)", "example": "High engagement shows followers enjoy the content.", "partOfSpeech": "noun (U)" },
+      { "word": "viral", "definition": "spreading very quickly and widely on the internet", "example": "The video went viral overnight.", "partOfSpeech": "adjective" },
+      { "word": "transparency", "definition": "being open and honest, especially in business", "example": "Influencers must show transparency about paid partnerships.", "partOfSpeech": "noun (U)" },
+      { "word": "endorse", "definition": "to publicly approve or recommend a product", "example": "Many celebrities endorse sports brands.", "partOfSpeech": "verb" },
+      { "word": "algorithm", "definition": "a set of rules used by computers to decide what content to show", "example": "The algorithm decides which posts you see first.", "partOfSpeech": "noun (C)" },
+      { "word": "niche", "definition": "a specific area or topic with a dedicated audience", "example": "She found her niche in food photography.", "partOfSpeech": "noun (C)" },
+      { "word": "monetise", "definition": "to earn money from something", "example": "Creators monetise their content through ads and sponsorships.", "partOfSpeech": "verb" },
+      { "word": "credibility", "definition": "the quality of being trusted and believed in", "example": "Posting false information destroys your credibility.", "partOfSpeech": "noun (U)" },
+      { "word": "brand", "definition": "a company or product with a specific image and identity", "example": "She worked with several sports brands on her channel.", "partOfSpeech": "noun (C)" },
+      { "word": "platform", "definition": "a digital service used to create and share content", "example": "Instagram is a popular platform for influencers.", "partOfSpeech": "noun (C)" },
+      { "word": "sponsor", "definition": "a company that pays someone to promote their products", "example": "The show was sponsored by a technology company.", "partOfSpeech": "noun/verb" },
+      { "word": "feedback", "definition": "comments or reactions about someone's work", "example": "She receives a lot of feedback from her followers.", "partOfSpeech": "noun (U)" }
+    ],
+    "grammar": {
+      "topic": "Reported Speech",
+      "explanation": "Reported speech is used to tell someone what another person said. When reporting, verb tenses usually shift back one step (backshift). Pronouns and time expressions also change.",
+      "rules": [
+        "Direct: 'I am tired.' → Reported: She said she was tired.",
+        "Present Simple → Past Simple; Present Continuous → Past Continuous",
+        "Past Simple → Past Perfect; will → would",
+        "Time changes: today → that day; yesterday → the day before; here → there"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "He said, 'I will post a video tomorrow.' → He said he _____ post a video _____.", "answer": "would / the following day", "options": ["would / the following day", "will / tomorrow", "would / yesterday", "should / next day"], "explanation": "'Will' → 'would'; 'tomorrow' → 'the following day'." },
+        { "id": 2, "sentence": "She said, 'I have over a million followers.' → She said she _____ over a million followers.", "answer": "had", "options": ["had", "has", "would have", "was having"], "explanation": "Present Perfect → Past Perfect: 'had had' or Past Simple 'had' (both acceptable)." },
+        { "id": 3, "sentence": "They told us, 'We are filming a new series.' → They told us they _____ a new series.", "answer": "were filming", "options": ["were filming", "are filming", "would film", "filmed"], "explanation": "Present Continuous → Past Continuous." },
+        { "id": 4, "sentence": "The journalist asked him where _____ (live).", "answer": "he lived", "options": ["he lived", "did he live", "he lives", "does he live"], "explanation": "Indirect questions use statement word order (not question order)." },
+        { "id": 5, "sentence": "She said, 'Don't believe everything you read online.' → She told us not _____ everything we read online.", "answer": "to believe", "options": ["to believe", "believe", "believing", "believed"], "explanation": "Reported imperatives: told + object + (not) to + infinitive." },
+        { "id": 6, "sentence": "He said he _____ (work) on a new project at the time.", "answer": "had been working", "options": ["had been working", "was working", "has been working", "worked"], "explanation": "Past Continuous in direct speech → Past Perfect Continuous in reported." }
+      ]
+    },
+    "reading": {
+      "title": "The Reality Behind the Perfect Life",
+      "text": "Scroll through any social media feed today and you will see endless images of people enjoying perfect lives — beautiful homes, exotic holidays, and flawless skin. But how much of what we see online is actually real?\n\nResearch suggests that the idealised images posted by influencers can have a negative impact on viewers' self-esteem, particularly among teenagers. When young people constantly compare themselves to carefully edited images, they may begin to feel that their own lives don't measure up.\n\nHowever, a counter-movement is growing. A number of high-profile influencers have begun sharing unedited photos and discussing mental health struggles openly. This approach, often described as 'authentic content', has resonated strongly with audiences who are tired of feeling inadequate.\n\nPlatforms such as Instagram and TikTok have also introduced new regulations requiring influencers to disclose when a post is a paid advertisement. This is a step towards greater transparency, but critics argue that more needs to be done to protect young people from misleading content.\n\nUltimately, developing critical thinking skills — the ability to question and evaluate what we see online — may be the most powerful tool we have in navigating the digital world.",
+      "questions": [
+        { "id": 1, "question": "What does research suggest about idealised social media images?", "options": ["A. They motivate young people to work harder", "B. They have no impact on how people feel", "C. They can lower teenagers' self-esteem", "D. They make social media more entertaining"], "answer": "C", "explanation": "'Idealised images can have a negative impact on viewers' self-esteem, particularly among teenagers.'" },
+        { "id": 2, "question": "What is 'authentic content' in this context?", "options": ["A. Content made without technology", "B. Content featuring real, unedited images and honest topics", "C. Content that is free of advertisements", "D. Content only made by amateur creators"], "answer": "B", "explanation": "'Sharing unedited photos and discussing mental health struggles openly.'" },
+        { "id": 3, "question": "What new rule have platforms introduced?", "options": ["A. Banning all edited images", "B. Limiting daily screen time", "C. Requiring influencers to label paid posts", "D. Removing all influencer accounts"], "answer": "C", "explanation": "'Requiring influencers to disclose when a post is a paid advertisement.'" },
+        { "id": 4, "question": "What does the article suggest is the best tool for young people?", "options": ["A. Avoiding social media altogether", "B. Following only verified influencers", "C. Developing critical thinking skills", "D. Using platforms with strict regulations"], "answer": "C", "explanation": "'Developing critical thinking skills may be the most powerful tool.'" }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "'I don't know how many followers I have,' he said.", "key_word": "said", "answer": "He said he didn't know how many followers he had.", "hint": "didn't know...he had" },
+      { "id": 2, "original": "'Please don't share this video,' she told them.", "key_word": "not", "answer": "She told them not to share the video.", "hint": "told them not to" },
+      { "id": 3, "original": "'Are you planning to launch a new channel?' she asked him.", "key_word": "whether", "answer": "She asked him whether he was planning to launch a new channel.", "hint": "asked whether he was" },
+      { "id": 4, "original": "He said the collaboration had been very successful.", "key_word": "was", "answer": "He said, 'The collaboration was very successful.'", "hint": "Direct speech: said 'was'" }
+    ],
+    "cloze": {
+      "title": "Building an Online Following",
+      "text": "Growing a social media (1)_____ requires consistency and creativity. Successful creators post (2)_____, usually several times a week, and always try to (3)_____ with their audience through comments and messages. Choosing a specific (4)_____ helps attract the right kind of followers — people who are genuinely interested in your content. Many creators also (5)_____ with other influencers to reach new audiences. However, experts warn that focusing too much on follower (6)_____ can be discouraging. It is more important to (7)_____ a loyal, engaged community than to simply have large numbers.",
+      "gaps": [
+        { "id": 1, "answer": "following", "options": ["following", "audience", "community", "group"] },
+        { "id": 2, "answer": "regularly", "options": ["regularly", "frequently", "often", "daily"] },
+        { "id": 3, "answer": "engage", "options": ["engage", "interact", "communicate", "connect"] },
+        { "id": 4, "answer": "niche", "options": ["niche", "topic", "area", "field"] },
+        { "id": 5, "answer": "collaborate", "options": ["collaborate", "work", "partner", "team"] },
+        { "id": 6, "answer": "counts", "options": ["counts", "numbers", "statistics", "figures"] },
+        { "id": 7, "answer": "build", "options": ["build", "create", "develop", "grow"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 9,
+    "unit_title": "Stay Fit and Healthy",
+    "topic": "Health & Fitness",
+    "color": "#84CC16",
+    "vocabulary": [
+      { "word": "immune system", "definition": "the body's natural defence against infection and illness", "example": "A healthy diet strengthens your immune system.", "partOfSpeech": "noun phrase" },
+      { "word": "nutrition", "definition": "the process of eating the right foods for good health", "example": "Good nutrition is essential for growing children.", "partOfSpeech": "noun (U)" },
+      { "word": "sedentary", "definition": "spending too much time sitting and not being active", "example": "A sedentary lifestyle increases the risk of heart disease.", "partOfSpeech": "adjective" },
+      { "word": "endurance", "definition": "the ability to do something difficult for a long time", "example": "Marathon runners need incredible endurance.", "partOfSpeech": "noun (U)" },
+      { "word": "metabolism", "definition": "the chemical processes in the body that convert food into energy", "example": "Exercise can speed up your metabolism.", "partOfSpeech": "noun (U/C)" },
+      { "word": "cardiovascular", "definition": "relating to the heart and blood vessels", "example": "Cycling is excellent cardiovascular exercise.", "partOfSpeech": "adjective" },
+      { "word": "obesity", "definition": "the condition of being very overweight in a way that is dangerous", "example": "Childhood obesity is a growing health concern.", "partOfSpeech": "noun (U)" },
+      { "word": "portion", "definition": "an amount of food served to one person", "example": "Reducing your portion sizes can help with weight management.", "partOfSpeech": "noun (C)" },
+      { "word": "hydrate", "definition": "to drink enough water to keep your body healthy", "example": "It is important to stay hydrated during exercise.", "partOfSpeech": "verb" },
+      { "word": "stress relief", "definition": "activities or methods that reduce stress", "example": "Yoga is an excellent form of stress relief.", "partOfSpeech": "noun phrase" },
+      { "word": "insomnia", "definition": "the inability to sleep properly", "example": "Stress and screen time can cause insomnia.", "partOfSpeech": "noun (U)" },
+      { "word": "flexibility", "definition": "the ability to bend easily without injury", "example": "Stretching improves your flexibility.", "partOfSpeech": "noun (U)" },
+      { "word": "remedy", "definition": "a treatment or solution for a medical problem", "example": "Honey and lemon is a popular home remedy for colds.", "partOfSpeech": "noun (C)" },
+      { "word": "supplement", "definition": "a product taken to add nutrients to your diet", "example": "Some athletes take vitamin supplements.", "partOfSpeech": "noun (C)" },
+      { "word": "posture", "definition": "the position in which you hold your body", "example": "Sitting correctly improves your posture.", "partOfSpeech": "noun (U)" }
+    ],
+    "grammar": {
+      "topic": "First and Second Conditionals",
+      "explanation": "First conditional: real/likely future situations. Second conditional: unreal or hypothetical situations (present/future).",
+      "rules": [
+        "1st: If + present simple, will/can/may + base verb",
+        "2nd: If + past simple, would/could/might + base verb",
+        "Use 'were' (not 'was') in formal 2nd conditional: If I were you...",
+        "1st = possible; 2nd = less likely or impossible"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "If you eat a balanced diet, you _____ feel much better.", "answer": "will feel", "options": ["will feel", "would feel", "feel", "felt"], "explanation": "Real future situation → 1st conditional." },
+        { "id": 2, "sentence": "If I _____ more time, I would exercise every day.", "answer": "had", "options": ["had", "have", "will have", "would have"], "explanation": "Hypothetical → 2nd conditional: If + past simple." },
+        { "id": 3, "sentence": "She would sleep better if she _____ her phone before bed.", "answer": "didn't use", "options": ["didn't use", "doesn't use", "won't use", "hadn't used"], "explanation": "Unreal present → 2nd conditional." },
+        { "id": 4, "sentence": "If you _____ (not/warm up) before exercise, you may injure yourself.", "answer": "don't warm up", "options": ["don't warm up", "won't warm up", "didn't warm up", "wouldn't warm up"], "explanation": "General truth/real → 1st conditional." },
+        { "id": 5, "sentence": "If I _____ (be) the government, I would make sport compulsory in schools.", "answer": "were", "options": ["were", "was", "am", "would be"], "explanation": "Formal 2nd conditional uses 'were' (If I were...)." },
+        { "id": 6, "sentence": "Unless you _____ (drink) enough water, you will become dehydrated.", "answer": "drink", "options": ["drink", "drank", "would drink", "will drink"], "explanation": "'Unless' = 'if not' → 1st conditional." }
+      ]
+    },
+    "reading": {
+      "title": "Sleep: The Forgotten Health Essential",
+      "text": "Most people know that eating well and exercising regularly are essential for good health. However, one equally important factor is often overlooked: sleep. Despite its importance, surveys suggest that a significant proportion of teenagers and adults are chronically sleep-deprived.\n\nDuring sleep, the body repairs itself, consolidates memories, and regulates hormones. Without enough sleep, cognitive performance deteriorates rapidly — concentration, decision-making, and even emotional control all suffer. Research has shown that people who regularly sleep fewer than seven hours per night are at greater risk of obesity, diabetes, and heart disease.\n\nOne major cause of poor sleep in modern society is the use of electronic devices before bed. The blue light emitted by screens suppresses the production of melatonin, the hormone that signals to the brain that it is time to sleep. Experts recommend avoiding screens for at least an hour before going to bed.\n\nDeveloping a consistent sleep routine — going to bed and waking up at the same time every day, even at weekends — can significantly improve sleep quality. Creating a comfortable, cool, and dark sleeping environment also helps signal to the body that it is time to rest.",
+      "questions": [
+        { "id": 1, "question": "What does the article suggest is often underestimated in importance?", "options": ["A. Exercise", "B. Diet", "C. Sleep", "D. Stress management"], "answer": "C", "explanation": "'Sleep is often overlooked' despite being equally important to exercise and diet." },
+        { "id": 2, "question": "What health risks are associated with sleeping less than 7 hours?", "options": ["A. Poor posture and headaches", "B. Obesity, diabetes, and heart disease", "C. Insomnia and anxiety", "D. Loss of appetite"], "answer": "B", "explanation": "'Greater risk of obesity, diabetes, and heart disease.'" },
+        { "id": 3, "question": "How does blue light affect sleep?", "options": ["A. It makes you feel more awake and alert during the day", "B. It improves the quality of your dreams", "C. It reduces the hormone that signals sleep", "D. It causes you to wake up earlier"], "answer": "C", "explanation": "'Blue light suppresses the production of melatonin, the hormone that signals it is time to sleep.'" },
+        { "id": 4, "question": "What sleep strategy does the article recommend?", "options": ["A. Sleeping as long as possible", "B. Exercising just before bed", "C. Having a consistent sleep schedule", "D. Taking regular naps during the day"], "answer": "C", "explanation": "'A consistent sleep routine can significantly improve sleep quality.'" }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "Eat more vegetables and you will feel healthier.", "key_word": "if", "answer": "If you eat more vegetables, you will feel healthier.", "hint": "If + present simple + will" },
+      { "id": 2, "original": "I don't exercise regularly, so I'm not very fit.", "key_word": "would", "answer": "If I exercised regularly, I would be fitter.", "hint": "2nd conditional" },
+      { "id": 3, "original": "She regrets not joining the gym earlier.", "key_word": "wishes", "answer": "She wishes she had joined the gym earlier.", "hint": "wishes + past perfect" },
+      { "id": 4, "original": "Unless you rest properly, the injury will get worse.", "key_word": "if", "answer": "If you don't rest properly, the injury will get worse.", "hint": "Unless = if not" }
+    ],
+    "cloze": {
+      "title": "The Benefits of Regular Exercise",
+      "text": "Regular exercise has numerous (1)_____ for both physical and mental health. Adults are recommended to do at least 150 minutes of (2)_____ activity per week. This doesn't have to mean going to a gym — activities such as brisk walking, swimming, or cycling all (3)_____. Exercise helps to (4)_____ the risk of many serious diseases, including heart disease and type 2 diabetes. It also improves mood by (5)_____ the release of chemicals called endorphins in the brain. For people who (6)_____ from anxiety or depression, regular exercise can be as effective as medication. The key is to (7)_____ a type of activity you enjoy so that you are more likely to keep it up.",
+      "gaps": [
+        { "id": 1, "answer": "benefits", "options": ["benefits", "advantages", "effects", "gains"] },
+        { "id": 2, "answer": "moderate", "options": ["moderate", "physical", "regular", "intense"] },
+        { "id": 3, "answer": "count", "options": ["count", "work", "help", "qualify"] },
+        { "id": 4, "answer": "reduce", "options": ["reduce", "lower", "decrease", "prevent"] },
+        { "id": 5, "answer": "triggering", "options": ["triggering", "causing", "starting", "increasing"] },
+        { "id": 6, "answer": "suffer", "options": ["suffer", "have", "experience", "deal"] },
+        { "id": 7, "answer": "find", "options": ["find", "choose", "select", "decide"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 10,
+    "unit_title": "Looks Amazing!",
+    "topic": "Fashion & Appearance",
+    "color": "#A855F7",
+    "vocabulary": [
+      { "word": "trend", "definition": "a general direction in which something is changing or developing", "example": "Sustainable fashion is a growing trend.", "partOfSpeech": "noun (C)" },
+      { "word": "accessory", "definition": "an extra item worn with an outfit to complete it", "example": "A scarf can be a stylish accessory.", "partOfSpeech": "noun (C)" },
+      { "word": "versatile", "definition": "able to be used for many different purposes", "example": "A navy blazer is a very versatile item of clothing.", "partOfSpeech": "adjective" },
+      { "word": "sophisticated", "definition": "having or showing a lot of experience and knowledge", "example": "The dress had a sophisticated, elegant design.", "partOfSpeech": "adjective" },
+      { "word": "identical", "definition": "exactly the same", "example": "The twins wore identical outfits.", "partOfSpeech": "adjective" },
+      { "word": "flatter", "definition": "to make someone look more attractive", "example": "That colour really flatters her complexion.", "partOfSpeech": "verb" },
+      { "word": "blend in", "definition": "to look the same as people or things around you", "example": "She prefers to blend in rather than stand out.", "partOfSpeech": "phrasal verb" },
+      { "word": "distinctive", "definition": "easy to recognise; clearly different from others", "example": "She has a very distinctive style.", "partOfSpeech": "adjective" },
+      { "word": "sustainable fashion", "definition": "clothing made in ways that don't harm the environment", "example": "More brands are adopting sustainable fashion practices.", "partOfSpeech": "noun phrase" },
+      { "word": "tailor", "definition": "to make or adjust clothing to fit exactly; to customise", "example": "The suit was tailored to fit him perfectly.", "partOfSpeech": "verb" },
+      { "word": "texture", "definition": "the way a surface or fabric feels when you touch it", "example": "The dress has a soft, silky texture.", "partOfSpeech": "noun (C/U)" },
+      { "word": "compliment", "definition": "an expression of praise or admiration", "example": "She received many compliments on her outfit.", "partOfSpeech": "noun (C)" },
+      { "word": "fade", "definition": "to become less bright or vivid over time", "example": "The colour faded after several washes.", "partOfSpeech": "verb" },
+      { "word": "secondhand", "definition": "previously owned by someone else", "example": "Buying secondhand clothes is better for the environment.", "partOfSpeech": "adjective" },
+      { "word": "pattern", "definition": "a repeated decorative design on a surface or fabric", "example": "She loves floral patterns on dresses.", "partOfSpeech": "noun (C)" }
+    ],
+    "grammar": {
+      "topic": "Articles (a, an, the, zero article)",
+      "explanation": "Articles tell us whether we are talking about something specific (the) or unspecific (a/an), or making general statements (zero article).",
+      "rules": [
+        "a/an: first mention, unspecific, jobs (She's a designer), count nouns",
+        "the: second mention, only one exists, specific thing known to both",
+        "Zero article: general statements (Fashion is important), proper nouns, most sports",
+        "a before consonant sounds; an before vowel sounds (an hour)"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "She is _____ fashion designer who works for _____ famous brand.", "answer": "a / a", "options": ["a / a", "the / a", "a / the", "the / the"], "explanation": "First mention, job title → 'a'; unspecific brand → 'a'." },
+        { "id": 2, "sentence": "I bought _____ pair of jeans yesterday. _____ jeans fit perfectly.", "answer": "a / The", "options": ["a / The", "the / A", "a / A", "the / The"], "explanation": "First mention → 'a'; second mention (specific ones) → 'The'." },
+        { "id": 3, "sentence": "_____ fashion industry has a huge impact on _____ environment.", "answer": "The / the", "options": ["The / the", "A / the", "The / an", "A / an"], "explanation": "Specific industries → 'The'; specific environment we all share → 'the'." },
+        { "id": 4, "sentence": "She is wearing _____ amazing dress — _____ dress she bought in Milan.", "answer": "an / the", "options": ["an / the", "a / the", "an / a", "the / a"], "explanation": "'amazing' starts with vowel sound → 'an'; second mention → 'the'." },
+        { "id": 5, "sentence": "_____ sustainable fashion is _____ answer to many environmental problems.", "answer": "— / the", "options": ["— / the", "The / an", "A / the", "— / an"], "explanation": "General concept → zero article; specific answer (unique) → 'the'." },
+        { "id": 6, "sentence": "He plays _____ tennis and reads _____ books in his spare time.", "answer": "— / —", "options": ["— / —", "the / the", "a / the", "— / the"], "explanation": "Sports and general activities → zero article." }
+      ]
+    },
+    "reading": {
+      "title": "Fast Fashion and Its Hidden Cost",
+      "text": "The term 'fast fashion' refers to the rapid production of large quantities of inexpensive clothing that is designed to be worn only a few times before being discarded. In recent decades, this model has dominated the global fashion industry, making trendy clothes accessible to a mass market.\n\nHowever, the true cost of fast fashion is becoming increasingly clear. Producing cheap clothes at high speed requires enormous resources — water, energy, and raw materials. The fashion industry is estimated to be responsible for around 10% of global carbon emissions, more than the aviation and shipping industries combined.\n\nThe social impact is equally troubling. Many garments are produced in factories where workers face poor conditions and extremely low wages. Consumers in wealthy countries enjoy cheap prices, but workers in developing nations often pay a high human price.\n\nIn response, a growing movement of conscious consumers is choosing to shop secondhand, buy from ethical brands, or simply buy less. Some fashion designers are exploring innovative materials, such as fabric made from recycled plastic bottles, to make the industry more sustainable. Whether these efforts will be enough to transform the fashion industry remains to be seen.",
+      "questions": [
+        { "id": 1, "question": "What is the main characteristic of fast fashion?", "options": ["A. High-quality clothing that lasts a long time", "B. Cheap clothing designed to be worn briefly", "C. Clothing made from sustainable materials", "D. Clothing designed by famous fashion houses"], "answer": "B", "explanation": "'Large quantities of inexpensive clothing designed to be worn only a few times.'" },
+        { "id": 2, "question": "What does the article say about the fashion industry's carbon emissions?", "options": ["A. They are less than aviation emissions", "B. They are equal to shipping emissions", "C. They exceed aviation and shipping combined", "D. They have been falling in recent years"], "answer": "C", "explanation": "'More than the aviation and shipping industries combined.'" },
+        { "id": 3, "question": "How does the article describe factory workers in developing countries?", "options": ["A. They earn competitive wages", "B. They have good working conditions", "C. They work in poor conditions for low wages", "D. They benefit from fast fashion's popularity"], "answer": "C", "explanation": "'Workers face poor conditions and extremely low wages.'" },
+        { "id": 4, "question": "What is one way people are responding to fast fashion's problems?", "options": ["A. Buying more clothing online", "B. Demanding lower prices", "C. Shopping secondhand or buying from ethical brands", "D. Boycotting all clothing brands"], "answer": "C", "explanation": "'Conscious consumers choosing to shop secondhand, buy from ethical brands, or buy less.'" }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "Buying secondhand clothes is not as expensive as buying new ones.", "key_word": "cheaper", "answer": "Buying secondhand clothes is cheaper than buying new ones.", "hint": "cheaper than" },
+      { "id": 2, "original": "It was the most elegant dress I had ever seen.", "key_word": "never", "answer": "I had never seen such an elegant dress.", "hint": "had never seen such" },
+      { "id": 3, "original": "She couldn't decide which dress to wear.", "key_word": "difficulty", "answer": "She had difficulty deciding which dress to wear.", "hint": "had difficulty + -ing" },
+      { "id": 4, "original": "The jacket needs to be dry-cleaned.", "key_word": "have", "answer": "She needs to have the jacket dry-cleaned.", "hint": "have something done" }
+    ],
+    "cloze": {
+      "title": "Dressing for Success",
+      "text": "Research suggests that what we wear can affect not only how others (1)_____ us, but also how we feel about ourselves. This phenomenon, sometimes called 'enclothed cognition', suggests that clothing has a psychological (2)_____ on the wearer. For example, wearing smart, professional clothing can make people feel more (3)_____ and authoritative in work situations. On the other hand, wearing comfortable, casual clothing at home can help us (4)_____. Most experts agree that dressing in a way that reflects your personality is the most important thing. Trying to (5)_____ a certain image that doesn't suit you can actually (6)_____ your confidence. The key is to wear clothes that make you feel comfortable and (7)_____ in your own skin.",
+      "gaps": [
+        { "id": 1, "answer": "perceive", "options": ["perceive", "see", "judge", "view"] },
+        { "id": 2, "answer": "impact", "options": ["impact", "effect", "influence", "power"] },
+        { "id": 3, "answer": "confident", "options": ["confident", "professional", "smart", "powerful"] },
+        { "id": 4, "answer": "relax", "options": ["relax", "unwind", "rest", "calm"] },
+        { "id": 5, "answer": "project", "options": ["project", "create", "build", "show"] },
+        { "id": 6, "answer": "undermine", "options": ["undermine", "reduce", "decrease", "damage"] },
+        { "id": 7, "answer": "confident", "options": ["confident", "comfortable", "happy", "good"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 11,
+    "unit_title": "The Natural World",
+    "topic": "Nature & Environment",
+    "color": "#22C55E",
+    "vocabulary": [
+      { "word": "biodiversity", "definition": "the variety of plant and animal life in a particular habitat", "example": "The Amazon rainforest has incredible biodiversity.", "partOfSpeech": "noun (U)" },
+      { "word": "ecosystem", "definition": "all the living organisms in an area and how they interact", "example": "Coral reefs are one of the world's most important ecosystems.", "partOfSpeech": "noun (C)" },
+      { "word": "deforestation", "definition": "cutting down large areas of forest", "example": "Deforestation is destroying wildlife habitats.", "partOfSpeech": "noun (U)" },
+      { "word": "renewable", "definition": "replaced naturally and never running out", "example": "Solar and wind are forms of renewable energy.", "partOfSpeech": "adjective" },
+      { "word": "habitat", "definition": "the natural environment of a plant or animal", "example": "Polar bears are losing their natural habitat.", "partOfSpeech": "noun (C)" },
+      { "word": "species", "definition": "a group of plants or animals that are the same type", "example": "Thousands of species are threatened with extinction.", "partOfSpeech": "noun (C/U)" },
+      { "word": "carbon footprint", "definition": "the amount of carbon dioxide produced by a person or organisation", "example": "Switching to public transport reduces your carbon footprint.", "partOfSpeech": "noun phrase" },
+      { "word": "extinct", "definition": "no longer existing as a species", "example": "Dinosaurs became extinct 66 million years ago.", "partOfSpeech": "adjective" },
+      { "word": "conservation", "definition": "the protection of natural environments and species", "example": "Conservation efforts have helped tiger populations recover.", "partOfSpeech": "noun (U)" },
+      { "word": "drought", "definition": "a long period of time with little or no rain", "example": "The drought destroyed the harvest in the region.", "partOfSpeech": "noun (C/U)" },
+      { "word": "pollution", "definition": "harmful substances in the environment", "example": "Air pollution is a major health problem in cities.", "partOfSpeech": "noun (U)" },
+      { "word": "sustainable", "definition": "not harmful to the environment in the long term", "example": "We need more sustainable energy sources.", "partOfSpeech": "adjective" },
+      { "word": "greenhouse effect", "definition": "the warming of the Earth due to trapped heat from carbon dioxide", "example": "Human activity is intensifying the greenhouse effect.", "partOfSpeech": "noun phrase" },
+      { "word": "poaching", "definition": "illegally hunting or catching animals", "example": "Poaching is threatening the survival of elephants.", "partOfSpeech": "noun (U)" },
+      { "word": "glacier", "definition": "a slow-moving mass of ice", "example": "Glaciers are melting faster than expected.", "partOfSpeech": "noun (C)" }
+    ],
+    "grammar": {
+      "topic": "Future Forms (will, going to, Present Continuous, Future Perfect)",
+      "explanation": "English uses several structures to talk about the future, each with a different meaning.",
+      "rules": [
+        "will: instant decisions, predictions, promises, offers",
+        "going to: plans already decided, predictions based on evidence",
+        "Present Continuous: fixed arrangements in the near future",
+        "Future Perfect: will + have + past participle (completed by a time)"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "Look at those clouds! It _____ (rain) soon.", "answer": "is going to", "options": ["is going to", "will", "is", "shall"], "explanation": "Evidence visible now → 'going to'." },
+        { "id": 2, "sentence": "I promise I _____ recycle more from now on.", "answer": "will", "options": ["will", "am going to", "am", "shall"], "explanation": "Promise → 'will'." },
+        { "id": 3, "sentence": "We _____ (fly) to Brazil next Monday for the conference.", "answer": "are flying", "options": ["are flying", "will fly", "are going to fly", "fly"], "explanation": "Fixed arrangement with date → Present Continuous." },
+        { "id": 4, "sentence": "By 2050, many coastal cities _____ (flood) if emissions don't fall.", "answer": "will have flooded", "options": ["will have flooded", "will flood", "are going to flood", "flood"], "explanation": "Completed by a future time → Future Perfect." },
+        { "id": 5, "sentence": "'The heating has stopped.' 'OK, I _____ call the engineer.'", "answer": "will", "options": ["will", "am going to", "am calling", "shall"], "explanation": "Instant decision made at the moment of speaking → 'will'." },
+        { "id": 6, "sentence": "Scientists predict that average temperatures _____ rise by 2°C this century.", "answer": "will", "options": ["will", "are going to", "are", "should"], "explanation": "General prediction without immediate evidence → 'will'." }
+      ]
+    },
+    "reading": {
+      "title": "Rewilding: Nature's Comeback",
+      "text": "In recent decades, a radical new approach to conservation has gained momentum: rewilding. Unlike traditional conservation, which focuses on protecting existing habitats, rewilding involves actively restoring natural ecosystems by reintroducing species that have disappeared and allowing nature to manage itself.\n\nOne famous example is the reintroduction of wolves to Yellowstone National Park in the USA in 1995. Before the wolves' return, deer populations had grown unchecked, overgrazing vegetation along riverbanks. When the wolves returned, they changed the behaviour of the deer, which began avoiding certain areas. This allowed plants and trees to regenerate, which in turn stabilised riverbanks, improved water quality, and increased populations of birds and fish. Scientists call this a 'trophic cascade' — a chain reaction triggered by a top predator.\n\nIn Europe, rewilding projects are restoring forests, wetlands, and grasslands across the continent. In Scotland, discussions are underway about reintroducing lynx, which disappeared around 1,300 years ago. Supporters argue that this would help control deer populations and restore natural balance.\n\nCritics, however, raise concerns about the risks of reintroducing large predators, particularly in areas where people and livestock live nearby. The debate continues, but evidence from successful projects suggests that rewilding may be one of the most powerful tools we have to reverse biodiversity loss.",
+      "questions": [
+        { "id": 1, "question": "What is rewilding different from traditional conservation?", "options": ["A. It costs less money", "B. It only works in national parks", "C. It actively restores ecosystems with species reintroduction", "D. It focuses on protecting existing habitats"], "answer": "C", "explanation": "'Rewilding involves actively restoring ecosystems by reintroducing species.'" },
+        { "id": 2, "question": "How did the reintroduction of wolves benefit Yellowstone?", "options": ["A. It reduced the wolf population", "B. It had no measurable effect", "C. It improved water quality and biodiversity", "D. It eliminated deer from the park"], "answer": "C", "explanation": "'Allowed plants to regenerate, stabilised riverbanks, improved water quality, and increased bird and fish populations.'" },
+        { "id": 3, "question": "What concerns do critics have about rewilding?", "options": ["A. It is too expensive", "B. Predators might threaten people and animals nearby", "C. There are no suitable habitats", "D. Animals may not survive"], "answer": "B", "explanation": "'Risks of reintroducing large predators in areas where people and livestock live nearby.'" },
+        { "id": 4, "question": "What does the article suggest about rewilding overall?", "options": ["A. It is too controversial to implement", "B. It is only suitable for wilderness areas", "C. It could be a powerful tool against biodiversity loss", "D. It has failed in most cases"], "answer": "C", "explanation": "'Rewilding may be one of the most powerful tools to reverse biodiversity loss.'" }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "Scientists expect that the glacier will disappear within 20 years.", "key_word": "predicted", "answer": "The glacier is predicted to disappear within 20 years.", "hint": "is predicted to" },
+      { "id": 2, "original": "Unless we act now, we will lose many more species.", "key_word": "if", "answer": "If we don't act now, we will lose many more species.", "hint": "If we don't + will" },
+      { "id": 3, "original": "The government plans to reduce emissions by 50% by 2030.", "key_word": "will", "answer": "Emissions will be reduced by 50% by 2030.", "hint": "Future passive" },
+      { "id": 4, "original": "It is the most biodiverse region on the planet.", "key_word": "nowhere", "answer": "Nowhere on the planet is as biodiverse as this region.", "hint": "Nowhere + inverted structure" }
+    ],
+    "cloze": {
+      "title": "Protecting Our Oceans",
+      "text": "Oceans (1)_____ more than 70% of the Earth's surface and are home to an enormous (2)_____ of species. However, they are (3)_____ serious threats including plastic pollution, overfishing, and climate change. Plastic waste in particular is a growing (4)_____ — millions of tonnes of plastic (5)_____ the oceans each year, harming marine life and entering the food chain. Many countries are now taking (6)_____ to reduce single-use plastic, such as banning plastic bags and straws. Protecting our oceans is not just an environmental (7)_____ — it is essential for the survival of future generations.",
+      "gaps": [
+        { "id": 1, "answer": "cover", "options": ["cover", "make", "fill", "form"] },
+        { "id": 2, "answer": "variety", "options": ["variety", "number", "amount", "range"] },
+        { "id": 3, "answer": "facing", "options": ["facing", "having", "experiencing", "meeting"] },
+        { "id": 4, "answer": "concern", "options": ["concern", "problem", "issue", "worry"] },
+        { "id": 5, "answer": "enter", "options": ["enter", "pollute", "fill", "reach"] },
+        { "id": 6, "answer": "steps", "options": ["steps", "measures", "actions", "decisions"] },
+        { "id": 7, "answer": "issue", "options": ["issue", "problem", "concern", "matter"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 12,
+    "unit_title": "Express Yourself!",
+    "topic": "Communication & Language",
+    "color": "#6366F1",
+    "vocabulary": [
+      { "word": "articulate", "definition": "able to express ideas clearly; to express clearly", "example": "She is very articulate when presenting her ideas.", "partOfSpeech": "adjective / verb" },
+      { "word": "persuade", "definition": "to convince someone to do or believe something", "example": "He managed to persuade the committee to support his plan.", "partOfSpeech": "verb" },
+      { "word": "argue", "definition": "to give reasons to support or oppose an idea; to disagree", "example": "She argued that the decision was unfair.", "partOfSpeech": "verb" },
+      { "word": "elaborate", "definition": "to give more details about something", "example": "Could you elaborate on your point?", "partOfSpeech": "verb" },
+      { "word": "convey", "definition": "to communicate a message or feeling", "example": "It's important to convey your ideas clearly.", "partOfSpeech": "verb" },
+      { "word": "multilingual", "definition": "able to speak several languages", "example": "Being multilingual is a valuable skill in business.", "partOfSpeech": "adjective" },
+      { "word": "dialect", "definition": "a form of a language spoken in a particular area", "example": "The novel is written in a regional dialect.", "partOfSpeech": "noun (C)" },
+      { "word": "nuance", "definition": "a subtle difference in meaning or expression", "example": "Poetry captures nuances that plain prose cannot.", "partOfSpeech": "noun (C/U)" },
+      { "word": "tone", "definition": "the quality of a voice or piece of writing that shows attitude", "example": "The formal tone of her email was impressive.", "partOfSpeech": "noun (C/U)" },
+      { "word": "interpret", "definition": "to translate spoken language; to understand the meaning of something", "example": "She works as an interpreter at the United Nations.", "partOfSpeech": "verb" },
+      { "word": "bilingual", "definition": "able to speak two languages fluently", "example": "Growing up, he was bilingual in French and Arabic.", "partOfSpeech": "adjective" },
+      { "word": "coherent", "definition": "logical and well-organised; easy to understand", "example": "Please make sure your argument is coherent.", "partOfSpeech": "adjective" },
+      { "word": "rhetoric", "definition": "the art of using language persuasively", "example": "Politicians often use rhetoric to persuade audiences.", "partOfSpeech": "noun (U)" },
+      { "word": "eloquent", "definition": "expressing ideas in a very clear and effective way", "example": "The speaker gave an eloquent defence of her position.", "partOfSpeech": "adjective" },
+      { "word": "imply", "definition": "to suggest something without saying it directly", "example": "He didn't say I was wrong, but he implied it.", "partOfSpeech": "verb" }
+    ],
+    "grammar": {
+      "topic": "Mixed Conditionals & Wish / If Only",
+      "explanation": "Mixed conditionals combine different time frames. Wish/If only express regret or desire about past or present situations.",
+      "rules": [
+        "Mixed: If I had studied harder (past), I would have a better job now (present).",
+        "Wish + past simple: wish for a different present (I wish I were taller.)",
+        "Wish + past perfect: regret about the past (I wish I hadn't said that.)",
+        "Wish + would: desire for change in someone's behaviour (I wish he would listen.)",
+        "If only = stronger form of wish"
+      ],
+      "exercises": [
+        { "id": 1, "sentence": "I wish I _____ (study) more languages when I was young.", "answer": "had studied", "options": ["had studied", "studied", "would study", "have studied"], "explanation": "Regret about past → wish + past perfect." },
+        { "id": 2, "sentence": "If she _____ (not/give up) early, she would be fluent by now.", "answer": "hadn't given up", "options": ["hadn't given up", "didn't give up", "wouldn't have given up", "hasn't given up"], "explanation": "Mixed conditional: past action affecting present result." },
+        { "id": 3, "sentence": "If only I _____ (be) more confident when speaking in public!", "answer": "were", "options": ["were", "am", "would be", "had been"], "explanation": "Wish about present state → if only + past simple (were)." },
+        { "id": 4, "sentence": "I wish my teacher _____ (explain) things more slowly.", "answer": "would explain", "options": ["would explain", "explained", "had explained", "explains"], "explanation": "Desire for behavioural change → wish + would." },
+        { "id": 5, "sentence": "If he _____ (tell) me earlier, I could have helped him.", "answer": "had told", "options": ["had told", "told", "would have told", "has told"], "explanation": "Past unreal → 3rd conditional: If + past perfect." },
+        { "id": 6, "sentence": "She _____ the meeting if she _____ the invitation. (miss / receive)", "answer": "wouldn't have missed / had received", "options": ["wouldn't have missed / had received", "wouldn't miss / received", "didn't miss / had received", "wouldn't have missed / received"], "explanation": "3rd conditional: would have + past participle / if + past perfect." }
+      ]
+    },
+    "reading": {
+      "title": "Why Learn a Foreign Language?",
+      "text": "In an age of increasingly sophisticated translation technology, some people question whether learning a foreign language is still worthwhile. After all, if a smartphone can translate any text or conversation instantly, why spend years studying grammar and vocabulary?\n\nHowever, linguists and educators argue that translation technology misses much of what makes language valuable. Language is not simply a code for exchanging information — it is the vehicle through which culture, humour, and emotion are expressed. A machine can translate words, but it struggles to capture the nuance, irony, and cultural context that make communication truly meaningful.\n\nFurthermore, research consistently shows significant cognitive benefits from learning foreign languages. Bilingual individuals tend to be better at problem-solving, multi-tasking, and switching between different tasks. Studies also suggest that speaking more than one language may delay the onset of dementia by several years.\n\nFrom a practical standpoint, knowing a second language opens doors professionally. In a globalised world, employers in many sectors actively seek candidates who can communicate across linguistic and cultural boundaries. For students considering future careers in business, diplomacy, science, or the arts, foreign language skills are an undeniable asset.\n\nThe digital age has made language learning more accessible than ever — apps, online courses, and language exchange partners are available to anyone with an internet connection. The question is no longer whether we can learn a language, but whether we choose to.",
+      "questions": [
+        { "id": 1, "question": "What argument do some people make against language learning?", "options": ["A. It is too difficult for most people", "B. Translation technology can do it instead", "C. There are not enough language teachers", "D. English is spoken everywhere now"], "answer": "B", "explanation": "'If a smartphone can translate any text, why spend years studying?'" },
+        { "id": 2, "question": "What do linguists say technology cannot capture?", "options": ["A. Grammar rules", "B. Vocabulary", "C. Cultural nuance and emotional meaning", "D. Basic information exchange"], "answer": "C", "explanation": "'Machines struggle to capture the nuance, irony, and cultural context.'" },
+        { "id": 3, "question": "What brain benefit does the article mention for bilinguals?", "options": ["A. Better memory for facts", "B. Faster reading speed", "C. Better multi-tasking and problem-solving", "D. Higher mathematical ability"], "answer": "C", "explanation": "'Bilingual individuals tend to be better at problem-solving and multi-tasking.'" },
+        { "id": 4, "question": "What is the article's conclusion about language learning today?", "options": ["A. It has become too difficult", "B. Technology has made it unnecessary", "C. It is more accessible than ever", "D. Only young children can learn a new language"], "answer": "C", "explanation": "'The digital age has made language learning more accessible than ever.'" }
+      ]
+    },
+    "sentence_transformations": [
+      { "id": 1, "original": "I regret not taking Spanish classes when I had the chance.", "key_word": "wish", "answer": "I wish I had taken Spanish classes when I had the chance.", "hint": "wish + past perfect" },
+      { "id": 2, "original": "Despite speaking three languages, she found the translation difficult.", "key_word": "although", "answer": "Although she speaks three languages, she found the translation difficult.", "hint": "Although + clause" },
+      { "id": 3, "original": "It is said that bilingual people have better memories.", "key_word": "believed", "answer": "It is believed that bilingual people have better memories.", "hint": "It is believed that..." },
+      { "id": 4, "original": "He was the most eloquent speaker at the conference.", "key_word": "spoken", "answer": "No one at the conference had spoken more eloquently than him.", "hint": "No one had spoken more eloquently" }
+    ],
+    "cloze": {
+      "title": "The Art of Persuasion",
+      "text": "Being able to (1)_____ others effectively is one of the most valuable skills you can have, both in everyday life and in a professional (2)_____. Whether you are trying to convince a friend, write a compelling essay, or present an idea to your boss, the principles of persuasion are largely the same. Firstly, it is important to clearly (3)_____ your argument with relevant evidence and examples. Secondly, acknowledging the other person's point of (4)_____ shows that you have considered their perspective. Finally, choosing the right (5)_____ is crucial — being too aggressive or too passive will both undermine your message. The most (6)_____ communicators are those who combine logic with empathy, presenting facts while also (7)_____ to the emotions of their audience.",
+      "gaps": [
+        { "id": 1, "answer": "persuade", "options": ["persuade", "convince", "influence", "change"] },
+        { "id": 2, "answer": "context", "options": ["context", "situation", "environment", "setting"] },
+        { "id": 3, "answer": "support", "options": ["support", "back", "prove", "show"] },
+        { "id": 4, "answer": "view", "options": ["view", "opinion", "perspective", "sight"] },
+        { "id": 5, "answer": "tone", "options": ["tone", "style", "voice", "approach"] },
+        { "id": 6, "answer": "effective", "options": ["effective", "successful", "powerful", "persuasive"] },
+        { "id": 7, "answer": "appealing", "options": ["appealing", "talking", "connecting", "speaking"] }
+      ]
+    }
+  }
+]

@@ -1,0 +1,576 @@
+{
+  "bookTitle": "New Round-Up 2: English Grammar Practice",
+  "level": "Elementary (A1+)",
+  "authors": ["Virginia Evans", "Jenny Dooley"],
+  "publisher": "Pearson Longman",
+  "targetAudience": "Children / Young Learners",
+  "totalUnits": 22,
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Personal Pronouns - 'Be' - 'Have (got)' - 'Can'",
+      "difficulty": "1.0",
+      "grammar": {
+        "topics": ["Subject Pronouns", "Object Pronouns", "Verb 'To Be'", "Verb 'Have got'", "Modal verb 'Can'"],
+        "patterns": [
+          "I/You/He/She/It/We/They",
+          "Me/You/Him/Her/It/Us/Them",
+          "Subject + am/is/are + Adjective/Noun",
+          "Subject + have/has got + Noun",
+          "Subject + can/cannot + Verb (infinitive)"
+        ],
+        "rules": [
+          "Use subject pronouns before verbs; use object pronouns after verbs or prepositions.",
+          "Use 'have got' to talk about possession.",
+          "Use 'can' to show ability or to ask for permission."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Pretty", "meaning": "Xinh đẹp, dễ thương", "context": "Hi, I am Pat. And I am a pretty little cat." },
+        { "word": "Funny", "meaning": "Buồn cười, khôi hài", "context": "This is Chuck. And he is a funny little duck." },
+        { "word": "Mice", "meaning": "Những con chuột (số nhiều của mouse)", "context": "They are Bob and Alice. And they are little mice." },
+        { "word": "Clown", "meaning": "Chú hề", "context": "Is he a clown? Yes, he is." },
+        { "word": "Thirsty", "meaning": "Khát nước", "context": "I am thirsty." },
+        { "word": "Fair hair", "meaning": "Tóc màu sáng/vàng", "context": "He has got fair hair and glasses." }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Plurals - This / These - That / Those",
+      "difficulty": "1.5",
+      "grammar": {
+        "topics": ["Plural Nouns", "Irregular Plurals", "Demonstratives", "Countable vs Uncountable Nouns", "Quantifiers 'Some/Any'", "Partitives / Containers"],
+        "patterns": [
+          "Noun + s/es/ies/ves",
+          "This is / These are",
+          "That is / Those are",
+          "Some + Uncountable Noun",
+          "A bottle/glass/slice/loaf of + Uncountable Noun"
+        ],
+        "rules": [
+          "Nouns ending in -s, -ss, -sh, -ch, -x, -o add -es.",
+          "Nouns ending in consonant + -y change to -ies.",
+          "Demonstratives: This/These for things near; That/Those for things far.",
+          "Use 'a/an' only with singular countable nouns. Use 'some' with plurals and uncountable nouns."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Camera", "meaning": "Máy ảnh", "context": "We form the plural of most nouns: cameras." },
+        { "word": "Thief", "meaning": "Kẻ trộm", "context": "Nouns ending in -f/-fe -> -ves: thief -> thieves." },
+        { "word": "Child", "meaning": "Đứa trẻ, trẻ em", "context": "Irregular plurals: child -> children." },
+        { "word": "Uncountable", "meaning": "Không đếm được", "context": "Some nouns are uncountable. They have no plural (e.g. bread, cheese, water)." },
+        { "word": "Loaf", "meaning": "Ổ (bánh mì)", "context": "A loaf of bread / two loaves of bread." },
+        { "word": "Carton", "meaning": "Hộp giấy (sữa, nước trái cây)", "context": "A carton of milk / two cartons of milk." }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Possessives",
+      "difficulty": "2.0",
+      "grammar": {
+        "topics": ["Possessive Adjectives", "Possessive Pronouns", "Possessive Case with People", "Possessive Case with Things", "Asking with 'Whose'"],
+        "patterns": [
+          "my/your/his/her/its/our/their + Noun",
+          "mine/yours/his/hers/ours/theirs",
+          "Singular Noun + 's (e.g., the boy's hat)",
+          "Plural Noun + ' (e.g., the girls' skirts)",
+          "the + Noun + of + Noun (e.g., the trunk of the tree)",
+          "Whose + Noun + is it?"
+        ],
+        "rules": [
+          "Possessive adjectives must be followed by nouns; possessive pronouns are used alone.",
+          "Use 's for one person/animal; use s' for two or more people.",
+          "Use 'of' to show possession for things, not 's."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Possessive", "meaning": "Sở hữu", "context": "Possessive Adjectives vs Possessive Pronouns." },
+        { "word": "Mane", "meaning": "Bờm (sư tử, ngựa)", "context": "The lion's mane." },
+        { "word": "Whose", "meaning": "Của ai", "context": "Whose hat is it? It's Mike's." },
+        { "word": "Trunk", "meaning": "Thân cây", "context": "The trunk of the tree." },
+        { "word": "Roof", "meaning": "Mái nhà", "context": "Where is the roof of my car?" }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "title": "There is / There are - Some / Any",
+      "difficulty": "2.2",
+      "grammar": {
+        "topics": ["There is / There are", "Quantifiers 'Some' and 'Any'"],
+        "patterns": [
+          "There is/are (Affirmative/Negative/Interrogative)",
+          "Is there any + Singular Uncountable Noun?",
+          "Are there any + Plural Countable Noun?",
+          "There isn't any / There aren't any"
+        ],
+        "rules": [
+          "Use 'some' in affirmative sentences for plurals and uncountables.",
+          "Use 'any' in questions and negative sentences."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Baker's", "meaning": "Tiệm bánh mì", "context": "In Choco Town, there’s a baker’s and a bank." },
+        { "word": "Sweet shop", "meaning": "Cửa hàng kẹo", "context": "There are two sweet shops but there aren’t any trees." },
+        { "word": "Theatre", "meaning": "Nhà hát", "context": "Is there a theatre in Hallam Street?" },
+        { "word": "Flour", "meaning": "Bột mì", "context": "Look at the picture and write sentences: There is some flour." },
+        { "word": "Lollipop", "meaning": "Kẹo mút", "context": "Are there five lollipops?" }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "title": "Present Continuous",
+      "difficulty": "2.8",
+      "grammar": {
+        "topics": ["Present Continuous", "Spelling Rules (-ing)", "Time Expressions for Present Continuous"],
+        "patterns": [
+          "Subject + am/is/are + Verb-ing",
+          "Subject + am/is/are + not + Verb-ing",
+          "Am/Is/Are + Subject + Verb-ing?"
+        ],
+        "rules": [
+          "Use Present Continuous for actions happening right now at the moment of speaking.",
+          "Spelling: verb ending in consonant + vowel + consonant doubles the last letter (run -> running).",
+          "Spelling: drop silent -e (dance -> dancing), change -ie to -y (lie -> lying)."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Fight", "meaning": "Đánh nhau, chiến đấu", "context": "The children are fighting." },
+        { "word": "Mime", "meaning": "Diễn kịch câm, bắt chước", "context": "Mime an action. Your friends try to guess." },
+        { "word": "Dig", "meaning": "Đào (đất)", "context": "Father is digging in the garden." },
+        { "word": "Snowing", "meaning": "Tuyết rơi", "context": "It's winter but it isn't snowing today." },
+        { "word": "Shine", "meaning": "Tỏa sáng, chiếu sáng", "context": "The sun is shining today." }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "title": "Present Simple",
+      "difficulty": "3.5",
+      "grammar": {
+        "topics": ["Present Simple", "Spelling Rules (3rd Person -s/es)", "Adverbs of Frequency", "Position of Adverbs of Frequency", "Present Simple vs Present Continuous"],
+        "patterns": [
+          "Subject + Verb (s/es for he/she/it)",
+          "Subject + do/does + not + Verb (infinitive)",
+          "Do/Does + Subject + Verb (infinitive)?",
+          "Subject + Adverb of Frequency + Verb",
+          "Subject + verb 'to be' + Adverb of Frequency"
+        ],
+        "rules": [
+          "Use Present Simple for habits, routines, repeated actions, and permanent states.",
+          "Spelling for he/she/it: verbs ending in -ss, -sh, -ch, -x, -o add -es (wash -> washes).",
+          "Adverbs of frequency go before main verbs but after the verb 'to be'."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Contrary", "meaning": "Trái ngược, ngang bướng", "context": "Mary, Mary, quite contrary. How does your garden grow?" },
+        { "word": "Routine", "meaning": "Thói quen hàng ngày", "context": "We use Present Simple for permanent actions and routines." },
+        { "word": "Seldom", "meaning": "Hiếm khi, ít khi", "context": "I seldom help in the house." },
+        { "word": "Dishes", "meaning": "Bát đĩa", "context": "Mother always washes the dishes." },
+        { "word": "Joke", "meaning": "Trò đùa, câu chuyện cười", "context": "My father often tells good jokes." }
+      ]
+    },
+    {
+      "unitNumber": 7,
+      "title": "The Imperative",
+      "difficulty": "3.8",
+      "grammar": {
+        "topics": ["Imperatives", "Negative Imperatives", "Commands", "Polite Commands"],
+        "patterns": [
+          "Verb (infinitive) + ...! (e.g. Stand up!)",
+          "Don't + Verb (infinitive) + ...! (e.g. Don't sit down!)",
+          "Please + Imperative / Imperative + please"
+        ],
+        "rules": [
+          "Use imperatives to tell someone to do or not to do something.",
+          "Imperatives do not have a subject (the subject is understood as 'you')."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Imperative", "meaning": "Mệnh lệnh, câu mệnh lệnh", "context": "We use the imperative when we tell someone to do something." },
+        { "word": "Shout", "meaning": "La hét, hét lên", "context": "Don't shout!" },
+        { "word": "Reach", "meaning": "Với tới, đạt tới", "context": "I can't reach the biscuits!" },
+        { "word": "Boots", "meaning": "Đôi ủng, giày cao cổ", "context": "Take your boots off, please!" },
+        { "word": "Fight", "meaning": "Đánh nhau", "context": "Stop fighting!" }
+      ]
+    },
+    {
+      "unitNumber": 8,
+      "title": "Prepositions of Place",
+      "difficulty": "4.0",
+      "grammar": {
+        "topics": ["Prepositions of Place"],
+        "patterns": [
+          "in / on / under / next to / behind / in front of / between / opposite / above / below"
+        ],
+        "rules": [
+          "Use prepositions of place to describe where people, animals, or things are located."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Opposite", "meaning": "Đối diện", "context": "Opposite the box / there was a park opposite our house." },
+        { "word": "Between", "meaning": "Ở giữa (2 người/vật)", "context": "Between two boxes / Peter is sitting between his mother and father." },
+        { "word": "Above", "meaning": "Ở phía trên (không chạm vào)", "context": "Above the box / There is a poster above the bed." },
+        { "word": "Below", "meaning": "Ở phía dưới (thấp hơn)", "context": "Below the box / The cat is below the shelf." },
+        { "word": "Rug", "meaning": "Tấm thảm trải sàn nhỏ", "context": "Can you see him? He's on a rug next to the bed." }
+      ]
+    },
+    {
+      "unitNumber": 9,
+      "title": "Prepositions of Time",
+      "difficulty": "4.2",
+      "grammar": {
+        "topics": ["Prepositions of Time 'In, At, On'", "Time Sequencers 'Before' and 'After'"],
+        "patterns": [
+          "in + morning/afternoon/evening/months/seasons/years",
+          "at + time/noon/night/midnight/weekend",
+          "on + days/dates/day segments",
+          "Subject + Verb + before / after + Clause"
+        ],
+        "rules": [
+          "Use 'in' for long periods and parts of the day.",
+          "Use 'at' for precise times and special expressions.",
+          "Use 'on' for specific days and dates.",
+          "Use 'before' and 'after' to specify the order of events."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Independence Day", "meaning": "Ngày Quốc Khánh", "context": "Independence Day is on July 4th." },
+        { "word": "Get dressed", "meaning": "Mặc quần áo", "context": "I get dressed before I have breakfast." },
+        { "word": "Autumn", "meaning": "Mùa thu", "context": "On / In autumn." },
+        { "word": "Midnight", "meaning": "Nửa đêm", "context": "At midnight." },
+        { "word": "Quarter past", "meaning": "Hơn 15 phút (giờ hơn)", "context": "At a quarter past six." }
+      ]
+    },
+    {
+      "unitNumber": 10,
+      "title": "How much - How many",
+      "difficulty": "4.5",
+      "grammar": {
+        "topics": ["How much / How many", "Countable and Uncountable Nouns", "Quantity short answers"],
+        "patterns": [
+          "How many + Plural Countable Noun + are there?",
+          "How much + Uncountable Noun + is there?",
+          "A lot! / Not many! / Not much!"
+        ],
+        "rules": [
+          "Use 'How many' for countable nouns in plural.",
+          "Use 'How much' for uncountable nouns.",
+          "Answer with 'Not many' for countable and 'Not much' for uncountable."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Pasta", "meaning": "Mỳ Ý, mỳ ống", "context": "Countable or Uncountable: pasta." },
+        { "word": "Yoghurt", "meaning": "Sữa chua", "context": "Countable or Uncountable: yoghurt." },
+        { "word": "Wool", "meaning": "Len, sợi len", "context": "How much wool do you need to make a sweater? A lot!" },
+        { "word": "Knit", "meaning": "Đan (len)", "context": "None. Sheep can't knit!" },
+        { "word": "Apple pie", "meaning": "Bánh táo", "context": "I want to make an apple pie. Can you help me?" }
+      ]
+    },
+    {
+      "unitNumber": 11,
+      "title": "'Be going to'",
+      "difficulty": "4.8",
+      "grammar": {
+        "topics": ["'Be going to' Future", "Future Plans and Intentions", "Predictions based on evidence"],
+        "patterns": [
+          "Subject + am/is/are + going to + Verb (infinitive)",
+          "Subject + am/is/are + not + going to + Verb",
+          "Am/Is/Are + Subject + going to + Verb?"
+        ],
+        "rules": [
+          "Use 'be going to' to talk about plans, intentions, and decisions made before speaking.",
+          "Use 'be going to' when there is clear evidence in the present that something will happen soon."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Intention", "meaning": "Ý định, dự định", "context": "We use be going to to talk about plans and intentions." },
+        { "word": "Evidence", "meaning": "Bằng chứng, dấu hiệu rõ ràng", "context": "Use be going to when there is evidence that something is going to happen." },
+        { "word": "Statue of Liberty", "meaning": "Tượng Nữ Thần Tự Do", "context": "Are you going to visit the Statue of Liberty?" },
+        { "word": "Autograph", "meaning": "Chữ ký (của người nổi tiếng)", "context": "Are you going to get some autographs?" },
+        { "word": "Diary", "meaning": "Nhật ký, lịch công tác", "context": "Look at Julie's diary and write what her plans are." }
+      ]
+    },
+    {
+      "unitNumber": 12,
+      "title": "Like / Love / Hate + -ing form - Want + to form",
+      "difficulty": "5.0",
+      "grammar": {
+        "topics": ["Gerund after verbs of liking", "Infinitive after 'Want'"],
+        "patterns": [
+          "like / love / hate + Verb-ing",
+          "want + to + Verb (infinitive)"
+        ],
+        "rules": [
+          "Use the -ing form (gerund) after verbs of emotion like like, love, hate, enjoy.",
+          "Use the to-infinitive form after the verb want."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Baked apples", "meaning": "Táo nướng", "context": "Dad, do you like eating baked apples?" },
+        { "word": "Burglary", "meaning": "Vụ trộm (đột nhập vào nhà)", "context": "I want to report a burglary. I'm inside a bathroom." },
+        { "word": "Burglar", "meaning": "Kẻ trộm (đột nhập)", "context": "The burglar!" },
+        { "word": "Dentist", "meaning": "Nha sĩ", "context": "Sue and Beth want to be dentists." },
+        { "word": "Pilot", "meaning": "Phi công", "context": "Adam wants to be a pilot." }
+      ]
+    },
+    {
+      "unitNumber": 13,
+      "title": "Must - Mustn’t - Have to - Shall - May",
+      "difficulty": "5.5",
+      "grammar": {
+        "topics": ["Obligation and Necessity ('Must', 'Have to')", "Prohibition ('Mustn't')", "Lack of obligation ('Don't have to')", "Offers ('Shall I...?')", "Asking Permission ('May I...?')"],
+        "patterns": [
+          "Subject + must + Verb (infinitive)",
+          "Subject + mustn't + Verb",
+          "Subject + have/has to + Verb",
+          "Subject + don't/doesn't have to + Verb",
+          "Shall I + Verb?",
+          "May I + Verb?"
+        ],
+        "rules": [
+          "Use 'must' for obligation/necessity.",
+          "Use 'mustn't' for prohibition (not allowed).",
+          "Use 'have to' when it is necessary/obligatory (rules, external laws).",
+          "Use 'don't have to' when something is not necessary (optional).",
+          "Use 'shall I' to offer help; use 'may I' to ask for permission politely."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Obligation", "meaning": "Nghĩa vụ, sự bắt buộc", "context": "We use must to talk about obligation or necessity." },
+        { "word": "Prohibition", "meaning": "Sự cấm đoán, ngăn cấm", "context": "We use mustn't to talk about prohibition." },
+        { "word": "Pond", "meaning": "Cái ao", "context": "You mustn't swim in the pond." },
+        { "word": "Rubbish", "meaning": "Rác thải", "context": "No Rubbish. Don't throw rubbish on the street." },
+        { "word": "Starving", "meaning": "Rất đói, đói lả", "context": "A: I'm starving. B: Shall I make some sandwiches?" }
+      ]
+    },
+    {
+      "unitNumber": 14,
+      "title": "Past Simple (Was - Were)",
+      "difficulty": "5.8",
+      "grammar": {
+        "topics": ["Past Simple of 'To Be'", "Past Time Expressions"],
+        "patterns": [
+          "Subject + was/were + ...",
+          "Subject + was/were + not + ...",
+          "Was/Were + Subject + ...?",
+          "There was / There were"
+        ],
+        "rules": [
+          "Use 'was' for I, he, she, it. Use 'were' for you, we, they.",
+          "Use 'there was/were' to talk about the existence of things in the past.",
+          "Common time expressions: yesterday, last night, last week, ago, then."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Sweetie", "meaning": "Con yêu, cục cưng (gọi thân mật)", "context": "How was your test, sweetie?" },
+        { "word": "Sunny", "meaning": "Có nắng", "context": "It was sunny last week." },
+        { "word": "Bored", "meaning": "Chán nản, buồn tẻ", "context": "Marek and Anna were bored last Saturday." },
+        { "word": "Opposite", "meaning": "Đối diện", "context": "Fifty years ago, there was a park opposite our house." },
+        { "word": "Circus", "meaning": "Rạp xiếc", "context": "Was Mark at the circus yesterday?" }
+      ]
+    },
+    {
+      "unitNumber": 15,
+      "title": "Past Simple (Had - Could)",
+      "difficulty": "6.0",
+      "grammar": {
+        "topics": ["Past Simple of 'Have' (Had)", "Past Simple of 'Can' (Could)"],
+        "patterns": [
+          "Subject + had + ... (Affirmative)",
+          "Subject + didn't have + ... (Negative)",
+          "Did + Subject + have + ...? (Interrogative)",
+          "Subject + could + Verb (infinitive)",
+          "Subject + couldn't + Verb",
+          "Could + Subject + Verb?"
+        ],
+        "rules": [
+          "The past tense of 'have got' is 'had' (without 'got').",
+          "Use 'didn't have' for negatives and 'Did... have' for questions.",
+          "Use 'could' to talk about general ability in the past."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Ending", "meaning": "Phần kết, cái kết", "context": "Did the film have a happy ending?" },
+        { "word": "Hurry", "meaning": "Vội vã, vội vàng", "context": "I didn't have breakfast. I was in a hurry." },
+        { "word": "Roller-skates", "meaning": "Giày trượt patin (có bánh xe)", "context": "When Jamie was a young boy, he had roller-skates." },
+        { "word": "Spell", "meaning": "Đánh vần", "context": "Albert Einstein couldn't spell." },
+        { "word": "Climb", "meaning": "Leo trèo", "context": "She couldn't climb trees." }
+      ]
+    },
+    {
+      "unitNumber": 16,
+      "title": "Past Simple (Regular Verbs)",
+      "difficulty": "6.5",
+      "grammar": {
+        "topics": ["Past Simple Regular Verbs", "Spelling of Regular Past Verbs (-ed)", "Pronunciation of -ed ending"],
+        "patterns": [
+          "Subject + Verb-ed",
+          "Subject + did + not + Verb (infinitive)",
+          "Did + Subject + Verb (infinitive)?"
+        ],
+        "rules": [
+          "We form the regular past simple by adding -ed to the verb.",
+          "Spelling: verb ending in -y after a consonant changes to -ied (study -> studied).",
+          "Spelling: double final consonant for short verbs ending in consonant-vowel-consonant (stop -> stopped).",
+          "Pronunciation: -ed sounds like /t/ after voiceless sounds, /d/ after voiced, and /ɪd/ after /t/ or /d/."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Cancel", "meaning": "Hủy bỏ", "context": "Why did the bird cancel his trip?" },
+        { "word": "Forecast", "meaning": "Dự báo", "context": "Because the feather forecast wasn't good." },
+        { "word": "Tidy", "meaning": "Dọn dẹp ngăn nắp", "context": "George tidied his room an hour ago." },
+        { "word": "Iron", "meaning": "Ủi, là (quần áo)", "context": "Yesterday, Dad ironed the clothes." },
+        { "word": "Return", "meaning": "Trở về, quay lại", "context": "We returned home late." }
+      ]
+    },
+    {
+      "unitNumber": 17,
+      "title": "Past Simple (Irregular Verbs)",
+      "difficulty": "7.0",
+      "grammar": {
+        "topics": ["Past Simple Irregular Verbs", "Past Simple Questions and Negatives"],
+        "patterns": [
+          "Subject + Irregular Past Verb (e.g. went, saw, bought, took)",
+          "Subject + didn't + Verb (infinitive)",
+          "Did + Subject + Verb (infinitive)?"
+        ],
+        "rules": [
+          "Irregular verbs do not add -ed in the past simple. Each verb changes differently.",
+          "Use 'did/didn't' + base verb form for questions and negatives, not the past form."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Fly-fishing", "meaning": "Câu cá bằng ruồi nhân tạo", "context": "I went fly-fishing with my dad yesterday." },
+        { "word": "Popcorn", "meaning": "Bắp rang bơ", "context": "He bought us some popcorn." },
+        { "word": "Hoop", "meaning": "Cái vòng (để nhảy qua)", "context": "The lions jumped through hoops." },
+        { "word": "Feed", "meaning": "Cho ăn", "context": "I even fed the baby penguins." },
+        { "word": "Excuse", "meaning": "Lời xin lỗi, lý do thoái thác", "context": "Alex wants to find some excuses to return home." }
+      ]
+    },
+    {
+      "unitNumber": 18,
+      "title": "Simple Future",
+      "difficulty": "7.5",
+      "grammar": {
+        "topics": ["Simple Future ('Will')", "On-the-spot decisions", "Future Predictions", "Will vs Be going to"],
+        "patterns": [
+          "Subject + will/won't + Verb (infinitive)",
+          "Will + Subject + Verb?",
+          "I think/hope + Subject + will + Verb"
+        ],
+        "rules": [
+          "Use 'will' to talk about predictions without definite evidence, on-the-spot decisions, hopes, and expectations.",
+          "Use 'will' with verbs like hope, think, believe, expect, probably, perhaps."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Check", "meaning": "Kiểm tra", "context": "She will check you." },
+        { "word": "Find out", "meaning": "Tìm ra, phát hiện ra", "context": "She will find out everything about you." },
+        { "word": "Probably", "meaning": "Có lẽ, có khả năng", "context": "I will probably go to Spain next summer." },
+        { "word": "Perhaps", "meaning": "Có lẽ", "context": "Perhaps she will come to the party." },
+        { "word": "Mop", "meaning": "Lau (sàn nhà)", "context": "A: Mop the kitchen floor. B: OK, I'll help you then." }
+      ]
+    },
+    {
+      "unitNumber": 19,
+      "title": "Question Words",
+      "difficulty": "8.0",
+      "grammar": {
+        "topics": ["Wh- Question Words", "Subject vs Object Questions"],
+        "patterns": [
+          "Who/Whose/What/Where/When/Why/How/How much/How many + auxiliary + subject + verb?"
+        ],
+        "rules": [
+          "Use question words to ask for specific information (person, place, time, reason, quantity)."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Choir", "meaning": "Dàn hợp xướng, ca đoàn", "context": "How many bees do you need in a bee choir?" },
+        { "word": "Sting", "meaning": "Đốt, châm (côn trùng)", "context": "A bee choir answers: Sting!" },
+        { "word": "Cost", "meaning": "Giá bao nhiêu, trị giá", "context": "How much does it cost? It's 20 euros." },
+        { "word": "Nationality", "meaning": "Quốc tịch", "context": "What nationality are you? Italian." },
+        { "word": "Whose", "meaning": "Của ai", "context": "Whose jacket is this? It's Sara's." }
+      ]
+    },
+    {
+      "unitNumber": 20,
+      "title": "Adjectives - Adverbs of manner",
+      "difficulty": "8.5",
+      "grammar": {
+        "topics": ["Adjectives vs Adverbs", "Adverbs of Manner", "Irregular Adverbs"],
+        "patterns": [
+          "Subject + be + Adjective / Adjective + Noun",
+          "Subject + Verb + Adverb of Manner",
+          "Adjective + -ly -> Adverb (e.g. slowly, happily)",
+          "Irregular: good -> well, fast -> fast, hard -> hard"
+        ],
+        "rules": [
+          "Adjectives describe nouns and go before nouns or after 'to be'. They remain the same in plural.",
+          "Adverbs of manner describe how someone does an action. They usually go after verbs.",
+          "Form adverbs by adding -ly to adjectives, noting spelling rules (easy -> easily)."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Wild", "meaning": "Hoang dã", "context": "Name six wild animals. An elephant is a wild animal." },
+        { "word": "Clever", "meaning": "Thông minh, khôn khéo", "context": "He is a clever boy. They are clever boys." },
+        { "word": "Behave", "meaning": "Cư xử, ăn ở", "context": "All the children behave very well." },
+        { "word": "Camp", "meaning": "Trại hè, cắm trại", "context": "Alex is at a summer camp." },
+        { "word": "Politely", "meaning": "Một cách lịch sự", "context": "Some girls talk very politely to me." }
+      ]
+    },
+    {
+      "unitNumber": 21,
+      "title": "Comparisons",
+      "difficulty": "9.0",
+      "grammar": {
+        "topics": ["Comparative Adjectives", "Superlative Adjectives", "Spelling of Comparisons", "Irregular Comparisons"],
+        "patterns": [
+          "Subject + be + comparative adjective + than + ...",
+          "Subject + be + the + superlative adjective + ...",
+          "one syllable: -er than / the -est",
+          "two syllables ending in -y: -ier than / the -iest",
+          "long adjectives: more ... than / the most ..."
+        ],
+        "rules": [
+          "Use comparative to compare two people, animals, or things.",
+          "Use superlative to compare three or more people, animals, or things.",
+          "Use 'the' before superlative adjectives.",
+          "Irregular: good-better-best, bad-worse-worst, much/many-more-most."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Comparative", "meaning": "So sánh hơn", "context": "Write the comparative and superlative forms." },
+        { "word": "Superlative", "meaning": "So sánh nhất", "context": "Superlative adjectives compare three or more things." },
+        { "word": "Lizard", "meaning": "Con thằn lằn", "context": "In picture A, the lizard is longer than the lizard in picture B." },
+        { "word": "Slim", "meaning": "Mảnh khảnh, thon thả", "context": "Write the comparison forms of: slim -> slimmer -> the slimmest." },
+        { "word": "Hippo", "meaning": "Con hà mã", "context": "The hippo in picture A is bigger than the hippo in picture B." }
+      ]
+    },
+    {
+      "unitNumber": 22,
+      "title": "And / But / Or / Because",
+      "difficulty": "9.5",
+      "grammar": {
+        "topics": ["Conjunctions"],
+        "patterns": [
+          "Idea 1 + and + Idea 2 (similar)",
+          "Idea 1 + but + Idea 2 (contrast)",
+          "Possibility 1 + or + Possibility 2 (choice)",
+          "Action + because + Reason (explanation)"
+        ],
+        "rules": [
+          "Use 'and' to join two similar ideas.",
+          "Use 'but' to join two different/contrasting ideas.",
+          "Use 'or' to join two possibilities.",
+          "Use 'because' to give a reason."
+        ]
+      },
+      "vocabulary": [
+        { "word": "Conjunction", "meaning": "Liên từ", "context": "Using conjunctions to join sentences." },
+        { "word": "Mirror", "meaning": "Cái gương", "context": "You're different because these are special mirrors!" },
+        { "word": "Skiing", "meaning": "Trượt tuyết", "context": "I wanted to go skiing but I didn't have any skis." },
+        { "word": "Starving", "meaning": "Đói bụng", "context": "I am starving because I didn't have lunch." },
+        { "word": "Excuse", "meaning": "Lý do viện cớ", "context": "Write the six best excuses for not doing your homework." }
+      ]
+    }
+  ]
+}

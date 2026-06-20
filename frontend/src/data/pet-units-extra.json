@@ -1,0 +1,494 @@
+[
+  {
+    "unit_id": 1,
+    "extra_grammar": [
+      { "id": 7, "sentence": "She _____ (currently/work) on a big project.", "answer": "is currently working", "options": ["is currently working", "currently works", "has currently worked", "currently worked"], "explanation": "Temporary ongoing action → Present Continuous." },
+      { "id": 8, "sentence": "My parents _____ (own) two houses in the countryside.", "answer": "own", "options": ["own", "are owning", "have owned", "are owned"], "explanation": "'Own' is a state verb — no continuous form." },
+      { "id": 9, "sentence": "Why _____ you _____ (smell) the milk? Is it bad?", "answer": "are / smelling", "options": ["are / smelling", "do / smell", "have / smelt", "did / smell"], "explanation": "Action use of 'smell' (checking) → Present Continuous." },
+      { "id": 10, "sentence": "The children _____ (play) in the garden every day after school.", "answer": "play", "options": ["play", "are playing", "have played", "played"], "explanation": "Regular daily habit → Present Simple." },
+      { "id": 11, "sentence": "He _____ (always/lose) his keys! It's so annoying.", "answer": "is always losing", "options": ["is always losing", "always loses", "always lost", "has always lost"], "explanation": "Annoying habit → Present Continuous (not simple)." },
+      { "id": 12, "sentence": "The sun _____ (set) in the west.", "answer": "sets", "options": ["sets", "is setting", "has set", "set"], "explanation": "Permanent fact/scientific truth → Present Simple." }
+    ],
+    "reading2": {
+      "title": "Tiny Homes: Living Large in Small Spaces",
+      "text": "Across the world, a quiet revolution in housing is taking place. More and more people are choosing to live in 'tiny homes' — dwellings of under 50 square metres. Far from being a compromise, many tiny home owners say their reduced living space has transformed their lives for the better.\n\nThe tiny home movement began in the United States in the early 2000s and has since spread to Europe, Australia, and beyond. Advocates argue that smaller homes cost significantly less to build, heat, and maintain. This allows owners to spend less time working to pay their mortgage and more time enjoying life. Some tiny home enthusiasts even manage to live mortgage-free.\n\nDesigners of tiny homes have become experts in maximising every centimetre of space. Built-in storage, foldaway furniture, and clever multi-purpose rooms are all essential features. One particularly popular design includes a sleeping loft accessed by a ladder, with a full kitchen and bathroom below.\n\nCritics, however, argue that tiny homes are simply impractical for families. There is rarely enough space for children to play, and guests have nowhere to sleep. Despite these limitations, interest in tiny living continues to grow, particularly among young adults who prioritise experiences over possessions.",
+      "questions": [
+        { "id": 1, "question": "Where did the tiny home movement begin?", "options": ["A. Europe", "B. Australia", "C. The United States", "D. Japan"], "answer": "C", "explanation": "'The tiny home movement began in the United States in the early 2000s.'" },
+        { "id": 2, "question": "What financial benefit do tiny homes offer?", "options": ["A. Higher resale value", "B. Government grants", "C. Lower costs to build and maintain", "D. No property taxes"], "answer": "C", "explanation": "'Smaller homes cost significantly less to build, heat, and maintain.'" },
+        { "id": 3, "question": "What is one common design feature of tiny homes?", "options": ["A. A large garden", "B. A sleeping loft accessed by a ladder", "C. A separate dining room", "D. Underground storage"], "answer": "B", "explanation": "'A sleeping loft accessed by a ladder, with a full kitchen and bathroom below.'" },
+        { "id": 4, "question": "What do critics mainly say about tiny homes?", "options": ["A. They are too expensive to build", "B. They are not environmentally friendly", "C. They are impractical for families", "D. They require too much maintenance"], "answer": "C", "explanation": "'Tiny homes are simply impractical for families... no space for children to play.'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "My neighbour is always playing loud music. It annoys me.", "key_word": "wish", "answer": "I wish my neighbour wouldn't play loud music.", "hint": "wish + would + base verb" },
+      { "id": 6, "original": "The flat is too small for a family of four.", "key_word": "enough", "answer": "The flat is not big enough for a family of four.", "hint": "not big enough for" },
+      { "id": 7, "original": "We haven't decided where to live yet.", "key_word": "decision", "answer": "We haven't made a decision about where to live yet.", "hint": "made a decision about" },
+      { "id": 8, "original": "The house was built in 1890.", "key_word": "built", "answer": "They built the house in 1890.", "hint": "Active: They built the house" }
+    ],
+    "cloze2": {
+      "title": "Moving to a New Home",
+      "text": "Moving to a new home can be both exciting and (1)_____ at the same time. Most people spend weeks (2)_____ their belongings and deciding what to keep and what to throw (3)_____. It is important to (4)_____ all the costs involved before making a final (5)_____. In addition to the price of the property itself, buyers need to consider legal (6)_____ and removal costs. Once you (7)_____ in, you will quickly start to feel (8)_____ in your new surroundings.",
+      "gaps": [
+        { "id": 1, "answer": "stressful", "options": ["stressful", "difficult", "boring", "dangerous"] },
+        { "id": 2, "answer": "sorting", "options": ["sorting", "packing", "moving", "cleaning"] },
+        { "id": 3, "answer": "away", "options": ["away", "out", "off", "down"] },
+        { "id": 4, "answer": "consider", "options": ["consider", "think", "check", "calculate"] },
+        { "id": 5, "answer": "decision", "options": ["decision", "choice", "option", "plan"] },
+        { "id": 6, "answer": "fees", "options": ["fees", "costs", "prices", "charges"] },
+        { "id": 7, "answer": "settle", "options": ["settle", "move", "get", "come"] },
+        { "id": 8, "answer": "at home", "options": ["at home", "comfortable", "relaxed", "secure"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 2,
+    "extra_grammar": [
+      { "id": 7, "sentence": "We need to buy _____ milk — there's none left.", "answer": "some", "options": ["some", "any", "a little", "few"], "explanation": "'Some' is used in requests/offers and affirmative statements with uncountable nouns." },
+      { "id": 8, "sentence": "The teacher gave _____ useful _____ today.", "answer": "some / advice", "options": ["some / advice", "an / advice", "a few / advices", "some / advices"], "explanation": "'Advice' is uncountable — use 'some advice'." },
+      { "id": 9, "sentence": "There are very _____ students who failed the test.", "answer": "few", "options": ["few", "little", "much", "less"], "explanation": "'Few' = not many (countable noun 'students')." },
+      { "id": 10, "sentence": "He has _____ experience in teaching abroad.", "answer": "a lot of", "options": ["a lot of", "many", "a few", "several"], "explanation": "'Experience' (uncountable) → 'a lot of'." },
+      { "id": 11, "sentence": "I'm afraid I don't have _____ time to help you right now.", "answer": "much", "options": ["much", "many", "a few", "several"], "explanation": "'Time' is uncountable → 'much'." },
+      { "id": 12, "sentence": "_____ the students in my class passed the exam.", "answer": "Most of", "options": ["Most of", "Most", "The most of", "Almost"], "explanation": "'Most of the students' (specific group) needs 'of'. 'Most students' (general) has no 'of'." }
+    ],
+    "reading2": {
+      "title": "The Flipped Classroom",
+      "text": "The traditional classroom model is simple: a teacher stands at the front and delivers information, while students listen and take notes. Homework is then used to practise what was taught in class. However, a growing number of schools around the world are experimenting with an entirely different approach, known as the 'flipped classroom'.\n\nIn a flipped classroom, students watch video lectures or read materials at home before class. The classroom time is then used for discussion, problem-solving, and collaborative activities. The idea is that students come to class having already encountered the new material, so the teacher can spend more time addressing individual questions and supporting deeper understanding.\n\nResearch into the flipped model has produced mixed results. Many students report feeling more engaged during lessons, and teachers say they can give more personalised attention. However, the approach requires students to have access to technology at home, which is not always the case. There are also concerns that some students simply do not watch the videos before class, which puts them at a disadvantage.\n\nDespite these challenges, many educators believe the flipped classroom represents an important step forward in making learning more student-centred and effective.",
+      "questions": [
+        { "id": 1, "question": "What is the main difference between a traditional and a flipped classroom?", "options": ["A. Students work in groups more often", "B. Teachers give less homework", "C. Content is studied at home, and class time is for practice", "D. Technology is used instead of textbooks"], "answer": "C", "explanation": "'Students watch lectures at home; classroom time is for discussion and problem-solving.'" },
+        { "id": 2, "question": "What do teachers in flipped classrooms say about their lessons?", "options": ["A. They can teach more topics", "B. They can give more personalised attention", "C. They have less work to prepare", "D. Students behave better"], "answer": "B", "explanation": "'Teachers say they can give more personalised attention.'" },
+        { "id": 3, "question": "What is one challenge of the flipped model?", "options": ["A. It costs too much to implement", "B. Teachers need extra training", "C. Not all students have technology at home", "D. Parents object to the approach"], "answer": "C", "explanation": "'The approach requires students to have access to technology at home, which is not always the case.'" },
+        { "id": 4, "question": "What does the article say about research on the flipped classroom?", "options": ["A. It shows the model is a complete failure", "B. Results are mixed", "C. It is too early to draw conclusions", "D. All schools should adopt it"], "answer": "B", "explanation": "'Research into the flipped model has produced mixed results.'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "The teacher told the students not to use their phones during class.", "key_word": "allowed", "answer": "Students were not allowed to use their phones during class.", "hint": "were not allowed to" },
+      { "id": 6, "original": "She found the exam very difficult.", "key_word": "difficulty", "answer": "She had great difficulty with the exam.", "hint": "had great difficulty with" },
+      { "id": 7, "original": "This is the best school in the city.", "key_word": "no", "answer": "There is no better school in the city.", "hint": "There is no better" },
+      { "id": 8, "original": "He started studying at this university five years ago.", "key_word": "been", "answer": "He has been studying at this university for five years.", "hint": "has been studying for" }
+    ],
+    "cloze2": {
+      "title": "Learning a New Language",
+      "text": "Learning a second language is one of the most (1)_____ things you can do for your brain. Research (2)_____ that bilingual people have stronger memory and better multi-tasking abilities. The most effective (3)_____ to learn a language is to use it as much as possible in real (4)_____ situations. This means speaking with native speakers, watching films, and reading books in the target language. Many learners make the (5)_____ of only studying grammar without practising conversation. While grammar is important, communication (6)_____ are developed through real interaction. The key is to be (7)_____ to make mistakes — they are an essential (8)_____ of the learning process.",
+      "gaps": [
+        { "id": 1, "answer": "beneficial", "options": ["beneficial", "useful", "good", "helpful"] },
+        { "id": 2, "answer": "suggests", "options": ["suggests", "shows", "says", "tells"] },
+        { "id": 3, "answer": "way", "options": ["way", "method", "approach", "technique"] },
+        { "id": 4, "answer": "life", "options": ["life", "world", "practice", "context"] },
+        { "id": 5, "answer": "mistake", "options": ["mistake", "error", "fault", "problem"] },
+        { "id": 6, "answer": "skills", "options": ["skills", "abilities", "talents", "levels"] },
+        { "id": 7, "answer": "willing", "options": ["willing", "ready", "able", "happy"] },
+        { "id": 8, "answer": "part", "options": ["part", "step", "stage", "section"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 3,
+    "extra_grammar": [
+      { "id": 7, "sentence": "How long _____ you _____ (know) each other?", "answer": "have / known", "options": ["have / known", "do / know", "did / know", "are / knowing"], "explanation": "Duration from past to now → Present Perfect." },
+      { "id": 8, "sentence": "She _____ (win) three medals since she joined the club.", "answer": "has won", "options": ["has won", "won", "was winning", "had won"], "explanation": "Accumulated result, no specific time → Present Perfect." },
+      { "id": 9, "sentence": "The film _____ (already/start) when we arrived.", "answer": "had already started", "options": ["had already started", "already started", "has already started", "was already starting"], "explanation": "Action before another past action → Past Perfect." },
+      { "id": 10, "sentence": "I _____ (never/try) bungee jumping, and I never will!", "answer": "have never tried", "options": ["have never tried", "never tried", "was never trying", "had never tried"], "explanation": "'Never' with a lifetime experience → Present Perfect." },
+      { "id": 11, "sentence": "He _____ (play) tennis professionally for five years before his injury.", "answer": "had played", "options": ["had played", "has played", "played", "was playing"], "explanation": "Past action before another past event → Past Perfect." },
+      { "id": 12, "sentence": "This is the first time I _____ (see) a live concert!", "answer": "have ever seen", "options": ["have ever seen", "ever saw", "had ever seen", "am ever seeing"], "explanation": "'First time I have ever...' → Present Perfect." }
+    ],
+    "reading2": {
+      "title": "Community Sports: More Than Just Exercise",
+      "text": "Joining a local sports club or community team offers far more than just physical fitness. For many people, especially those who have recently moved to a new area, community sport provides an instant social network and a sense of belonging.\n\nResearchers at the University of Oxford studied over 7,000 people and found that those who played team sports reported higher levels of wellbeing compared to those who exercised alone. The social side of team sport — the shared goals, the celebrations, and even the defeats — appears to create a sense of community that individual exercise simply cannot replicate.\n\nCoaches also play an important role in community sport. A good coach does more than teach techniques; they build confidence, manage conflict, and create an environment where every participant feels valued, regardless of ability. This is particularly important for younger players, who may be developing their sense of identity and self-worth.\n\nDespite the benefits, access to community sport remains unequal. Participation rates are significantly lower in lower-income communities, where club fees, equipment costs, and lack of local facilities can all act as barriers. Addressing these inequalities is essential if the full benefits of community sport are to be realised.",
+      "questions": [
+        { "id": 1, "question": "What extra benefit do researchers say team sports provide compared to exercising alone?", "options": ["A. Better physical results", "B. A sense of community", "C. Improved concentration", "D. Lower injury risk"], "answer": "B", "explanation": "'The social side of team sport creates a sense of community that individual exercise cannot replicate.'" },
+        { "id": 2, "question": "What is the role of a good coach according to the article?", "options": ["A. Winning as many matches as possible", "B. Teaching only advanced players", "C. Creating a valued and confident environment", "D. Selecting the best players for competitions"], "answer": "C", "explanation": "'Build confidence, create an environment where every participant feels valued.'" },
+        { "id": 3, "question": "What problem does the article identify regarding access to community sport?", "options": ["A. There are not enough teams", "B. Training is too intense for beginners", "C. Lower-income communities face financial barriers", "D. Coaches are not properly trained"], "answer": "C", "explanation": "'Club fees, equipment costs, and lack of local facilities act as barriers in lower-income communities.'" },
+        { "id": 4, "question": "Who does the article say especially benefits from a supportive coaching environment?", "options": ["A. Professional athletes", "B. Adult beginners", "C. Older players", "D. Younger players still developing their identity"], "answer": "D", "explanation": "'Particularly important for younger players, who may be developing their sense of identity.'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "This is the most exciting hobby I have ever tried.", "key_word": "never", "answer": "I have never tried such an exciting hobby.", "hint": "have never tried such an" },
+      { "id": 6, "original": "She regrets giving up chess when she was young.", "key_word": "wishes", "answer": "She wishes she hadn't given up chess when she was young.", "hint": "wishes she hadn't given up" },
+      { "id": 7, "original": "They started the tournament two hours ago.", "key_word": "going", "answer": "The tournament has been going on for two hours.", "hint": "has been going on for" },
+      { "id": 8, "original": "Despite the bad weather, they played the match.", "key_word": "even", "answer": "They played the match even though the weather was bad.", "hint": "even though the weather was" }
+    ],
+    "cloze2": {
+      "title": "The Psychology of Winning",
+      "text": "What separates elite athletes from the rest? Physical (1)_____ is obviously important, but sports psychologists argue that mental strength can be equally (2)_____. The ability to stay (3)_____ under pressure, recover quickly from setbacks, and maintain confidence after a (4)_____ are all signs of mental toughness. Successful athletes often use techniques such as visualisation — (5)_____ imagining themselves performing well — to prepare for (6)_____. They also learn to control their (7)_____, staying positive even when things are not going to (8)_____.",
+      "gaps": [
+        { "id": 1, "answer": "fitness", "options": ["fitness", "strength", "ability", "talent"] },
+        { "id": 2, "answer": "decisive", "options": ["decisive", "important", "critical", "significant"] },
+        { "id": 3, "answer": "focused", "options": ["focused", "calm", "concentrated", "relaxed"] },
+        { "id": 4, "answer": "defeat", "options": ["defeat", "failure", "loss", "setback"] },
+        { "id": 5, "answer": "mentally", "options": ["mentally", "clearly", "strongly", "physically"] },
+        { "id": 6, "answer": "competition", "options": ["competition", "matches", "games", "events"] },
+        { "id": 7, "answer": "emotions", "options": ["emotions", "feelings", "reactions", "thoughts"] },
+        { "id": 8, "answer": "plan", "options": ["plan", "schedule", "expectation", "hope"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 4,
+    "extra_grammar": [
+      { "id": 7, "sentence": "The Sahara Desert is _____ desert in the world.", "answer": "the largest", "options": ["the largest", "the most large", "larger", "the larger"], "explanation": "Superlative: 'the + adjective + est' for short adjectives." },
+      { "id": 8, "sentence": "The flight was _____ than I expected.", "answer": "far longer", "options": ["far longer", "much more long", "the longest", "more longer"], "explanation": "'Far' intensifies a comparative. 'Long' → 'longer'." },
+      { "id": 9, "sentence": "This resort isn't _____ the one we stayed at last year.", "answer": "as luxurious as", "options": ["as luxurious as", "more luxurious than", "so luxurious than", "the most luxurious"], "explanation": "Equal comparison (negative): 'not as...as'." },
+      { "id": 10, "sentence": "The _____ you pack, the _____ your trip will be.", "answer": "lighter / more comfortable", "options": ["lighter / more comfortable", "more light / comfortable", "lightest / most comfortable", "less / better"], "explanation": "Double comparative: 'The + comparative, the + comparative'." },
+      { "id": 11, "sentence": "Travelling by night train is one of _____ ways to see the countryside.", "answer": "the most scenic", "options": ["the most scenic", "more scenic", "the scenicest", "most scenic"], "explanation": "Superlative: 'the most + adjective' for long adjectives." },
+      { "id": 12, "sentence": "She speaks Portuguese _____ than her brother.", "answer": "more fluently", "options": ["more fluently", "fluenter", "most fluently", "fluentlier"], "explanation": "Adverb comparative: 'more + adverb'." }
+    ],
+    "reading2": {
+      "title": "Overtourism: When Paradise Becomes a Problem",
+      "text": "Every year, millions of tourists flock to iconic destinations such as Venice, Barcelona, and Bali. While tourism is a vital source of income for many local economies, the sheer volume of visitors in some places has created a phenomenon known as 'overtourism' — a situation where tourism degrades the very experience it is supposed to provide.\n\nResidents of popular destinations often bear the brunt of overtourism. Rental prices soar as landlords convert homes into holiday apartments, forcing locals out of their own neighbourhoods. Historic city centres become crowded with tourists, and public transport is overwhelmed. In Venice, for example, the permanent population has halved in the last 50 years as residents leave in search of more liveable conditions.\n\nSome cities have begun to take action. Amsterdam has capped the number of new hotels and restricted short-term rentals. The Greek island of Santorini has limited cruise ship arrivals to 8,000 visitors per day. These measures are controversial — the tourism industry argues they harm local businesses — but supporters say they are essential to preserving what makes these places worth visiting in the first place.\n\nThe debate ultimately comes down to a difficult question: who do destinations belong to — the residents who call them home, or the tourists who fund their economies?",
+      "questions": [
+        { "id": 1, "question": "What is 'overtourism' according to the article?", "options": ["A. Tourism that is too expensive for most visitors", "B. When tourism damages the experience it was meant to provide", "C. When tourists visit dangerous destinations", "D. Tourism that harms the natural environment only"], "answer": "B", "explanation": "'A situation where tourism degrades the very experience it is supposed to provide.'" },
+        { "id": 2, "question": "What has happened to housing prices in popular tourist destinations?", "options": ["A. They have fallen due to increased supply", "B. They have stayed the same", "C. They have risen as homes are converted to holiday rentals", "D. They are controlled by the government"], "answer": "C", "explanation": "'Rental prices soar as landlords convert homes into holiday apartments.'" },
+        { "id": 3, "question": "What measure has Santorini introduced?", "options": ["A. Banned all cruise ships", "B. Introduced a tourist tax", "C. Limited daily cruise ship arrivals to 8,000", "D. Closed historic sites in summer"], "answer": "C", "explanation": "'Santorini has limited cruise ship arrivals to 8,000 visitors per day.'" },
+        { "id": 4, "question": "What key question does the article raise at the end?", "options": ["A. Should governments control the tourism industry?", "B. Who do destinations truly belong to?", "C. How can tourists reduce their environmental impact?", "D. Are historic cities worth preserving?"], "answer": "B", "explanation": "'Who do destinations belong to — the residents or the tourists?'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "The hotel wasn't as comfortable as the reviews suggested.", "key_word": "less", "answer": "The hotel was less comfortable than the reviews suggested.", "hint": "less comfortable than" },
+      { "id": 6, "original": "I have never been on a longer flight.", "key_word": "longest", "answer": "It was the longest flight I have ever been on.", "hint": "the longest flight I have ever" },
+      { "id": 7, "original": "The earlier you book, the more money you save.", "key_word": "save", "answer": "You save more money if you book earlier.", "hint": "save more money if you book" },
+      { "id": 8, "original": "The journey took five hours longer than planned.", "key_word": "as", "answer": "The journey wasn't as short as planned.", "hint": "wasn't as short as planned" }
+    ],
+    "cloze2": {
+      "title": "A Perfect Day in Kyoto",
+      "text": "Kyoto, Japan's ancient (1)_____, is widely regarded as one of the most beautiful cities in Asia. Unlike Tokyo, which is famous for its fast-paced modern (2)_____, Kyoto offers visitors a (3)_____ into traditional Japanese culture. The city is home to over 1,600 Buddhist temples and 400 Shinto shrines. A (4)_____ through the famous bamboo grove of Arashiyama is an unforgettable (5)_____. For those interested in traditional arts, Kyoto also offers (6)_____ to experience the tea ceremony and ikebana flower arranging. Most visitors (7)_____ that visiting Kyoto in spring, when the cherry blossoms are in full (8)_____, is the most magical time of all.",
+      "gaps": [
+        { "id": 1, "answer": "capital", "options": ["capital", "city", "centre", "town"] },
+        { "id": 2, "answer": "lifestyle", "options": ["lifestyle", "culture", "life", "living"] },
+        { "id": 3, "answer": "glimpse", "options": ["glimpse", "look", "view", "sight"] },
+        { "id": 4, "answer": "walk", "options": ["walk", "trip", "journey", "tour"] },
+        { "id": 5, "answer": "experience", "options": ["experience", "memory", "moment", "activity"] },
+        { "id": 6, "answer": "opportunities", "options": ["opportunities", "chances", "options", "choices"] },
+        { "id": 7, "answer": "agree", "options": ["agree", "say", "think", "believe"] },
+        { "id": 8, "answer": "bloom", "options": ["bloom", "colour", "flower", "growth"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 5,
+    "extra_grammar": [
+      { "id": 7, "sentence": "We _____ book in advance — the show might sell out.", "answer": "should", "options": ["should", "must", "will", "shall"], "explanation": "'Should' gives advice/recommendation." },
+      { "id": 8, "sentence": "You _____ stay out late — remember your exam tomorrow.", "answer": "shouldn't", "options": ["shouldn't", "mustn't", "can't", "won't"], "explanation": "'Shouldn't' = advice against doing something." },
+      { "id": 9, "sentence": "She _____ be at home — I can see a light on.", "answer": "must", "options": ["must", "should", "might", "can"], "explanation": "'Must' expresses near-certainty based on evidence." },
+      { "id": 10, "sentence": "They _____ have arrived yet — the train was delayed.", "answer": "can't", "options": ["can't", "mustn't", "shouldn't", "mightn't"], "explanation": "'Can't have' = logical impossibility (deduction)." },
+      { "id": 11, "sentence": "I _____ swim when I was three years old.", "answer": "could", "options": ["could", "can", "managed to", "was able to"], "explanation": "'Could' = general ability in the past." },
+      { "id": 12, "sentence": "After three attempts, he _____ open the safe.", "answer": "was able to", "options": ["was able to", "could", "managed", "can"], "explanation": "Specific success at a past moment → 'was able to' (not 'could')." }
+    ],
+    "reading2": {
+      "title": "Mindfulness: Hype or Help?",
+      "text": "Mindfulness — the practice of focusing your attention on the present moment without judgement — has become one of the most talked-about wellness trends of recent years. Promoted by celebrities, recommended by doctors, and offered in corporate boardrooms, mindfulness seems to be everywhere. But does it actually work?\n\nThe scientific evidence suggests that it can. Studies have shown that regular mindfulness practice can reduce symptoms of anxiety and depression, improve sleep quality, and even lower blood pressure. Mindfulness-Based Cognitive Therapy (MBCT), which combines mindfulness techniques with traditional therapy, has been approved by the UK's National Health Service as an effective treatment for recurrent depression.\n\nHowever, some researchers urge caution. A 2018 review of mindfulness studies found that many were poorly designed and that results were often exaggerated. There are also reports of negative experiences, where intense meditation practices triggered anxiety or unpleasant memories in some individuals.\n\nThe consensus seems to be that mindfulness, practised gently and consistently, can be a helpful tool for many people — but it is not a miracle cure. Like any approach to mental health, it works best as part of a broader strategy that may include therapy, physical activity, and social support.",
+      "questions": [
+        { "id": 1, "question": "What is mindfulness, according to the article?", "options": ["A. A type of yoga exercise", "B. Focusing on the present moment without judgement", "C. A form of therapy involving talking about the past", "D. Relaxation through controlled breathing only"], "answer": "B", "explanation": "'Focusing your attention on the present moment without judgement.'" },
+        { "id": 2, "question": "What does scientific evidence say about mindfulness?", "options": ["A. It has no proven benefits", "B. It is only useful for depression", "C. It can reduce anxiety and improve sleep", "D. It works better than medication"], "answer": "C", "explanation": "'Studies have shown mindfulness can reduce symptoms of anxiety, depression, and improve sleep.'" },
+        { "id": 3, "question": "What concern do some researchers raise?", "options": ["A. Mindfulness is too expensive", "B. Many studies are poorly designed and exaggerated", "C. It only works for highly educated people", "D. It requires professional guidance always"], "answer": "B", "explanation": "'Many studies were poorly designed and results were often exaggerated.'" },
+        { "id": 4, "question": "What is the article's overall conclusion about mindfulness?", "options": ["A. It is overhyped and should be avoided", "B. It is a miracle cure for mental illness", "C. It is a useful tool, but not a complete solution", "D. Only trained therapists should practise it"], "answer": "C", "explanation": "'Helpful tool for many people — but it is not a miracle cure.'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "I'm certain she passed the exam — she studied so hard.", "key_word": "must", "answer": "She must have passed the exam — she studied so hard.", "hint": "must have passed" },
+      { "id": 6, "original": "It's not necessary to bring a gift.", "key_word": "need", "answer": "You needn't bring a gift.", "hint": "needn't bring" },
+      { "id": 7, "original": "It was wrong of him to shout at the children.", "key_word": "should", "answer": "He shouldn't have shouted at the children.", "hint": "shouldn't have shouted" },
+      { "id": 8, "original": "Perhaps she left early because she was unwell.", "key_word": "may", "answer": "She may have left early because she was unwell.", "hint": "may have left" }
+    ],
+    "cloze2": {
+      "title": "Dealing with Disappointment",
+      "text": "Everyone experiences disappointment at some (1)_____ in their life. Whether it's failing an exam, losing a competition, or not getting a job you wanted, feeling (2)_____ is a completely natural response. The key is how you (3)_____ with these feelings. Experts suggest that (4)_____ yourself too harshly is counterproductive. Instead, try to (5)_____ the situation as a learning (6)_____. Ask yourself what you could do differently next time and set new (7)_____. Over time, learning to (8)_____ setbacks with resilience can actually help you grow stronger.",
+      "gaps": [
+        { "id": 1, "answer": "point", "options": ["point", "time", "moment", "stage"] },
+        { "id": 2, "answer": "disappointed", "options": ["disappointed", "upset", "unhappy", "sad"] },
+        { "id": 3, "answer": "deal", "options": ["deal", "cope", "manage", "handle"] },
+        { "id": 4, "answer": "criticising", "options": ["criticising", "judging", "blaming", "punishing"] },
+        { "id": 5, "answer": "view", "options": ["view", "see", "treat", "consider"] },
+        { "id": 6, "answer": "opportunity", "options": ["opportunity", "chance", "experience", "lesson"] },
+        { "id": 7, "answer": "goals", "options": ["goals", "targets", "aims", "plans"] },
+        { "id": 8, "answer": "overcome", "options": ["overcome", "face", "deal with", "handle"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 6,
+    "extra_grammar": [
+      { "id": 7, "sentence": "The film _____ has just won the Oscar was made by a French director.", "answer": "that", "options": ["that", "whose", "where", "who"], "explanation": "Thing, defining relative clause → 'that' or 'which'." },
+      { "id": 8, "sentence": "My favourite author, _____ latest novel I read last summer, is coming to our town.", "answer": "whose", "options": ["whose", "who", "which", "that"], "explanation": "Possession → 'whose'." },
+      { "id": 9, "sentence": "The theatre _____ we saw the play last week has closed down.", "answer": "where", "options": ["where", "that", "which", "in that"], "explanation": "Place → 'where'." },
+      { "id": 10, "sentence": "She's the presenter _____ show I watch every evening.", "answer": "whose", "options": ["whose", "who", "which", "that"], "explanation": "'Whose show' = possession of the presenter." },
+      { "id": 11, "sentence": "That was the year _____ I first discovered my passion for music.", "answer": "when", "options": ["when", "which", "that", "where"], "explanation": "Time reference → 'when'." },
+      { "id": 12, "sentence": "The reason _____ he left the band early is still unclear.", "answer": "why", "options": ["why", "which", "that", "where"], "explanation": "Reason → 'why'." }
+    ],
+    "reading2": {
+      "title": "Video Games: From Hobby to Profession",
+      "text": "For decades, video games were dismissed as a childish hobby with no real-world value. Today, that perception has dramatically changed. The global gaming industry now generates more revenue than the film and music industries combined, and professional gaming — known as esports — has become a legitimate career path for a growing number of talented players.\n\nBeyond professional gaming, the industry has created countless jobs in development, marketing, journalism, and content creation. Game design programmes are offered at universities worldwide, and graduates are finding employment not only in gaming but also in fields like architecture, education, and healthcare — where simulation technology borrowed from gaming is increasingly used.\n\nThere is also growing recognition of the cognitive benefits of gaming. Research suggests that certain types of games improve spatial reasoning, problem-solving, and decision-making skills. Surgeons who played video games regularly were found to make fewer errors during laparoscopic surgery than non-gaming colleagues in one notable study.\n\nOf course, challenges remain. Concerns about addiction, the portrayal of violence, and the financial exploitation of players through in-game purchases continue to generate debate. But for the first time, mainstream culture is beginning to acknowledge gaming not just as entertainment, but as a cultural force worthy of serious attention.",
+      "questions": [
+        { "id": 1, "question": "How does the gaming industry compare financially to film and music?", "options": ["A. It earns slightly less than both", "B. It earns the same as film but more than music", "C. It generates more than both combined", "D. It earns less than the film industry"], "answer": "C", "explanation": "'The gaming industry generates more revenue than the film and music industries combined.'" },
+        { "id": 2, "question": "What fields outside gaming use simulation technology from games?", "options": ["A. Cooking and fashion", "B. Architecture, education, and healthcare", "C. Law and finance", "D. Transportation and engineering only"], "answer": "B", "explanation": "'Architecture, education, and healthcare — where simulation technology is increasingly used.'" },
+        { "id": 3, "question": "What does the study of surgeons show?", "options": ["A. Surgeons who game spend less time working", "B. Gaming improves surgical planning skills", "C. Regular gamers make fewer errors in surgery", "D. Games are used to train all medical students"], "answer": "C", "explanation": "'Surgeons who played video games regularly made fewer errors during laparoscopic surgery.'" },
+        { "id": 4, "question": "What concerns about gaming does the article mention?", "options": ["A. The cost of consoles and equipment", "B. Addiction, violence, and financial exploitation", "C. Poor career prospects for developers", "D. The negative effect on physical fitness"], "answer": "B", "explanation": "'Concerns about addiction, the portrayal of violence, and the financial exploitation of players.'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "The documentary was too long to watch in one sitting.", "key_word": "enough", "answer": "The documentary wasn't short enough to watch in one sitting.", "hint": "wasn't short enough to" },
+      { "id": 6, "original": "Nobody makes films as well as that director.", "key_word": "best", "answer": "That director makes the best films.", "hint": "makes the best films" },
+      { "id": 7, "original": "The band's concert was cancelled because of a technical problem.", "key_word": "due", "answer": "The band's concert was cancelled due to a technical problem.", "hint": "cancelled due to" },
+      { "id": 8, "original": "It's three years since she last performed on stage.", "key_word": "performed", "answer": "She hasn't performed on stage for three years.", "hint": "hasn't performed for" }
+    ],
+    "cloze2": {
+      "title": "The Art of Film Review",
+      "text": "Writing a good film review requires more than simply saying whether you (1)_____ or disliked a film. A strong review should (2)_____ the plot briefly without giving away the ending — this is known as (3)_____ spoilers. The reviewer should then analyse key (4)_____ such as the acting, direction, and cinematography. It is important to (5)_____ your opinions with specific examples from the film. For (6)_____, if you think the lead actor gave a powerful performance, explain which (7)_____ made it memorable. Finally, the review should include a (8)_____ recommendation — would you suggest others see this film or not?",
+      "gaps": [
+        { "id": 1, "answer": "liked", "options": ["liked", "enjoyed", "loved", "appreciated"] },
+        { "id": 2, "answer": "summarise", "options": ["summarise", "describe", "explain", "tell"] },
+        { "id": 3, "answer": "avoiding", "options": ["avoiding", "not giving", "preventing", "stopping"] },
+        { "id": 4, "answer": "elements", "options": ["elements", "aspects", "parts", "features"] },
+        { "id": 5, "answer": "support", "options": ["support", "back", "prove", "explain"] },
+        { "id": 6, "answer": "instance", "options": ["instance", "example", "case", "reason"] },
+        { "id": 7, "answer": "scene", "options": ["scene", "moment", "part", "section"] },
+        { "id": 8, "answer": "clear", "options": ["clear", "strong", "firm", "final"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 7,
+    "extra_grammar": [
+      { "id": 7, "sentence": "The new policy _____ (implement) next month.", "answer": "will be implemented", "options": ["will be implemented", "will implement", "is implemented", "has been implemented"], "explanation": "Future passive: will + be + past participle." },
+      { "id": 8, "sentence": "The road _____ (damage) by the flooding last night.", "answer": "was damaged", "options": ["was damaged", "damaged", "had been damaging", "is damaged"], "explanation": "Past passive: was + past participle." },
+      { "id": 9, "sentence": "Millions of tonnes of goods _____ (transport) by ship every year.", "answer": "are transported", "options": ["are transported", "transport", "are transporting", "have transported"], "explanation": "Regular general fact, passive → Present Simple passive." },
+      { "id": 10, "sentence": "The suspect _____ (question) by police when his lawyer arrived.", "answer": "was being questioned", "options": ["was being questioned", "was questioned", "is being questioned", "had been questioning"], "explanation": "Past action in progress (interrupted) → Past Continuous Passive." },
+      { "id": 11, "sentence": "The driver _____ (fine) for speeding by the time he reached home.", "answer": "had been fined", "options": ["had been fined", "was fined", "has been fined", "is fined"], "explanation": "Action completed before another past event → Past Perfect Passive." },
+      { "id": 12, "sentence": "The broken escalator _____ (repair) by the end of the day.", "answer": "will have been repaired", "options": ["will have been repaired", "will be repaired", "is being repaired", "has been repaired"], "explanation": "Future Perfect Passive: will + have been + past participle." }
+    ],
+    "reading2": {
+      "title": "Hyperloop: The Future of Travel?",
+      "text": "Since Elon Musk first proposed the concept in 2013, the hyperloop has captured the imagination of engineers and transport planners around the world. The technology involves sealed pods travelling through low-pressure tubes at speeds of up to 1,200 kilometres per hour — faster than a commercial aircraft — using magnetic levitation to eliminate friction.\n\nIf the technology can be made to work reliably and safely, the implications for travel are extraordinary. The journey from London to Edinburgh, which currently takes around four and a half hours by train, could potentially be completed in around 50 minutes. Similarly, the distance between Los Angeles and San Francisco — a six-hour drive — could be covered in 35 minutes.\n\nHowever, the technology faces significant challenges. Building the infrastructure — the tubes, stations, and pods — would cost enormous amounts of money. Questions about safety, particularly in the event of a sudden decompression at high speed, have also been raised. So far, no full-scale hyperloop has entered commercial operation, though several companies are conducting testing.\n\nDespite the obstacles, many transport experts believe that some form of hyperloop system will eventually become a reality. The question is not whether it is technically possible, but whether governments and investors are willing to commit the financial resources required.",
+      "questions": [
+        { "id": 1, "question": "What is the maximum speed that hyperloop pods could achieve?", "options": ["A. 500 km/h", "B. 800 km/h", "C. 1,000 km/h", "D. 1,200 km/h"], "answer": "D", "explanation": "'Speeds of up to 1,200 kilometres per hour.'" },
+        { "id": 2, "question": "What advantage does the article mention for the London-Edinburgh route?", "options": ["A. It would be cheaper than a plane", "B. The journey could take just 50 minutes", "C. It would be free for commuters", "D. The route already exists"], "answer": "B", "explanation": "'The journey from London to Edinburgh could be completed in around 50 minutes.'" },
+        { "id": 3, "question": "What safety concern does the article mention?", "options": ["A. Pods travelling too close together", "B. The risk of fire in the tubes", "C. Sudden decompression at high speed", "D. Passenger discomfort during turns"], "answer": "C", "explanation": "'Sudden decompression at high speed has been raised as a safety concern.'" },
+        { "id": 4, "question": "What do transport experts say about the hyperloop's future?", "options": ["A. It will never be built due to the cost", "B. It is technically impossible", "C. Some form of it will eventually exist", "D. It is already being used in some countries"], "answer": "C", "explanation": "'Many experts believe some form of hyperloop system will eventually become a reality.'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "Workers are repairing the bridge at the moment.", "key_word": "repaired", "answer": "The bridge is being repaired at the moment.", "hint": "is being repaired" },
+      { "id": 6, "original": "The company had already delivered the packages before noon.", "key_word": "been", "answer": "The packages had already been delivered before noon.", "hint": "had already been delivered" },
+      { "id": 7, "original": "Nobody told me about the change in timetable.", "key_word": "informed", "answer": "I wasn't informed about the change in timetable.", "hint": "wasn't informed about" },
+      { "id": 8, "original": "The government will investigate the accident next week.", "key_word": "investigated", "answer": "The accident will be investigated by the government next week.", "hint": "will be investigated by" }
+    ],
+    "cloze2": {
+      "title": "Cycling to Work",
+      "text": "More and more people are (1)_____ to cycle to work as an alternative to driving or using public transport. Cycling has obvious health (2)_____, including improved cardiovascular fitness and reduced stress. From an environmental point of (3)_____, cycling produces zero carbon emissions, making it one of the most sustainable forms of transport (4)_____. However, many potential cyclists are (5)_____ off by safety concerns, particularly in cities where cycle lanes are (6)_____ or poorly maintained. Some cities have responded by introducing (7)_____ traffic zones and expanding their cycling (8)_____, making commuting by bike both safer and more attractive.",
+      "gaps": [
+        { "id": 1, "answer": "choosing", "options": ["choosing", "deciding", "opting", "wanting"] },
+        { "id": 2, "answer": "benefits", "options": ["benefits", "advantages", "effects", "results"] },
+        { "id": 3, "answer": "view", "options": ["view", "sight", "perspective", "angle"] },
+        { "id": 4, "answer": "available", "options": ["available", "possible", "existing", "known"] },
+        { "id": 5, "answer": "put", "options": ["put", "kept", "turned", "stopped"] },
+        { "id": 6, "answer": "inadequate", "options": ["inadequate", "missing", "absent", "few"] },
+        { "id": 7, "answer": "low-emission", "options": ["low-emission", "traffic-free", "pedestrian", "clean"] },
+        { "id": 8, "answer": "infrastructure", "options": ["infrastructure", "network", "routes", "lanes"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 8,
+    "extra_grammar": [
+      { "id": 7, "sentence": "She told the interviewer she _____ (work) in marketing for three years.", "answer": "had been working", "options": ["had been working", "has been working", "was working", "worked"], "explanation": "Past Perfect Continuous in reported speech: had been working." },
+      { "id": 8, "sentence": "He asked me what time the event _____ (start).", "answer": "started", "options": ["started", "would start", "starts", "has started"], "explanation": "Reported question with future meaning → would start OR past simple 'started' both accepted." },
+      { "id": 9, "sentence": "They warned us _____ touch the equipment.", "answer": "not to", "options": ["not to", "to not", "don't", "not"], "explanation": "Reported imperative (negative): warned + object + not to + infinitive." },
+      { "id": 10, "sentence": "She said she _____ (be) at the conference the following week.", "answer": "would be", "options": ["would be", "will be", "is", "was"], "explanation": "'Will' → 'would' in reported speech. 'Next week' → 'the following week'." },
+      { "id": 11, "sentence": "He admitted _____ the report without reading it properly.", "answer": "having submitted", "options": ["having submitted", "to submit", "submitting", "he submitted"], "explanation": "Admit + gerund (having + past participle for past action)." },
+      { "id": 12, "sentence": "She denied _____ the information.", "answer": "leaking", "options": ["leaking", "to leak", "that she leaked", "have leaked"], "explanation": "Deny + gerund." }
+    ],
+    "reading2": {
+      "title": "Digital Detox: Switching Off to Switch On",
+      "text": "In an age where the average person checks their smartphone over 150 times a day, the idea of deliberately disconnecting from all technology can seem radical — or even frightening. Yet a growing movement of people are choosing to take 'digital detoxes', periods of time ranging from a single weekend to several weeks during which they avoid all screens and digital devices.\n\nThose who have tried detoxing report a range of benefits. Many describe a renewed sense of calm and the ability to concentrate for longer without being distracted by notifications. Some say they sleep better, have more meaningful conversations, and feel more present in their daily lives. One participant in a study described the experience as 'like coming up for air after being underwater'.\n\nHowever, critics of the digital detox movement argue that it misses the point. The problem, they say, is not technology itself but the way we use it. Rather than periodic disconnection, what is needed is a more intentional approach to technology — setting limits on use, turning off notifications, and creating tech-free times and spaces at home.\n\nPerhaps the answer lies somewhere between the two extremes: not complete withdrawal, but a healthier, more conscious relationship with our devices.",
+      "questions": [
+        { "id": 1, "question": "What is a 'digital detox'?", "options": ["A. A type of software to reduce screen time", "B. A period of deliberately avoiding all technology", "C. A medical treatment for smartphone addiction", "D. A social media-free diet plan"], "answer": "B", "explanation": "'Periods of time during which they avoid all screens and digital devices.'" },
+        { "id": 2, "question": "What benefits do people report from digital detoxing?", "options": ["A. More productive screen time afterwards", "B. Better physical fitness", "C. More calm, better sleep, and more meaningful conversations", "D. Improved career performance"], "answer": "C", "explanation": "'Calm, concentrate for longer, sleep better, have more meaningful conversations.'" },
+        { "id": 3, "question": "What do critics of digital detox say?", "options": ["A. Devices should be banned during meals", "B. The problem is not technology but how we use it", "C. Detoxes are too extreme to be practical", "D. Technology companies should control usage limits"], "answer": "B", "explanation": "'The problem is not technology itself but the way we use it.'" },
+        { "id": 4, "question": "What does the article suggest as a possible solution?", "options": ["A. Avoiding all social media permanently", "B. Using only essential apps on phones", "C. A healthier, more conscious relationship with devices", "D. Scheduling regular full digital detoxes"], "answer": "C", "explanation": "'Not complete withdrawal, but a healthier, more conscious relationship with our devices.'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "'I didn't steal the phone,' he said.", "key_word": "denied", "answer": "He denied stealing the phone.", "hint": "denied stealing" },
+      { "id": 6, "original": "'Why don't you post the video tonight?' she asked him.", "key_word": "suggested", "answer": "She suggested posting the video that night.", "hint": "suggested posting that night" },
+      { "id": 7, "original": "'I will definitely collaborate with you again,' she told him.", "key_word": "promised", "answer": "She promised to collaborate with him again.", "hint": "promised to collaborate" },
+      { "id": 8, "original": "The journalist said the story had been published that morning.", "key_word": "published", "answer": "The journalist said, 'The story was published this morning.'", "hint": "Direct speech: was published this morning" }
+    ],
+    "cloze2": {
+      "title": "The Power of Reviews",
+      "text": "Online reviews have (1)_____ the way consumers make purchasing decisions. Before (2)_____ a restaurant, hotel, or product, most people now check what others have said about it online. Studies (3)_____ that a single negative review can reduce sales by up to 22%. This has made (4)_____ reviews enormously important for businesses, many of (5)_____ actively encourage customers to leave positive feedback. However, not all reviews are genuine. 'Fake reviews' — written either by the business itself or by competitors — are a (6)_____ problem in the online marketplace. Platforms like Amazon and Google are investing heavily in technology to (7)_____ fake reviews and remove them. In the meantime, consumers are (8)_____ to read multiple reviews critically rather than relying on a single rating.",
+      "gaps": [
+        { "id": 1, "answer": "transformed", "options": ["transformed", "changed", "affected", "influenced"] },
+        { "id": 2, "answer": "choosing", "options": ["choosing", "visiting", "booking", "selecting"] },
+        { "id": 3, "answer": "suggest", "options": ["suggest", "show", "prove", "indicate"] },
+        { "id": 4, "answer": "customer", "options": ["customer", "online", "user", "public"] },
+        { "id": 5, "answer": "whom", "options": ["whom", "which", "who", "that"] },
+        { "id": 6, "answer": "growing", "options": ["growing", "serious", "common", "real"] },
+        { "id": 7, "answer": "detect", "options": ["detect", "find", "spot", "identify"] },
+        { "id": 8, "answer": "advised", "options": ["advised", "told", "recommended", "suggested"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 9,
+    "extra_grammar": [
+      { "id": 7, "sentence": "If I were a doctor, I _____ (work) in a remote area to help people.", "answer": "would work", "options": ["would work", "will work", "worked", "would have worked"], "explanation": "Hypothetical present/future → 2nd conditional." },
+      { "id": 8, "sentence": "Provided that you _____ (follow) the instructions, the medicine will work.", "answer": "follow", "options": ["follow", "followed", "would follow", "will follow"], "explanation": "'Provided that' = 'if' → 1st conditional, present simple in condition." },
+      { "id": 9, "sentence": "If she _____ (not/take) antibiotics, the infection would have spread.", "answer": "hadn't taken", "options": ["hadn't taken", "didn't take", "wouldn't take", "hadn't been taking"], "explanation": "3rd conditional: If + past perfect." },
+      { "id": 10, "sentence": "Suppose you _____ (be) ill tomorrow — what would you do?", "answer": "were", "options": ["were", "are", "would be", "had been"], "explanation": "Hypothetical: 'Suppose' + 2nd conditional → past simple 'were'." },
+      { "id": 11, "sentence": "If only I _____ (get) more sleep last night!", "answer": "had got", "options": ["had got", "got", "would get", "have got"], "explanation": "Regret about past → if only + past perfect." },
+      { "id": 12, "sentence": "We _____ (miss) the ferry unless we leave immediately.", "answer": "will miss", "options": ["will miss", "would miss", "miss", "would have missed"], "explanation": "'Unless' = 'if not' → 1st conditional: will miss." }
+    ],
+    "reading2": {
+      "title": "Should Schools Teach Cooking?",
+      "text": "Rates of obesity and diet-related disease continue to rise across many countries, and experts are increasingly pointing to a lack of cooking skills as a contributing factor. As ready-made meals and fast food have become more accessible and affordable, many young people are growing up without the ability to prepare basic, healthy food at home.\n\nSome education systems have responded by making cooking — or 'food technology' — a compulsory subject. Advocates argue that learning to cook at school gives children the practical skills to make healthier food choices throughout their lives. Research from the United Kingdom found that children who cook at school eat more fruit and vegetables and are more likely to help prepare meals at home.\n\nCritics, however, question whether cooking belongs in an academic curriculum. There are concerns about cost — maintaining a school kitchen is expensive — and about the time it takes away from core academic subjects. Some parents argue that cooking should be taught at home rather than at school.\n\nDespite the debate, there is growing recognition that food literacy — understanding what we eat and how to prepare it — is an essential life skill. Whether the classroom or the kitchen table is the right setting for this education remains open to debate.",
+      "questions": [
+        { "id": 1, "question": "What do experts link to rising obesity rates?", "options": ["A. Lack of exercise in schools", "B. Insufficient access to healthy food", "C. Poor cooking skills among young people", "D. Too much screen time"], "answer": "C", "explanation": "'Experts point to a lack of cooking skills as a contributing factor.'" },
+        { "id": 2, "question": "What does research from the UK show about children who cook at school?", "options": ["A. They achieve better grades in all subjects", "B. They eat more fruit and vegetables", "C. They spend less money on food", "D. They are less likely to eat fast food"], "answer": "B", "explanation": "'Children who cook at school eat more fruit and vegetables.'" },
+        { "id": 3, "question": "What practical concern do critics raise about school cooking lessons?", "options": ["A. Students don't take them seriously", "B. The skills taught are outdated", "C. Maintaining a school kitchen is expensive", "D. Parents are not informed about the curriculum"], "answer": "C", "explanation": "'Maintaining a school kitchen is expensive.'" },
+        { "id": 4, "question": "What does the article suggest everyone agrees on?", "options": ["A. Cooking should be taught at home", "B. Schools should focus on academic subjects", "C. Food literacy is an essential life skill", "D. Students prefer cooking to other subjects"], "answer": "C", "explanation": "'There is growing recognition that food literacy is an essential life skill.'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "She doesn't exercise regularly, so she gets tired easily.", "key_word": "if", "answer": "If she exercised regularly, she wouldn't get tired so easily.", "hint": "If she exercised, she wouldn't" },
+      { "id": 6, "original": "The accident wouldn't have happened if drivers had been more careful.", "key_word": "been", "answer": "If drivers had been more careful, the accident wouldn't have happened.", "hint": "If drivers had been more careful" },
+      { "id": 7, "original": "I'm sorry I didn't see a doctor earlier.", "key_word": "wish", "answer": "I wish I had seen a doctor earlier.", "hint": "wish I had seen" },
+      { "id": 8, "original": "You should eat less sugar for your health.", "key_word": "cut", "answer": "You should cut down on sugar for your health.", "hint": "cut down on sugar" }
+    ],
+    "cloze2": {
+      "title": "Running for Beginners",
+      "text": "Running is one of the most (1)_____ forms of exercise because it requires no expensive equipment — just a good pair of trainers. If you are new to running, it is important to start (2)_____ and gradually (3)_____ the distance and intensity of your runs. Many beginners make the (4)_____ of going too fast too soon, which can lead to injuries. Experts recommend the 'run-walk' method, where you (5)_____ between running and walking intervals. This (6)_____ your body time to adapt without (7)_____ the joints. Most people find that after four to six weeks of consistent training, they can run for 30 minutes (8)_____ stopping.",
+      "gaps": [
+        { "id": 1, "answer": "accessible", "options": ["accessible", "popular", "affordable", "common"] },
+        { "id": 2, "answer": "slowly", "options": ["slowly", "gently", "carefully", "gradually"] },
+        { "id": 3, "answer": "increase", "options": ["increase", "build", "grow", "extend"] },
+        { "id": 4, "answer": "mistake", "options": ["mistake", "error", "habit", "problem"] },
+        { "id": 5, "answer": "alternate", "options": ["alternate", "switch", "change", "move"] },
+        { "id": 6, "answer": "gives", "options": ["gives", "allows", "lets", "provides"] },
+        { "id": 7, "answer": "damaging", "options": ["damaging", "hurting", "stressing", "straining"] },
+        { "id": 8, "answer": "without", "options": ["without", "before", "after", "while"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 10,
+    "extra_grammar": [
+      { "id": 7, "sentence": "She bought _____ coat online, but _____ coat was too small.", "answer": "a / the", "options": ["a / the", "the / a", "a / a", "the / the"], "explanation": "First mention → 'a'; second mention (specific one) → 'the'." },
+      { "id": 8, "sentence": "_____ gold has always been considered _____ symbol of wealth.", "answer": "— / a", "options": ["— / a", "The / a", "The / the", "A / a"], "explanation": "General material → zero article; indefinite symbol → 'a'." },
+      { "id": 9, "sentence": "She has _____ job as _____ fashion designer in Milan.", "answer": "a / a", "options": ["a / a", "the / a", "a / the", "the / the"], "explanation": "Indefinite job → 'a'; profession → 'a'." },
+      { "id": 10, "sentence": "He is considered _____ most talented designer of his generation.", "answer": "the", "options": ["the", "a", "—", "one"], "explanation": "Superlative → 'the'." },
+      { "id": 11, "sentence": "They flew to _____ Paris for _____ fashion week.", "answer": "— / —", "options": ["— / —", "the / the", "a / the", "the / a"], "explanation": "Cities → zero article; named events (fashion week) → zero article." },
+      { "id": 12, "sentence": "She wore _____ blue dress with _____ gold necklace to _____ party.", "answer": "a / a / the", "options": ["a / a / the", "the / the / a", "a / the / the", "the / a / a"], "explanation": "First mentions (indefinite) → 'a'; specific party (known event) → 'the'." }
+    ],
+    "reading2": {
+      "title": "The Rise of Gender-Neutral Fashion",
+      "text": "Fashion has always been a mirror of social change, and nowhere is this more evident than in the growing movement towards gender-neutral clothing. Increasingly, designers are creating collections that are not marketed specifically to men or women, but to anyone who wants to wear them.\n\nAdvocates of gender-neutral fashion argue that clothing has long been unnecessarily divided along gender lines, limiting individual expression and reinforcing stereotypes. By removing these divisions, they say, fashion can become a more inclusive space where people are free to express their identity however they choose.\n\nMajor fashion houses including Gucci, Burberry, and Stella McCartney have all launched gender-neutral collections in recent years. Meanwhile, on the high street, brands like Zara and H&M have introduced 'ungendered' clothing lines, indicating that this is more than a niche trend.\n\nNot everyone, however, is enthusiastic. Some critics argue that gender-neutral fashion is driven more by marketing than by genuine social progress, and that truly inclusive fashion should focus more on size diversity and affordability rather than simply removing labels. The debate is ongoing, but what is clear is that the fashion industry — historically one of the most rigidly binary — is changing faster than ever before.",
+      "questions": [
+        { "id": 1, "question": "What is gender-neutral fashion, according to the article?", "options": ["A. Clothing designed for children", "B. Fashion that copies traditional styles", "C. Clothing not marketed specifically to one gender", "D. Sportswear designed for everyone"], "answer": "C", "explanation": "'Clothing not marketed specifically to men or women, but to anyone who wants to wear it.'" },
+        { "id": 2, "question": "What do supporters of gender-neutral fashion argue?", "options": ["A. Traditional fashion is outdated", "B. Clothing divisions have unnecessarily limited expression", "C. Fashion should ignore cultural traditions", "D. All clothing should be unisex"], "answer": "B", "explanation": "'Clothing has long been unnecessarily divided along gender lines, limiting individual expression.'" },
+        { "id": 3, "question": "What does the mention of Zara and H&M suggest?", "options": ["A. The trend is fading", "B. Only luxury brands support gender-neutral fashion", "C. The trend is spreading beyond high-end fashion", "D. High street brands are imitating designers"], "answer": "C", "explanation": "'This is more than a niche trend' — mainstream brands are adopting it." },
+        { "id": 4, "question": "What do critics say about gender-neutral fashion?", "options": ["A. It is too expensive for most people", "B. It is driven by marketing rather than real progress", "C. It doesn't suit most body types", "D. Traditional fashion is better quality"], "answer": "B", "explanation": "'Driven more by marketing than by genuine social progress.'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "She had never worn such an elegant dress before.", "key_word": "first", "answer": "It was the first time she had ever worn such an elegant dress.", "hint": "the first time she had ever worn" },
+      { "id": 6, "original": "The tailor will make the suit for him by Friday.", "key_word": "have", "answer": "He will have the suit made by Friday.", "hint": "will have the suit made" },
+      { "id": 7, "original": "Nobody has ever designed a coat as beautiful as this.", "key_word": "ever", "answer": "This is the most beautiful coat anyone has ever designed.", "hint": "the most beautiful coat anyone has ever" },
+      { "id": 8, "original": "The jeans shrank after I washed them in hot water.", "key_word": "caused", "answer": "Washing them in hot water caused the jeans to shrink.", "hint": "caused the jeans to shrink" }
+    ],
+    "cloze2": {
+      "title": "The Second-Hand Fashion Revolution",
+      "text": "Buying second-hand clothing has (1)_____ from being considered embarrassing to being seen as a stylish and responsible (2)_____. Driven by concerns about the environmental impact of fast fashion, a new generation of consumers is (3)_____ the second-hand market. Apps like Vinted and Depop have made it easier than (4)_____ to buy and sell pre-loved clothing online. Many young fashion enthusiasts now (5)_____ through charity shops and vintage stores for unique items that (6)_____ their personality. Beyond the environmental (7)_____, buying second-hand is also significantly cheaper than buying new. Critics who once (8)_____ the trend are now embracing it as the future of sustainable fashion.",
+      "gaps": [
+        { "id": 1, "answer": "transformed", "options": ["transformed", "changed", "moved", "gone"] },
+        { "id": 2, "answer": "choice", "options": ["choice", "decision", "option", "style"] },
+        { "id": 3, "answer": "embracing", "options": ["embracing", "joining", "entering", "visiting"] },
+        { "id": 4, "answer": "ever", "options": ["ever", "before", "always", "always been"] },
+        { "id": 5, "answer": "browse", "options": ["browse", "look", "search", "hunt"] },
+        { "id": 6, "answer": "reflect", "options": ["reflect", "show", "match", "express"] },
+        { "id": 7, "answer": "benefits", "options": ["benefits", "advantages", "savings", "gains"] },
+        { "id": 8, "answer": "dismissed", "options": ["dismissed", "ignored", "rejected", "disliked"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 11,
+    "extra_grammar": [
+      { "id": 7, "sentence": "Scientists warn that sea levels _____ (rise) by one metre by 2100.", "answer": "will rise", "options": ["will rise", "are rising", "rise", "are going to rise"], "explanation": "General prediction → 'will'." },
+      { "id": 8, "sentence": "Look at those storm clouds! It _____ (rain) very soon.", "answer": "is going to", "options": ["is going to", "will", "is", "shall"], "explanation": "Evidence visible now → 'going to'." },
+      { "id": 9, "sentence": "By 2050, renewable energy _____ (replace) most fossil fuels.", "answer": "will have replaced", "options": ["will have replaced", "will replace", "is going to replace", "replaces"], "explanation": "Completed by a future time → Future Perfect." },
+      { "id": 10, "sentence": "I've decided: I _____ (reduce) my plastic use from now on.", "answer": "am going to reduce", "options": ["am going to reduce", "will reduce", "reduce", "am reducing"], "explanation": "Pre-planned decision → 'going to'." },
+      { "id": 11, "sentence": "The conference on climate change _____ (take place) in November.", "answer": "is taking place", "options": ["is taking place", "takes place", "is going to take place", "will take place"], "explanation": "Fixed future arrangement → Present Continuous." },
+      { "id": 12, "sentence": "We _____ (plant) 1,000 trees in the park next weekend.", "answer": "are planting", "options": ["are planting", "will plant", "plant", "are going to plant"], "explanation": "Arranged, scheduled event → Present Continuous for near future." }
+    ],
+    "reading2": {
+      "title": "The Ocean's Plastic Crisis",
+      "text": "Every year, an estimated eight million metric tonnes of plastic waste enters the world's oceans. This plastic does not disappear — it breaks down into tiny particles called 'microplastics', which are now found everywhere from the deepest ocean trenches to the peaks of the Himalayas. Scientists have even detected microplastics in human blood.\n\nThe impact on marine life is severe. Sea turtles mistake plastic bags for jellyfish and eat them, causing fatal blockages. Seabirds feed their chicks plastic fragments believing them to be food. Whales have been found stranded with hundreds of kilograms of plastic in their stomachs. The food web is also affected — fish that consume microplastics are then eaten by humans, meaning the plastic may ultimately end up on our plates.\n\nCleaning up the existing plastic in the ocean is a monumental challenge. The 'Ocean Cleanup' project, founded by a Dutch teenager in 2013, has developed large floating barriers to collect plastic from the 'Great Pacific Garbage Patch' — an area of ocean twice the size of Texas where plastic accumulates due to ocean currents.\n\nExperts agree that while clean-up is important, prevention must be the priority. This means reducing our reliance on single-use plastics and improving waste management systems, particularly in countries where much of the plastic enters waterways in the first place.",
+      "questions": [
+        { "id": 1, "question": "What happens to plastic that enters the ocean?", "options": ["A. It dissolves within 100 years", "B. It sinks to the sea floor permanently", "C. It breaks down into microplastics", "D. It is filtered out naturally by tides"], "answer": "C", "explanation": "'It breaks down into tiny particles called microplastics.'" },
+        { "id": 2, "question": "How does plastic affect humans, according to the article?", "options": ["A. It causes skin disease through contact with sea water", "B. It may enter our food through fish that consume microplastics", "C. It contaminates drinking water directly", "D. It has no proven effect on human health yet"], "answer": "B", "explanation": "'Fish that consume microplastics are then eaten by humans, meaning plastic may end up on our plates.'" },
+        { "id": 3, "question": "What is the 'Great Pacific Garbage Patch'?", "options": ["A. A landfill site on a Pacific island", "B. An area of ocean where plastic collects", "C. A plastic recycling facility in the Pacific", "D. A shipping route heavily polluted by waste"], "answer": "B", "explanation": "'An area of ocean where plastic accumulates due to ocean currents.'" },
+        { "id": 4, "question": "What do experts say is the most important priority?", "options": ["A. Building more recycling plants", "B. Cleaning the existing plastic from oceans", "C. Preventing more plastic from entering the ocean", "D. Finding plastic-eating bacteria"], "answer": "C", "explanation": "'Prevention must be the priority... reducing reliance on single-use plastics.'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "They expect that the new species will be discovered by the end of the year.", "key_word": "expected", "answer": "The new species is expected to be discovered by the end of the year.", "hint": "is expected to be discovered" },
+      { "id": 6, "original": "If we don't protect the rainforest, many species will become extinct.", "key_word": "unless", "answer": "Many species will become extinct unless we protect the rainforest.", "hint": "will become extinct unless" },
+      { "id": 7, "original": "The temperature has risen by 1.5 degrees in the last century.", "key_word": "rise", "answer": "There has been a rise of 1.5 degrees in temperature in the last century.", "hint": "There has been a rise of" },
+      { "id": 8, "original": "People used to hunt whales commercially.", "key_word": "were", "answer": "Whales were once hunted commercially.", "hint": "were once hunted" }
+    ],
+    "cloze2": {
+      "title": "Urban Green Spaces",
+      "text": "As cities continue to grow, the importance of green (1)_____ — parks, gardens, and tree-lined streets — is becoming increasingly (2)_____. Studies show that access to nature in urban environments significantly (3)_____ residents' mental health and quality of life. Green spaces also play a (4)_____ role in the environment: trees absorb carbon dioxide, reduce flooding by absorbing rainwater, and provide habitat for urban (5)_____. Despite these benefits, green spaces are often the first (6)_____ of budget cuts, with local authorities choosing to develop land for housing instead. Campaigners (7)_____ that investing in green infrastructure is not a (8)_____, but a necessity for building healthier and more resilient cities.",
+      "gaps": [
+        { "id": 1, "answer": "spaces", "options": ["spaces", "areas", "zones", "places"] },
+        { "id": 2, "answer": "recognised", "options": ["recognised", "known", "clear", "obvious"] },
+        { "id": 3, "answer": "improves", "options": ["improves", "benefits", "helps", "boosts"] },
+        { "id": 4, "answer": "vital", "options": ["vital", "important", "key", "central"] },
+        { "id": 5, "answer": "wildlife", "options": ["wildlife", "animals", "birds", "insects"] },
+        { "id": 6, "answer": "victim", "options": ["victim", "target", "subject", "result"] },
+        { "id": 7, "answer": "argue", "options": ["argue", "claim", "believe", "suggest"] },
+        { "id": 8, "answer": "luxury", "options": ["luxury", "choice", "option", "extra"] }
+      ]
+    }
+  },
+  {
+    "unit_id": 12,
+    "extra_grammar": [
+      { "id": 7, "sentence": "If he _____ (study) harder at school, he would have a better career now.", "answer": "had studied", "options": ["had studied", "studied", "would have studied", "has studied"], "explanation": "Mixed conditional: past action affecting present result → if + past perfect." },
+      { "id": 8, "sentence": "She _____ (speak) five languages if she had stayed abroad longer.", "answer": "would speak", "options": ["would speak", "would have spoken", "spoke", "speaks"], "explanation": "Mixed: past condition → present result: would + base verb." },
+      { "id": 9, "sentence": "If only she _____ (choose) a different subject at university!", "answer": "had chosen", "options": ["had chosen", "chose", "would have chosen", "has chosen"], "explanation": "Regret about past decision → if only + past perfect." },
+      { "id": 10, "sentence": "I wish I _____ (be) able to express myself more clearly in meetings.", "answer": "were", "options": ["were", "am", "would be", "had been"], "explanation": "Wish about present ability → past simple (were)." },
+      { "id": 11, "sentence": "If she _____ (not/be) so nervous, she would have performed better.", "answer": "hadn't been", "options": ["hadn't been", "wasn't", "wouldn't have been", "wasn't being"], "explanation": "3rd conditional: If + past perfect." },
+      { "id": 12, "sentence": "She speaks as if she _____ (know) everything about linguistics.", "answer": "knew", "options": ["knew", "knows", "had known", "would know"], "explanation": "'As if' + unreal present → past simple." }
+    ],
+    "reading2": {
+      "title": "Public Speaking: A Skill for Life",
+      "text": "For many people, the idea of standing in front of an audience and speaking is one of the most terrifying experiences they can imagine. Studies consistently rank public speaking among the most common phobias — sometimes above the fear of death itself. Yet public speaking is a skill that most of us cannot avoid entirely, whether presenting at work, speaking at a family celebration, or participating in a school debate.\n\nThe good news is that, unlike many other fears, fear of public speaking can be significantly reduced through practice. Research shows that people who regularly put themselves in front of an audience — even in low-stakes situations — become noticeably more comfortable over time. Drama clubs, debating societies, and even storytelling groups can all provide valuable low-risk opportunities to develop confidence.\n\nProfessional speakers often emphasise the importance of preparation. The more thoroughly you know your material, the less mental energy is spent recalling information — and the more you can focus on delivery, eye contact, and connection with your audience. Many experienced speakers also recommend practising in front of a mirror or recording yourself to identify habits such as filler words ('um', 'er') or distracting gestures.\n\nUltimately, great public speaking is less about perfection and more about authenticity. Audiences connect most strongly with speakers who are genuine, enthusiastic, and willing to show their personality — even their imperfections.",
+      "questions": [
+        { "id": 1, "question": "How is public speaking ranked in studies about common fears?", "options": ["A. It is considered the least common phobia", "B. It is one of the most common phobias", "C. It ranks below most physical fears", "D. It is rarely studied by researchers"], "answer": "B", "explanation": "'Studies consistently rank public speaking among the most common phobias.'" },
+        { "id": 2, "question": "How can fear of public speaking be reduced, according to the article?", "options": ["A. Through relaxation techniques before speaking", "B. By reading about other people's experiences", "C. Through regular practice in front of audiences", "D. By memorising a fixed script"], "answer": "C", "explanation": "'Fear of public speaking can be significantly reduced through practice.'" },
+        { "id": 3, "question": "What do professional speakers say is the key to a good performance?", "options": ["A. Wearing smart, professional clothing", "B. Making jokes to relax the audience", "C. Thorough preparation and knowing the material", "D. Using technology to support the presentation"], "answer": "C", "explanation": "'The more thoroughly you know your material, the more you can focus on delivery.'" },
+        { "id": 4, "question": "What quality does the article say audiences value most in speakers?", "options": ["A. Perfect vocabulary and grammar", "B. Confidence and a loud voice", "C. Authenticity and showing personality", "D. Well-designed visual aids"], "answer": "C", "explanation": "'Audiences connect most strongly with speakers who are genuine and willing to show their personality.'" }
+      ]
+    },
+    "extra_transformations": [
+      { "id": 5, "original": "She isn't fluent in Arabic, so she can't apply for the job.", "key_word": "if", "answer": "If she were fluent in Arabic, she could apply for the job.", "hint": "If she were fluent, she could" },
+      { "id": 6, "original": "It's a pity I didn't take more opportunities to practise English abroad.", "key_word": "only", "answer": "If only I had taken more opportunities to practise English abroad.", "hint": "If only I had taken" },
+      { "id": 7, "original": "The journalist is said to have interviewed the president last week.", "key_word": "reported", "answer": "It is reported that the journalist interviewed the president last week.", "hint": "It is reported that" },
+      { "id": 8, "original": "Nobody speaks Italian in this town.", "key_word": "spoken", "answer": "Italian is not spoken in this town.", "hint": "is not spoken" }
+    ],
+    "cloze2": {
+      "title": "The Language of Emoji",
+      "text": "When emojis were first (1)_____ in the late 1990s, few people imagined they would become a global (2)_____ of communication. Today, billions of emojis are (3)_____ every day across messaging apps and social media (4)_____. Linguists are now debating whether emoji (5)_____ a new form of language, or simply decorative additions to text. Some researchers (6)_____ that emoji do function like words — they convey (7)_____, modify meaning, and can even be used to tell a story without any accompanying text. However, others point (8)_____ that interpretation can vary widely between cultures, making emoji an imprecise communication tool.",
+      "gaps": [
+        { "id": 1, "answer": "introduced", "options": ["introduced", "created", "invented", "launched"] },
+        { "id": 2, "answer": "form", "options": ["form", "type", "way", "method"] },
+        { "id": 3, "answer": "sent", "options": ["sent", "used", "shared", "posted"] },
+        { "id": 4, "answer": "platforms", "options": ["platforms", "sites", "apps", "networks"] },
+        { "id": 5, "answer": "represent", "options": ["represent", "form", "create", "make"] },
+        { "id": 6, "answer": "argue", "options": ["argue", "believe", "claim", "suggest"] },
+        { "id": 7, "answer": "emotion", "options": ["emotion", "meaning", "information", "feeling"] },
+        { "id": 8, "answer": "out", "options": ["out", "to", "at", "up"] }
+      ]
+    }
+  }
+]
