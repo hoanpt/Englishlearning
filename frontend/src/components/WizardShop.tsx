@@ -84,7 +84,7 @@ export default function WizardShop({ astronaut, onUpdateAstronaut, offlineMode }
     setLoadingItemId(item.id);
     if (!offlineMode) {
       try {
-        const res = await fetch('http://localhost:5000/api/astronaut/buy-accessory', {
+        const res = await fetch('/api/astronaut/buy-accessory', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -135,7 +135,7 @@ export default function WizardShop({ astronaut, onUpdateAstronaut, offlineMode }
 
     if (!offlineMode) {
       try {
-        const res = await fetch('http://localhost:5000/api/astronaut/equip-accessory', {
+        const res = await fetch('/api/astronaut/equip-accessory', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

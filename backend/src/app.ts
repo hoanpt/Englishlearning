@@ -1,3 +1,4 @@
+import path from 'path';
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -18,7 +19,9 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 // Global Middlewares
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: false,
+}));
 app.use(cors({
   origin: '*', // For development. Should be restricted to frontend domain in production
   credentials: true
@@ -56,6 +59,15 @@ app.use('/api', checkDbConnection);
 app.use('/api/vocabulary', vocabularyRoutes);
 app.use('/api/progress', progressRoutes);
 app.use('/api/astronaut', astronautRoutes);
+
+// Serve frontend static assets in production
+if (process.env.NODE_ENV === 'production') {
+  const frontendDistPath = path.join(__dirname, '../../frontend/dist');
+  app.use(express.static(frontendDistPath));
+  app.get('*', (req: Request, res: Response) => {
+    res.sendFile(path.join(frontendDistPath, 'index.html'));
+  });
+}
 
 // Error handling middleware
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {

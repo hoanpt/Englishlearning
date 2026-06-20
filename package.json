@@ -1,0 +1,18 @@
+{
+  "name": "english-learning-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Root package for English Learning System monorepo",
+  "scripts": {
+    "install-backend": "npm install --prefix backend",
+    "install-frontend": "npm install --prefix frontend",
+    "build-backend": "npm run build --prefix backend",
+    "build-frontend": "npm run build --prefix frontend",
+    "postinstall": "npm run install-backend && npm run install-frontend",
+    "build": "npm run build-frontend && npm run build-backend",
+    "start": "npm run start --prefix backend"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

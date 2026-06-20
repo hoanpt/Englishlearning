@@ -69,7 +69,7 @@ export default function App() {
     setLoading(true);
     setErrorMsg('');
     try {
-      const res = await fetch('http://localhost:5000/api/astronaut/profile', {
+      const res = await fetch('/api/astronaut/profile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name }),
@@ -123,7 +123,7 @@ export default function App() {
 
     if (!offlineMode) {
       try {
-        const res = await fetch('http://localhost:5000/api/astronaut/complete-mission', {
+        const res = await fetch('/api/astronaut/complete-mission', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name: astronaut.name, planetNumber: planetNum, earnedStars: starsEarned }),
@@ -163,7 +163,7 @@ export default function App() {
 
     if (!offlineMode) {
       try {
-        const res = await fetch('http://localhost:5000/api/astronaut/pass-revision', {
+        const res = await fetch('/api/astronaut/pass-revision', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name: astronaut.name, beltId: revisionBeltId, score }),

@@ -203,7 +203,7 @@ export default function CreativeLab({ astronaut, onUpdateAstronaut, offlineMode 
   const awardStars = async (amount: number) => {
     if (!offlineMode) {
       try {
-        const res = await fetch('http://localhost:5000/api/astronaut/add-stars', {
+        const res = await fetch('/api/astronaut/add-stars', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name: astronaut.name, stars: amount })
         });
