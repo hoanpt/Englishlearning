@@ -407,7 +407,7 @@ export const buyAccessory = async (req: Request, res: Response): Promise<void> =
 // Equip accessory
 export const equipAccessory = async (req: Request, res: Response): Promise<void> => {
   try {
-    const { name, accessoryId } = req.body;
+    const { name, accessoryId, equippedAccessories } = req.body;
     if (!name) {
       res.status(400).json({ message: 'Name is required' });
       return;
@@ -419,13 +419,52 @@ export const equipAccessory = async (req: Request, res: Response): Promise<void>
       return;
     }
 
-    // Set equipped accessory (allows empty string to unequip)
-    astronaut.equippedAccessory = accessoryId || '';
+    // Set equipped accessory (allows empty string to unequip - backward compatibility)
+    if (accessoryId !== undefined) {
+      astronaut.equippedAccessory = accessoryId || '';
+    }
+
+    // Set equipped accessories (multi-slot)
+    if (equippedAccessories !== undefined) {
+      astronaut.equippedAccessories = equippedAccessories;
+    }
     
     const updated = await saveAstronaut(astronaut);
     res.status(200).json(updated);
   } catch (error) {
     res.status(500).json({ message: 'Error equipping accessory', error: (error as Error).message });
+  }
+};
+
+// Unlock Units manually (by parent)
+export const unlockUnits = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { name, system, unitIds } = req.body;
+    if (!name || !system || !Array.isArray(unitIds)) {
+      res.status(400).json({ message: 'Missing name, system or unitIds in request' });
+      return;
+    }
+
+    const astronaut = await getAstronaut(name);
+    if (!astronaut) {
+      res.status(404).json({ message: 'Astronaut profile not found' });
+      return;
+    }
+
+    const nums = unitIds.map(Number);
+    if (system === 'prestarter') {
+      astronaut.manuallyUnlockedPreStarter = nums;
+    } else if (system === 'pet') {
+      astronaut.manuallyUnlockedPET = nums;
+    } else {
+      // default Mover/Roundup
+      astronaut.manuallyUnlockedPlanets = nums;
+    }
+
+    const updated = await saveAstronaut(astronaut);
+    res.status(200).json(updated);
+  } catch (error) {
+    res.status(500).json({ message: 'Error unlocking units', error: (error as Error).message });
   }
 };
 

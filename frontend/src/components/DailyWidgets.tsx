@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Check, Calendar, Sparkles, X } from 'lucide-react';
+import MascotVisual from './MascotVisual';
 
 // Helper to get today's date in local YYYY-MM-DD
 const getLocalDateString = (): string => {
@@ -233,14 +234,13 @@ export function MascotGreeting({ astronaut, onMoodSuccess }: MascotGreetingProps
       
       {/* Mascot character space */}
       <div className="relative shrink-0 flex flex-col items-center">
-        <div className="text-6xl animate-float p-3 bg-violet-50 rounded-full border border-violet-100">
-          {astronaut.avatar || '🚀'}
+        <div className="w-20 h-20 flex items-center justify-center bg-violet-50 rounded-full border border-violet-100 relative overflow-visible">
+          <MascotVisual
+            avatar={astronaut.avatar || '🚀'}
+            equippedAccessories={astronaut.equippedAccessories || (astronaut.equippedAccessory ? [astronaut.equippedAccessory] : [])}
+            size="text-5xl"
+          />
         </div>
-        {astronaut.equippedAccessory && (
-          <span className="absolute -bottom-1 bg-amber-400 text-slate-900 text-[10px] px-2 py-0.5 rounded-full font-black border border-white">
-            {astronaut.equippedAccessory}
-          </span>
-        )}
       </div>
 
       {/* Bubble & Interaction controls */}

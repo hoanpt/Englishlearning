@@ -12,9 +12,13 @@ export interface IAstronaut extends Document {
   completedPlanets: number[]; // roundup completed units
   completedPreStarter: number[]; // prestarter completed units
   completedPET: number[]; // pet completed units
+  manuallyUnlockedPlanets: number[]; // manually unlocked roundup units
+  manuallyUnlockedPreStarter: number[]; // manually unlocked prestarter units
+  manuallyUnlockedPET: number[]; // manually unlocked pet units
   badges: string[];
   accessories: string[];
   equippedAccessory: string;
+  equippedAccessories: string[]; // multi equipped items
   passedRevisions: number[];
   lastCheckIn?: string; // YYYY-MM-DD
   checkInStreak: number;
@@ -36,9 +40,13 @@ const AstronautSchema: Schema = new Schema({
   completedPlanets: [{ type: Number }], // Array of completed unit numbers for roundup
   completedPreStarter: [{ type: Number, default: [] }], // Prestarter completed units
   completedPET: [{ type: Number, default: [] }], // PET completed units
+  manuallyUnlockedPlanets: [{ type: Number, default: [] }], // Manually unlocked roundup units
+  manuallyUnlockedPreStarter: [{ type: Number, default: [] }], // Manually unlocked prestarter units
+  manuallyUnlockedPET: [{ type: Number, default: [] }], // Manually unlocked pet units
   badges: [{ type: String }],            // List of unlocked badge identifiers
   accessories: [{ type: String, default: [] }],
   equippedAccessory: { type: String, default: '' },
+  equippedAccessories: [{ type: String, default: [] }], // Multi equipped items list
   passedRevisions: [{ type: Number, default: [] }],
   lastCheckIn: { type: String, default: '' },
   checkInStreak: { type: Number, default: 0 },

@@ -7,6 +7,7 @@ interface Props {
   equippedAccessory: string;
   completedPlanets: number[];
   passedRevisions: number[];
+  manuallyUnlockedPlanets?: number[];
   onSelectUnit: (id: number) => void;
   onStartRevision: (beltId: number) => void;
 }
@@ -22,13 +23,14 @@ export default function JourneyMap({
   equippedAccessory,
   completedPlanets,
   passedRevisions,
+  manuallyUnlockedPlanets = [],
   onSelectUnit,
   onStartRevision,
 }: Props) {
   // Determine highest unlocked unit
   let highestUnlockedUnit = 1;
   for (let i = 25; i >= 1; i--) {
-    if (isUnitUnlocked(i, completedPlanets, passedRevisions)) {
+    if (isUnitUnlocked(i, completedPlanets, passedRevisions, manuallyUnlockedPlanets)) {
       highestUnlockedUnit = i;
       break;
     }
@@ -118,7 +120,7 @@ export default function JourneyMap({
           const uid = node.id;
           const belt = node.belt!;
           const isDone = completedPlanets.includes(uid);
-          const isUnlocked = isUnitUnlocked(uid, completedPlanets, passedRevisions);
+          const isUnlocked = isUnitUnlocked(uid, completedPlanets, passedRevisions, manuallyUnlockedPlanets);
           const isCurrent = uid === highestUnlockedUnit;
           
           // Calculate winding offset (x translation)
@@ -134,9 +136,9 @@ export default function JourneyMap({
             >
               {/* Path line to next node (below this one) */}
               {i < reversedNodes.length - 1 && (
-                <svg className="absolute top-[60px] -z-10 w-full h-[100px]" preserveAspectRatio="none">
+                <svg className="absolute top-[60px] -z-10 w-full h-[100px]" viewBox="0 0 100 100" preserveAspectRatio="none">
                   <path 
-                    d={`M 50% 0 Q ${50 + xOffset}% 50% 50% 100%`} 
+                    d={`M 50 0 Q ${50 + xOffset * 0.3} 50 50 100`} 
                     stroke={isUnlocked ? '#D1D5DB' : '#F3F4F6'} 
                     strokeWidth="8" 
                     fill="none" 

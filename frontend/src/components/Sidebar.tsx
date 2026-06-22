@@ -28,6 +28,7 @@ interface SidebarProps {
   selectedUnitId: number | null;
   completedPlanets: number[];
   passedRevisions: number[];    // revision belt ids that have been passed
+  manuallyUnlockedPlanets?: number[];
   onSelectUnit: (id: number) => void;
   onStartRevision: (beltId: number) => void;
   isOpen: boolean;
@@ -57,8 +58,11 @@ export function getRevisionNumber(beltId: number): number {
 export function isUnitUnlocked(
   unitId: number,
   completedPlanets: number[],
-  passedRevisions: number[]
+  passedRevisions: number[],
+  manuallyUnlockedPlanets?: number[]
 ): boolean {
+  if (manuallyUnlockedPlanets && manuallyUnlockedPlanets.includes(unitId)) return true;
+
   const belt = getBeltForUnit(unitId);
   if (!belt) return false;
 
@@ -87,6 +91,7 @@ export default function Sidebar({
   selectedUnitId,
   completedPlanets,
   passedRevisions,
+  manuallyUnlockedPlanets = [],
   onSelectUnit,
   onStartRevision,
   isOpen,
@@ -166,7 +171,7 @@ export default function Sidebar({
                 if (!unit) return null;
                 const isActive = selectedUnitId === unitId;
                 const isCompleted = completedPlanets.includes(unitId);
-                const unlocked = isUnitUnlocked(unitId, completedPlanets, passedRevisions);
+                const unlocked = isUnitUnlocked(unitId, completedPlanets, passedRevisions, manuallyUnlockedPlanets);
                 const emoji = UNIT_EMOJIS[unitId] || '📘';
 
                 return (

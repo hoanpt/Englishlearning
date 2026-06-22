@@ -3,6 +3,8 @@ import { Star, LogOut, Trophy, Target, TrendingUp, Award, CheckCircle, ChevronRi
 import petUnitsData from '../../data/pet-units.json';
 import petUnitsExtraData from '../../data/pet-units-extra.json';
 import PETUnitDetail from './PETUnitDetail';
+import { CheckInModal } from '../DailyWidgets';
+import MascotVisual from '../MascotVisual';
 
 interface UserProfile {
   name: string;
@@ -24,9 +26,13 @@ interface Astronaut {
   completedPlanets: number[];
   completedPreStarter?: number[];
   completedPET?: number[];
+  manuallyUnlockedPlanets?: number[];
+  manuallyUnlockedPreStarter?: number[];
+  manuallyUnlockedPET?: number[];
   badges: string[];
   accessories: string[];
   equippedAccessory: string;
+  equippedAccessories?: string[];
   passedRevisions: number[];
   lastCheckIn?: string;
   checkInStreak?: number;
@@ -71,6 +77,7 @@ const mergedUnits = petUnitsData.map(unit => {
 export default function PETApp({ astronaut, onUpdateAstronaut, onLogout }: Props) {
   const userName = astronaut.name;
   const storageKey = `pet_profile_${userName}`;
+  const [isCheckInOpen, setIsCheckInOpen] = useState(false);
   const [profile, setProfile] = useState<UserProfile>(() => {
     const stored = localStorage.getItem(storageKey);
     if (stored) return JSON.parse(stored);
@@ -157,12 +164,57 @@ export default function PETApp({ astronaut, onUpdateAstronaut, onLogout }: Props
     const unit = units.find(u => u.unit_id === selectedUnit)!;
     const completed = profile.sectionProgress[String(selectedUnit)] || [];
     return (
-      <PETUnitDetail
-        unit={unit as any}
-        completedSections={completed}
-        onSectionComplete={s => handleSectionComplete(selectedUnit, s)}
-        onBack={() => setSelectedUnit(null)}
-      />
+      <div className="relative min-h-screen bg-[#0F172A]">
+        {/* Floating Status Bar for Kids during PET practice */}
+        <div className="fixed top-16 right-4 z-50 flex items-center gap-3 bg-[#1E293B]/95 text-white backdrop-blur border-2 border-blue-500 rounded-2xl px-4 py-2.5 shadow-xl hover:scale-105 active:scale-95 transition-all duration-300">
+          <div className="relative w-10 h-10 flex items-center justify-center bg-blue-900/40 rounded-xl overflow-visible">
+            <MascotVisual 
+              avatar={astronaut.avatar || '🚀'} 
+              equippedAccessories={astronaut.equippedAccessories || (astronaut.equippedAccessory ? [astronaut.equippedAccessory] : [])} 
+              size="text-2xl" 
+            />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest leading-none mb-1">
+              {astronaut.name}
+            </span>
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-0.5 text-xs font-black text-amber-500">
+                <Star size={13} fill="currentColor" />
+                <span>{astronaut.stars}</span>
+              </div>
+              <div className="flex items-center gap-0.5 text-xs font-black text-rose-400">
+                <span>🔥</span>
+                <span>{astronaut.checkInStreak || 0}d</span>
+              </div>
+            </div>
+          </div>
+          <button 
+            onClick={() => setIsCheckInOpen(true)}
+            className="p-1.5 rounded-lg bg-blue-900/40 text-blue-400 hover:bg-blue-800 transition-colors text-xs"
+            title="Lịch điểm danh"
+          >
+            📅
+          </button>
+        </div>
+
+        <PETUnitDetail
+          unit={unit as any}
+          completedSections={completed}
+          onSectionComplete={s => handleSectionComplete(selectedUnit, s)}
+          onBack={() => setSelectedUnit(null)}
+        />
+
+        <CheckInModal
+          isOpen={isCheckInOpen}
+          onClose={() => setIsCheckInOpen(false)}
+          astronaut={astronaut}
+          onCheckInSuccess={(updated) => {
+            onUpdateAstronaut(updated);
+            localStorage.setItem(`astronaut_profile_${updated.name}`, JSON.stringify(updated));
+          }}
+        />
+      </div>
     );
   }
 
@@ -172,7 +224,13 @@ export default function PETApp({ astronaut, onUpdateAstronaut, onLogout }: Props
       <header className="sticky top-0 z-30 border-b border-slate-800 bg-[#0F172A]/95 backdrop-blur">
         <div className="max-w-6xl mx-auto px-3 sm:px-6 py-3 flex items-center gap-2 sm:gap-4 flex-wrap">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 flex items-center justify-center font-black text-sm">PET</div>
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 flex items-center justify-center font-black text-sm relative overflow-visible shrink-0 animate-pulse">
+              <MascotVisual 
+                avatar={astronaut.avatar || '🚀'} 
+                equippedAccessories={astronaut.equippedAccessories || (astronaut.equippedAccessory ? [astronaut.equippedAccessory] : [])} 
+                size="text-2xl" 
+              />
+            </div>
             <div className="hidden sm:block">
               <p className="font-black text-white text-sm">Complete PET · B1 Preliminary</p>
               <p className="text-xs text-slate-400">Hello, <span className="text-blue-400 font-bold">{profile.name}</span></p>
@@ -190,10 +248,17 @@ export default function PETApp({ astronaut, onUpdateAstronaut, onLogout }: Props
           </div>
 
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-900/30 border border-blue-800/40 text-blue-300 font-black text-sm">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-900/30 border border-amber-800/40 text-amber-400 font-black text-sm">
               <Star size={14} fill="currentColor" />
-              {profile.xp} XP
+              {astronaut.stars} Stars
             </div>
+            <button 
+              onClick={() => setIsCheckInOpen(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-900/30 border border-rose-800/40 text-rose-300 font-black text-sm hover:bg-rose-900/50 transition-colors"
+              title="Lịch điểm danh"
+            >
+              🔥 {astronaut.checkInStreak || 0}d
+            </button>
             <div className="flex bg-slate-800 rounded-xl p-0.5 gap-0.5">
               {(['units', 'progress'] as const).map(v => (
                 <button key={v} onClick={() => setActiveView(v)}
@@ -291,6 +356,16 @@ export default function PETApp({ astronaut, onUpdateAstronaut, onLogout }: Props
           <ProgressView profile={profile} units={units} />
         )}
       </main>
+      
+      <CheckInModal
+        isOpen={isCheckInOpen}
+        onClose={() => setIsCheckInOpen(false)}
+        astronaut={astronaut}
+        onCheckInSuccess={(updated) => {
+          onUpdateAstronaut(updated);
+          localStorage.setItem(`astronaut_profile_${updated.name}`, JSON.stringify(updated));
+        }}
+      />
     </div>
   );
 }

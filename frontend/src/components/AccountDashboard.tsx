@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { User, Award, BarChart2, Heart, Phone, Mail, Edit2, Calendar } from 'lucide-react';
+import { User, Award, BarChart2, Heart, Phone, Mail, Edit2, Calendar, Lock } from 'lucide-react';
 
 interface AccountDashboardProps {
   astronaut: any;
@@ -27,6 +27,10 @@ export default function AccountDashboard({ astronaut, onUpdateSuccess, onClose }
   const [selectedAvatar, setSelectedAvatar] = useState(astronaut?.avatar || '🚀');
   const [isEditingProfile, setIsEditingProfile] = useState(false);
   const [updating, setUpdating] = useState(false);
+
+  // Unlock states
+  const [unlockedPlanets, setUnlockedPlanets] = useState<number[]>(astronaut?.manuallyUnlockedPlanets || []);
+  const [savingUnlocks, setSavingUnlocks] = useState(false);
 
   if (!astronaut) return null;
 
@@ -65,6 +69,30 @@ export default function AccountDashboard({ astronaut, onUpdateSuccess, onClose }
       alert('Không thể lưu thông tin hồ sơ!');
     } finally {
       setUpdating(false);
+    }
+  };
+
+  const handleSaveUnlocks = async () => {
+    setSavingUnlocks(true);
+    try {
+      const res = await fetch('/api/astronaut/unlock-units', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: astronaut.name,
+          system: 'roundup',
+          unitIds: unlockedPlanets
+        })
+      });
+
+      if (!res.ok) throw new Error('Unlock update failed');
+      const data = await res.json();
+      onUpdateSuccess(data);
+      alert('🔓 Đã cập nhật trạng thái mở khóa các bài học thành công!');
+    } catch (err) {
+      alert('Không thể lưu cấu hình mở khóa bài học!');
+    } finally {
+      setSavingUnlocks(false);
     }
   };
 
@@ -382,6 +410,62 @@ export default function AccountDashboard({ astronaut, onUpdateSuccess, onClose }
                             style={{ width: `${petPercent}%` }}
                           />
                         </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Lesson Unlock Manager */}
+                  <div className="space-y-3">
+                    <h3 className="font-black text-slate-800 text-sm flex items-center gap-1.5">
+                      <Lock size={16} className="text-violet-500" /> Mở khóa bài học thủ công (Mover / Round Up 2)
+                    </h3>
+                    <p className="text-[11px] text-slate-500 font-semibold leading-normal">
+                      Nếu con đã học hoặc làm các bài này rồi, bố/mẹ có thể tích chọn mở khóa trực tiếp để bé có thể bỏ qua và học các Unit mới.
+                    </p>
+                    <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-4">
+                      <div className="grid grid-cols-5 gap-2">
+                        {Array.from({ length: 25 }, (_, i) => i + 1).map(num => {
+                          const isCompleted = astronaut.completedPlanets?.includes(num);
+                          const isManuallyUnlocked = unlockedPlanets.includes(num);
+                          
+                          return (
+                            <button
+                              key={num}
+                              type="button"
+                              onClick={() => {
+                                if (isCompleted) return; // already completed, no need to unlock
+                                if (isManuallyUnlocked) {
+                                  setUnlockedPlanets(p => p.filter(x => x !== num));
+                                } else {
+                                  setUnlockedPlanets(p => [...p, num]);
+                                }
+                              }}
+                              className={`py-2 px-1 text-center rounded-xl border text-xs font-black transition-all ${
+                                isCompleted
+                                  ? 'bg-emerald-100 border-emerald-300 text-emerald-800 cursor-not-allowed opacity-80'
+                                  : isManuallyUnlocked
+                                    ? 'bg-violet-650 border-violet-750 text-white shadow-sm'
+                                    : 'bg-white border-slate-200 text-slate-650 hover:bg-slate-50'
+                              }`}
+                            >
+                              <span>Bài {num}</span>
+                              <div className="text-[10px] font-bold opacity-80">
+                                {isCompleted ? 'Đã học' : isManuallyUnlocked ? 'Mở khóa' : 'Khóa'}
+                              </div>
+                            </button>
+                          );
+                        })}
+                      </div>
+                      
+                      <div className="flex justify-between items-center text-[10px] text-slate-500 font-semibold gap-4">
+                        <span>* Các bài màu xanh lục đã được bé hoàn thành thực tế.</span>
+                        <button
+                          onClick={handleSaveUnlocks}
+                          disabled={savingUnlocks}
+                          className="px-4 py-2 bg-violet-600 hover:bg-violet-700 text-white rounded-xl text-xs font-black transition-colors disabled:opacity-50 shrink-0"
+                        >
+                          {savingUnlocks ? 'Đang lưu...' : 'Lưu Thay Đổi Mở Khóa'}
+                        </button>
                       </div>
                     </div>
                   </div>

@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
-import { LogOut } from 'lucide-react';
+import { LogOut, Star } from 'lucide-react';
 import prestarterData from '../../data/prestarter-units.json';
 import PuzzleGame from './PuzzleGame';
 import JigsawGame from './JigsawGame';
+import MascotVisual from '../MascotVisual';
+import { CheckInModal } from '../DailyWidgets';
 
 interface Item {
   id: string;
@@ -40,9 +42,13 @@ interface Astronaut {
   completedPlanets: number[];
   completedPreStarter?: number[];
   completedPET?: number[];
+  manuallyUnlockedPlanets?: number[];
+  manuallyUnlockedPreStarter?: number[];
+  manuallyUnlockedPET?: number[];
   badges: string[];
   accessories: string[];
   equippedAccessory: string;
+  equippedAccessories?: string[];
   passedRevisions: number[];
   lastCheckIn?: string;
   checkInStreak?: number;
@@ -64,6 +70,7 @@ export default function PreStarterApp({
   offlineMode,
   onSwitchLevel
 }: PreStarterAppProps) {
+  const [isCheckInOpen, setIsCheckInOpen] = useState(false);
   const units: Unit[] = prestarterData.units as Unit[];
   const [activeTab, setActiveTab] = useState<'safari' | 'findFriend' | 'puzzle' | 'jigsaw'>('safari');
   const [selectedUnitId, setSelectedUnitId] = useState<number>(1);
@@ -169,7 +176,13 @@ export default function PreStarterApp({
       {/* TOP HEADER */}
       <header className="w-full bg-white/70 backdrop-blur-md px-6 py-4 flex items-center justify-between border-b border-emerald-100 md:hidden sticky top-0 z-50">
         <div className="flex items-center gap-2">
-          <span className="text-3xl">🐯</span>
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center font-black text-sm relative overflow-visible shrink-0 animate-pulse">
+            <MascotVisual 
+              avatar={astronaut.avatar || '🚀'} 
+              equippedAccessories={astronaut.equippedAccessories || (astronaut.equippedAccessory ? [astronaut.equippedAccessory] : [])} 
+              size="text-xl" 
+            />
+          </div>
           <span className="font-black text-xl text-emerald-800">Pre-Starter</span>
         </div>
         <div className="flex items-center gap-3">
@@ -177,6 +190,13 @@ export default function PreStarterApp({
             <span className="text-amber-500">⭐</span>
             <span className="font-black text-amber-700 text-sm">{astronaut.stars}</span>
           </div>
+          <button 
+            onClick={() => setIsCheckInOpen(true)}
+            className="bg-rose-100 px-3 py-1.5 rounded-full border border-rose-300 flex items-center gap-1 text-sm font-black text-rose-700 hover:bg-rose-200 transition-colors"
+            title="Lịch điểm danh"
+          >
+            🔥 {astronaut.checkInStreak || 0}d
+          </button>
           <button onClick={onSwitchLevel} className="p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-600 transition-colors">
             <LogOut size={18} />
           </button>
@@ -186,7 +206,13 @@ export default function PreStarterApp({
       {/* CUTE SIDEBAR LESSON PICKER */}
       <aside className="w-full md:w-36 bg-white/80 backdrop-blur-md border-b md:border-b-0 md:border-r border-emerald-100 flex md:flex-col items-center justify-start gap-4 p-4 md:py-8 shadow-sm md:h-screen md:sticky md:top-0 z-40 overflow-x-auto md:overflow-x-visible md:overflow-y-auto">
         <div className="hidden md:flex flex-col items-center gap-1 mb-6 text-center">
-          <div className="text-4xl filter drop-shadow-sm animate-bounce">🐯🐰</div>
+          <div className="w-16 h-16 flex items-center justify-center bg-emerald-50 rounded-full border border-emerald-100 relative overflow-visible mb-2 animate-bounce">
+            <MascotVisual 
+              avatar={astronaut.avatar || '🚀'} 
+              equippedAccessories={astronaut.equippedAccessories || (astronaut.equippedAccessory ? [astronaut.equippedAccessory] : [])} 
+              size="text-4xl" 
+            />
+          </div>
           <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">Làm quen</p>
           <div className="bg-amber-100/80 px-3 py-1 rounded-full border-2 border-amber-300 flex items-center gap-1 mt-1 shadow-sm">
             <span className={`text-xl transition-transform ${showStarAnimation ? 'scale-150 rotate-12' : ''}`}>⭐</span>
@@ -293,32 +319,12 @@ export default function PreStarterApp({
       <div className="fixed bottom-6 right-6 md:left-6 md:right-auto z-50 pointer-events-none drop-shadow-2xl">
         <div className="relative">
           <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-emerald-500/20 blur-xl rounded-[100%]" />
-          <div className="w-20 h-20 md:w-24 md:h-24 bg-slate-900 border-4 border-emerald-400 rounded-full flex items-center justify-center text-4xl md:text-5xl relative animate-float shadow-[0_0_30px_rgba(52,211,153,0.3)]">
-            <span>👨‍🚀</span>
-            {astronaut.equippedAccessory === 'wizard_hat' && (
-              <>
-                <span className="absolute -top-5 -right-3 text-4xl animate-bounce">🧙</span>
-                <span className="absolute -top-8 left-0 text-lg animate-spin text-amber-300">✨</span>
-              </>
-            )}
-            {astronaut.equippedAccessory === 'dragon_wings' && (
-              <>
-                <span className="absolute -bottom-1 -left-4 text-5xl animate-pulse">🐉</span>
-                <span className="absolute -bottom-4 -right-1 text-xl animate-bounce">🔥</span>
-              </>
-            )}
-            {astronaut.equippedAccessory === 'telescope' && (
-              <>
-                <span className="absolute -bottom-2 -right-4 text-4xl">🔭</span>
-                <div className="absolute inset-0 border border-dashed border-cyan-500/40 rounded-full animate-[spin_10s_linear_infinite]" />
-              </>
-            )}
-            {astronaut.equippedAccessory === 'energy_shield' && (
-              <>
-                <span className="absolute -top-3 -left-3 text-4xl animate-pulse">🛡️</span>
-                <div className="absolute inset-[-10px] border-[2px] border-amber-500/40 rounded-full animate-ping opacity-50" />
-              </>
-            )}
+          <div className="w-20 h-20 md:w-24 md:h-24 bg-slate-900 border-4 border-emerald-400 rounded-full flex items-center justify-center relative animate-float shadow-[0_0_30px_rgba(52,211,153,0.3)] overflow-visible">
+            <MascotVisual
+              avatar={astronaut.avatar || '🚀'}
+              equippedAccessories={astronaut.equippedAccessories || (astronaut.equippedAccessory ? [astronaut.equippedAccessory] : [])}
+              size="text-4xl md:text-5xl"
+            />
           </div>
           
           {/* Encouragement Speech Bubble */}
@@ -327,6 +333,49 @@ export default function PreStarterApp({
           </div>
         </div>
       </div>
+
+      {/* Floating Status Bar for Kids (Desktop only) */}
+      <div className="hidden md:flex fixed top-4 right-4 z-50 items-center gap-3 bg-white/95 backdrop-blur border-2 border-emerald-200 rounded-2xl px-4 py-2.5 shadow-xl hover:scale-105 active:scale-95 transition-all duration-300">
+        <div className="relative w-10 h-10 flex items-center justify-center bg-emerald-100 rounded-xl overflow-visible">
+          <MascotVisual 
+            avatar={astronaut.avatar || '🚀'} 
+            equippedAccessories={astronaut.equippedAccessories || (astronaut.equippedAccessory ? [astronaut.equippedAccessory] : [])} 
+            size="text-2xl" 
+          />
+        </div>
+        <div className="flex flex-col">
+          <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest leading-none mb-1">
+            {astronaut.name}
+          </span>
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-0.5 text-xs font-black text-amber-500">
+              <Star size={13} fill="currentColor" />
+              <span>{astronaut.stars}</span>
+            </div>
+            <div className="flex items-center gap-0.5 text-xs font-black text-rose-500">
+              <span>🔥</span>
+              <span>{astronaut.checkInStreak || 0}d</span>
+            </div>
+          </div>
+        </div>
+        <button 
+          onClick={() => setIsCheckInOpen(true)}
+          className="p-1.5 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-100 transition-colors text-xs font-bold"
+          title="Lịch điểm danh"
+        >
+          📅
+        </button>
+      </div>
+
+      <CheckInModal
+        isOpen={isCheckInOpen}
+        onClose={() => setIsCheckInOpen(false)}
+        astronaut={astronaut}
+        onCheckInSuccess={(updated) => {
+          onUpdateAstronaut(updated);
+          localStorage.setItem(`astronaut_profile_${updated.name}`, JSON.stringify(updated));
+        }}
+      />
     </div>
   );
 }

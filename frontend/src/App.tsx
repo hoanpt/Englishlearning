@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Star, LogOut, Trophy } from 'lucide-react';
 import curriculumData from './data/units.json';
 import Sidebar, { BELTS, isUnitUnlocked, isRevisionUnlocked } from './components/Sidebar';
+import MascotVisual from './components/MascotVisual';
 import MissionModal from './components/MissionModal';
 import MissionPractice from './components/MissionPractice';
 import RevisionTest from './components/RevisionTest';
@@ -34,9 +35,13 @@ interface Astronaut {
   completedPlanets: number[];
   completedPreStarter?: number[];
   completedPET?: number[];
+  manuallyUnlockedPlanets?: number[];
+  manuallyUnlockedPreStarter?: number[];
+  manuallyUnlockedPET?: number[];
   badges: string[];
   accessories: string[];
   equippedAccessory: string;
+  equippedAccessories?: string[];
   passedRevisions: number[];
   lastCheckIn?: string;
   checkInStreak?: number;
@@ -54,9 +59,44 @@ interface LeaderboardEntry {
 
 
 export default function App() {
-  const [astronaut, setAstronaut] = useState<Astronaut | null>(null);
+  const [astronautRaw, setAstronautRaw] = useState<Astronaut | null>(null);
   const [courseLevel, setCourseLevel] = useState<'prestarter' | 'roundup' | 'pet' | null>(null);
   const [isCheckInOpen, setIsCheckInOpen] = useState(false);
+
+  const sanitizeAstronaut = (data: any): Astronaut => {
+    return {
+      name: data.name || '',
+      password: data.password || '',
+      displayName: data.displayName || data.name || '',
+      birthYear: typeof data.birthYear === 'number' ? data.birthYear : 2018,
+      parentEmail: data.parentEmail || '',
+      parentPhone: data.parentPhone || '',
+      avatar: data.avatar || '🚀',
+      stars: typeof data.stars === 'number' ? data.stars : 0,
+      completedPlanets: Array.isArray(data.completedPlanets) ? data.completedPlanets : [],
+      completedPreStarter: Array.isArray(data.completedPreStarter) ? data.completedPreStarter : [],
+      completedPET: Array.isArray(data.completedPET) ? data.completedPET : [],
+      manuallyUnlockedPlanets: Array.isArray(data.manuallyUnlockedPlanets) ? data.manuallyUnlockedPlanets : [],
+      manuallyUnlockedPreStarter: Array.isArray(data.manuallyUnlockedPreStarter) ? data.manuallyUnlockedPreStarter : [],
+      manuallyUnlockedPET: Array.isArray(data.manuallyUnlockedPET) ? data.manuallyUnlockedPET : [],
+      badges: Array.isArray(data.badges) ? data.badges : [],
+      accessories: Array.isArray(data.accessories) ? data.accessories : [],
+      equippedAccessory: data.equippedAccessory || '',
+      equippedAccessories: Array.isArray(data.equippedAccessories) ? data.equippedAccessories : (data.equippedAccessory ? [data.equippedAccessory] : []),
+      passedRevisions: Array.isArray(data.passedRevisions) ? data.passedRevisions : [],
+      lastCheckIn: data.lastCheckIn || '',
+      checkInStreak: typeof data.checkInStreak === 'number' ? data.checkInStreak : 0,
+      checkInHistory: Array.isArray(data.checkInHistory) ? data.checkInHistory : [],
+      lastGreetingDate: data.lastGreetingDate || '',
+      dailyInteractions: Array.isArray(data.dailyInteractions) ? data.dailyInteractions : []
+    };
+  };
+
+  const setAstronaut = (data: Astronaut | null) => {
+    setAstronautRaw(data ? sanitizeAstronaut(data) : null);
+  };
+
+  const astronaut = astronautRaw;
 
   // Sidebar
   const [sidebarOpen, setSidebarOpen] = useState(() => window.innerWidth >= 1024);
@@ -81,7 +121,7 @@ export default function App() {
     const cachedLevel = localStorage.getItem('course_level') as 'prestarter' | 'roundup' | 'pet' | null;
     if (cachedName && cachedLevel) {
       setCourseLevel(cachedLevel);
-      if (cachedLevel === 'roundup' || cachedLevel === 'prestarter') loadProfile(cachedName);
+      loadProfile(cachedName);
     } else if (cachedName) {
       // Has name but no level — will show level selection after login
     }
@@ -218,7 +258,7 @@ export default function App() {
 
   const loadLeaderboard = async () => {
     setLeaderboard([
-      { name: astronaut?.name || 'Bé', stars: astronaut?.stars || 0, completedPlanetsCount: astronaut?.completedPlanets.length || 0 },
+      { name: astronaut?.name || 'Bé', stars: astronaut?.stars || 0, completedPlanetsCount: astronaut?.completedPlanets?.length || 0 },
       { name: 'Phi hành gia Bi', stars: 250, completedPlanetsCount: 15 },
       { name: 'Phi hành gia Tôm', stars: 120, completedPlanetsCount: 8 },
     ].sort((a, b) => b.stars - a.stars));
@@ -230,6 +270,15 @@ export default function App() {
 
   // ─────────── LOGIN ───────────
   if (!astronaut) {
+    const cachedName = localStorage.getItem('astronaut_name');
+    if (cachedName) {
+      return (
+        <div className="min-h-screen flex flex-col items-center justify-center bg-[#0F172A] text-white">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500 mb-4"></div>
+          <p className="text-sm font-semibold text-slate-400">Đang tải hồ sơ học tập...</p>
+        </div>
+      );
+    }
     return (
       <AuthScreens
         onAuthSuccess={(data) => {
@@ -412,12 +461,13 @@ export default function App() {
   // ─────────── PRACTICE VIEW ───────────
   if (isPracticing && selectedUnit) {
     return (
-      <div style={{ marginLeft: window.innerWidth >= 1024 ? sidebarWidth : 0, minHeight: '100vh', background: '#FFF8F0', transition: 'margin 0.3s' }}>
+      <div className="relative" style={{ marginLeft: window.innerWidth >= 1024 ? sidebarWidth : 0, minHeight: '100vh', background: '#FFF8F0', transition: 'margin 0.3s' }}>
         <Sidebar
           units={curriculumData.map(u => ({ unit_id: u.unit_id, unit_title: u.unit_title }))}
           selectedUnitId={selectedUnitId}
           completedPlanets={astronaut!.completedPlanets}
           passedRevisions={passedRevisions}
+          manuallyUnlockedPlanets={astronaut!.manuallyUnlockedPlanets}
           onSelectUnit={id => { setSelectedUnitId(id); setIsPracticing(false); }}
           onStartRevision={setRevisionBeltId}
           isOpen={sidebarOpen}
@@ -425,6 +475,40 @@ export default function App() {
           stars={astronaut!.stars}
           onOpenParentDashboard={() => setIsParentDashboardOpen(true)}
         />
+        
+        {/* Floating Status Bar for Kids */}
+        <div className="fixed top-4 right-4 z-50 flex items-center gap-3 bg-white/95 backdrop-blur border-2 border-purple-200 rounded-2xl px-4 py-2.5 shadow-xl hover:scale-105 active:scale-95 transition-all duration-300">
+          <div className="relative w-10 h-10 flex items-center justify-center bg-purple-100 rounded-xl overflow-visible">
+            <MascotVisual 
+              avatar={astronaut!.avatar || '🚀'} 
+              equippedAccessories={astronaut!.equippedAccessories || (astronaut!.equippedAccessory ? [astronaut!.equippedAccessory] : [])} 
+              size="text-2xl" 
+            />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-[10px] font-black text-purple-600 uppercase tracking-widest leading-none mb-1">
+              {astronaut!.name}
+            </span>
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-0.5 text-xs font-black text-amber-500">
+                <Star size={13} fill="currentColor" />
+                <span>{astronaut!.stars}</span>
+              </div>
+              <div className="flex items-center gap-0.5 text-xs font-black text-rose-500">
+                <span>🔥</span>
+                <span>{astronaut!.checkInStreak || 0}d</span>
+              </div>
+            </div>
+          </div>
+          <button 
+            onClick={() => setIsCheckInOpen(true)}
+            className="p-1.5 rounded-lg bg-purple-50 text-purple-600 hover:bg-purple-100 transition-colors text-xs"
+            title="Lịch điểm danh"
+          >
+            📅
+          </button>
+        </div>
+
         <MissionPractice
           unit={selectedUnit!}
           equippedAccessory={astronaut!.equippedAccessory}
@@ -443,6 +527,7 @@ export default function App() {
         selectedUnitId={selectedUnitId}
         completedPlanets={astronaut!.completedPlanets}
         passedRevisions={passedRevisions}
+        manuallyUnlockedPlanets={astronaut!.manuallyUnlockedPlanets}
         onSelectUnit={id => { setSelectedUnitId(id); setCurrentView('map'); setIsModalOpen(true); }}
         onStartRevision={setRevisionBeltId}
         isOpen={sidebarOpen}
@@ -523,6 +608,7 @@ export default function App() {
                 equippedAccessory={astronaut!.equippedAccessory}
                 completedPlanets={astronaut!.completedPlanets}
                 passedRevisions={passedRevisions}
+                manuallyUnlockedPlanets={astronaut!.manuallyUnlockedPlanets}
                 onSelectUnit={id => { setSelectedUnitId(id); setIsModalOpen(true); }}
                 onStartRevision={setRevisionBeltId}
               />
@@ -537,7 +623,7 @@ export default function App() {
           unit={selectedUnit}
           isOpen={isModalOpen}
           onClose={() => { setIsModalOpen(false); setSelectedUnitId(null); }}
-          isUnlocked={isUnitUnlocked(selectedUnit.unit_id, astronaut!.completedPlanets, passedRevisions)}
+          isUnlocked={isUnitUnlocked(selectedUnit.unit_id, astronaut!.completedPlanets, passedRevisions, astronaut!.manuallyUnlockedPlanets)}
           isCompleted={astronaut!.completedPlanets.includes(selectedUnit.unit_id)}
           onStartMission={() => { setIsModalOpen(false); setIsPracticing(true); }}
         />

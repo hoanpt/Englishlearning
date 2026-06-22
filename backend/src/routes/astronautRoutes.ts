@@ -5,6 +5,7 @@ import {
   checkIn, 
   submitMood, 
   updateProfile, 
+  unlockUnits,
   completePlanetMission, 
   getLeaderboard, 
   buyAccessory, 
@@ -20,6 +21,7 @@ router.post('/register', registerProfile);
 router.post('/checkin', checkIn);
 router.post('/mood', submitMood);
 router.post('/update-profile', updateProfile);
+router.post('/unlock-units', unlockUnits);
 router.post('/complete-mission', completePlanetMission);
 router.post('/pass-revision', passRevision);
 router.get('/leaderboard', getLeaderboard);
