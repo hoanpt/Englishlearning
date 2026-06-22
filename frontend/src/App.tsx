@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Star, LogOut, Trophy, Loader2 } from 'lucide-react';
+import { Star, LogOut, Trophy } from 'lucide-react';
 import curriculumData from './data/units.json';
 import Sidebar, { BELTS, isUnitUnlocked, isRevisionUnlocked } from './components/Sidebar';
 import MissionModal from './components/MissionModal';
@@ -7,19 +7,42 @@ import MissionPractice from './components/MissionPractice';
 import RevisionTest from './components/RevisionTest';
 import CreativeLab from './components/CreativeLab';
 import WizardShop from './components/WizardShop';
-import ParentDashboard from './components/ParentDashboard';
+import AuthScreens from './components/AuthScreens';
+import { CheckInModal, MascotGreeting } from './components/DailyWidgets';
+import AccountDashboard from './components/AccountDashboard';
 import JourneyMap from './components/JourneyMap';
 import PETApp from './components/pet/PETApp';
 import PreStarterApp from './components/prestarter/PreStarterApp';
 
+const getLocalDateString = (): string => {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const date = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${date}`;
+};
+
 interface Astronaut {
   name: string;
+  password?: string;
+  displayName?: string;
+  birthYear?: number;
+  parentEmail?: string;
+  parentPhone?: string;
+  avatar?: string;
   stars: number;
   completedPlanets: number[];
+  completedPreStarter?: number[];
+  completedPET?: number[];
   badges: string[];
   accessories: string[];
   equippedAccessory: string;
-  passedRevisions: number[];  // belt ids where revision has been passed
+  passedRevisions: number[];
+  lastCheckIn?: string;
+  checkInStreak?: number;
+  checkInHistory?: string[];
+  lastGreetingDate?: string;
+  dailyInteractions?: Array<{ date: string; mood: string; message: string }>;
 }
 
 interface LeaderboardEntry {
@@ -32,10 +55,8 @@ interface LeaderboardEntry {
 
 export default function App() {
   const [astronaut, setAstronaut] = useState<Astronaut | null>(null);
-  const [loginName, setLoginName] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
   const [courseLevel, setCourseLevel] = useState<'prestarter' | 'roundup' | 'pet' | null>(null);
+  const [isCheckInOpen, setIsCheckInOpen] = useState(false);
 
   // Sidebar
   const [sidebarOpen, setSidebarOpen] = useState(() => window.innerWidth >= 1024);
@@ -67,8 +88,6 @@ export default function App() {
   }, []);
 
   const loadProfile = async (name: string) => {
-    setLoading(true);
-    setErrorMsg('');
     try {
       const res = await fetch('/api/astronaut/profile', {
         method: 'POST',
@@ -80,6 +99,11 @@ export default function App() {
       if (!data.passedRevisions) data.passedRevisions = [];
       setAstronaut(data);
       setOfflineMode(false);
+
+      const today = getLocalDateString();
+      if (data.lastCheckIn !== today) {
+        setIsCheckInOpen(true);
+      }
     } catch {
       setOfflineMode(true);
       const stored = localStorage.getItem(`astronaut_profile_${name}`);
@@ -87,16 +111,22 @@ export default function App() {
         const parsed: Astronaut = JSON.parse(stored);
         if (!parsed.passedRevisions) parsed.passedRevisions = [];
         setAstronaut(parsed);
+
+        const today = getLocalDateString();
+        if (parsed.lastCheckIn !== today) {
+          setIsCheckInOpen(true);
+        }
       } else {
         const fresh: Astronaut = {
           name, stars: 0, completedPlanets: [], badges: [],
           accessories: [], equippedAccessory: '', passedRevisions: [],
+          completedPreStarter: [], completedPET: [], checkInHistory: [], dailyInteractions: []
         };
         localStorage.setItem(`astronaut_profile_${name}`, JSON.stringify(fresh));
         setAstronaut(fresh);
+        setIsCheckInOpen(true);
       }
     } finally {
-      setLoading(false);
       localStorage.setItem('astronaut_name', name);
     }
   };
@@ -199,55 +229,21 @@ export default function App() {
   }, [currentView]);
 
   // ─────────── LOGIN ───────────
-  if (!astronaut && courseLevel !== 'pet') {
-    if (!loginName && !localStorage.getItem('astronaut_name')) {
-      // Show login
-    }
-  }
-
-  if (!astronaut && courseLevel !== 'pet') {
+  if (!astronaut) {
     return (
-      <div className="min-h-screen bg-[#FFF8F0] flex items-center justify-center p-4">
-        <div className="w-full max-w-md bg-white rounded-3xl border-2 border-gray-100 shadow-xl overflow-hidden">
-          <div className="p-8 text-center" style={{ background: 'linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)' }}>
-            <div className="text-5xl mb-3 animate-float">🌟</div>
-            <h1 className="text-2xl font-black text-white">Round Up 2</h1>
-            <p className="text-purple-200 text-sm font-semibold mt-1">Học Tiếng Anh Cùng Bé</p>
-          </div>
-          <div className="p-8">
-            <form onSubmit={e => { e.preventDefault(); if (loginName.trim()) loadProfile(loginName); else setErrorMsg('Nhập tên nhé bé!'); }}>
-              <label className="block text-xs font-black text-gray-500 uppercase tracking-wider mb-2">Tên của bé:</label>
-              <input
-                type="text"
-                placeholder="Ví dụ: Tom, Anna, Minh..."
-                value={loginName}
-                onChange={e => setLoginName(e.target.value)}
-                className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3 text-gray-800 font-bold focus:outline-none focus:border-violet-400 transition-colors mb-3"
-              />
-              {errorMsg && <p className="text-rose-500 text-sm font-bold mb-3">{errorMsg}</p>}
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full py-3.5 text-white font-black rounded-2xl flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-98"
-                style={{ background: 'linear-gradient(135deg, #7C3AED, #2563EB)' }}
-              >
-                {loading ? <><Loader2 size={18} className="animate-spin" /> Đang tải...</> : '🚀 Bắt đầu học!'}
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // ─────────── PET SHORTCUT: logged-in name exists but as PET level ───────────
-  // If user chose PET but hasn't chosen Round Up yet (astronaut may be null)
-  if (courseLevel === 'pet' && !astronaut) {
-    const petName = loginName || localStorage.getItem('astronaut_name') || 'Student';
-    return (
-      <PETApp
-        userName={petName}
-        onLogout={() => { localStorage.removeItem('astronaut_name'); localStorage.removeItem('course_level'); setCourseLevel(null); }}
+      <AuthScreens
+        onAuthSuccess={(data) => {
+          setAstronaut(data);
+          localStorage.setItem('astronaut_name', data.name);
+          const cachedLevel = localStorage.getItem('course_level') as 'prestarter' | 'roundup' | 'pet' | null;
+          if (cachedLevel) {
+            setCourseLevel(cachedLevel);
+          }
+          const today = getLocalDateString();
+          if (data.lastCheckIn !== today) {
+            setIsCheckInOpen(true);
+          }
+        }}
       />
     );
   }
@@ -344,25 +340,54 @@ export default function App() {
   // ─────────── PET APP VIEW ───────────
   if (courseLevel === 'pet' && astronaut) {
     return (
-      <PETApp
-        userName={astronaut.name}
-        onLogout={() => { localStorage.removeItem('astronaut_name'); localStorage.removeItem('course_level'); setCourseLevel(null); setAstronaut(null); }}
-      />
+      <>
+        <PETApp
+          astronaut={astronaut}
+          onUpdateAstronaut={(updated) => {
+            setAstronaut(updated);
+            localStorage.setItem(`astronaut_profile_${updated.name}`, JSON.stringify(updated));
+          }}
+          onLogout={() => { localStorage.removeItem('astronaut_name'); localStorage.removeItem('course_level'); setCourseLevel(null); setAstronaut(null); }}
+        />
+        <CheckInModal
+          isOpen={isCheckInOpen}
+          onClose={() => setIsCheckInOpen(false)}
+          astronaut={astronaut}
+          onCheckInSuccess={(updated) => {
+            setAstronaut(updated);
+            localStorage.setItem(`astronaut_profile_${updated.name}`, JSON.stringify(updated));
+          }}
+        />
+      </>
     );
   }
 
   // ─────────── PRESTARTER APP VIEW ───────────
   if (courseLevel === 'prestarter' && astronaut) {
     return (
-      <PreStarterApp
-        astronaut={astronaut}
-        onUpdateAstronaut={setAstronaut}
-        offlineMode={offlineMode}
-        onSwitchLevel={() => {
-          localStorage.removeItem('course_level');
-          setCourseLevel(null);
-        }}
-      />
+      <>
+        <PreStarterApp
+          astronaut={astronaut}
+          onUpdateAstronaut={(updated) => {
+            setAstronaut(updated);
+            localStorage.setItem(`astronaut_profile_${updated.name}`, JSON.stringify(updated));
+          }}
+          offlineMode={offlineMode}
+          onSwitchLevel={() => {
+            localStorage.removeItem('course_level');
+            setCourseLevel(null);
+          }}
+        />
+        <CheckInModal
+          isOpen={isCheckInOpen}
+          onClose={() => setIsCheckInOpen(false)}
+          astronaut={astronaut}
+          onCheckInSuccess={(updated) => {
+            setAstronaut(updated);
+            localStorage.setItem(`astronaut_profile_${updated.name}`, JSON.stringify(updated));
+          }}
+        />
+      </>
     );
   }
 
@@ -485,14 +510,23 @@ export default function App() {
             <LeaderboardView leaderboard={leaderboard} myName={astronaut!.name} />
           ) : (
             // MAP / Home: Show journey map
-            <JourneyMap
-              astronautName={astronaut!.name}
-              equippedAccessory={astronaut!.equippedAccessory}
-              completedPlanets={astronaut!.completedPlanets}
-              passedRevisions={passedRevisions}
-              onSelectUnit={id => { setSelectedUnitId(id); setIsModalOpen(true); }}
-              onStartRevision={setRevisionBeltId}
-            />
+            <div className="space-y-4">
+              <MascotGreeting
+                astronaut={astronaut}
+                onMoodSuccess={(updated) => {
+                  setAstronaut(updated);
+                  localStorage.setItem(`astronaut_profile_${updated.name}`, JSON.stringify(updated));
+                }}
+              />
+              <JourneyMap
+                astronautName={astronaut!.name}
+                equippedAccessory={astronaut!.equippedAccessory}
+                completedPlanets={astronaut!.completedPlanets}
+                passedRevisions={passedRevisions}
+                onSelectUnit={id => { setSelectedUnitId(id); setIsModalOpen(true); }}
+                onStartRevision={setRevisionBeltId}
+              />
+            </div>
           )}
         </div>
       </main>
@@ -509,11 +543,27 @@ export default function App() {
         />
       )}
 
-      {/* Parent Dashboard Modal */}
-      <ParentDashboard
-        astronaut={astronaut!}
-        isOpen={isParentDashboardOpen}
-        onClose={() => setIsParentDashboardOpen(false)}
+      {/* Account / Parent Dashboard Modal */}
+      {isParentDashboardOpen && (
+        <AccountDashboard
+          astronaut={astronaut}
+          onUpdateSuccess={(updated) => {
+            setAstronaut(updated);
+            localStorage.setItem(`astronaut_profile_${updated.name}`, JSON.stringify(updated));
+          }}
+          onClose={() => setIsParentDashboardOpen(false)}
+        />
+      )}
+
+      {/* Check-In Modal for Mover level */}
+      <CheckInModal
+        isOpen={isCheckInOpen}
+        onClose={() => setIsCheckInOpen(false)}
+        astronaut={astronaut}
+        onCheckInSuccess={(updated) => {
+          setAstronaut(updated);
+          localStorage.setItem(`astronaut_profile_${updated.name}`, JSON.stringify(updated));
+        }}
       />
     </div>
   );

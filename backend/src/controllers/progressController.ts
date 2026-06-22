@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import Progress from '../models/Progress';
+import { saveProgress, getProgressHistory as getHistoryDb } from '../utils/dbHelper';
 
 // Submit a new placement test progress
 export const submitProgress = async (req: Request, res: Response): Promise<void> => {
@@ -22,7 +22,7 @@ export const submitProgress = async (req: Request, res: Response): Promise<void>
       return;
     }
 
-    const progress = new Progress({
+    const progressData = {
       studentName,
       dob,
       previousClass,
@@ -33,12 +33,12 @@ export const submitProgress = async (req: Request, res: Response): Promise<void>
       percentage,
       placementClass,
       diagnostics: diagnostics || []
-    });
+    };
 
-    const savedProgress = await progress.save();
+    const savedProgress = await saveProgress(progressData);
     res.status(201).json({
       status: 'success',
-      message: 'Placement test result saved to MongoDB successfully!',
+      message: 'Placement test result saved successfully!',
       data: savedProgress
     });
   } catch (error) {
@@ -49,7 +49,7 @@ export const submitProgress = async (req: Request, res: Response): Promise<void>
 // Get history of all placement tests
 export const getProgressHistory = async (req: Request, res: Response): Promise<void> => {
   try {
-    const history = await Progress.find().sort({ createdAt: -1 });
+    const history = await getHistoryDb();
     res.status(200).json(history);
   } catch (error) {
     res.status(500).json({ message: 'Error fetching progress history', error: (error as Error).message });

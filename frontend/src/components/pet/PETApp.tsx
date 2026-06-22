@@ -12,8 +12,32 @@ interface UserProfile {
   sectionProgress: Record<string, string[]>; // unitId -> ['vocab','grammar',...]
 }
 
+interface Astronaut {
+  name: string;
+  password?: string;
+  displayName?: string;
+  birthYear?: number;
+  parentEmail?: string;
+  parentPhone?: string;
+  avatar?: string;
+  stars: number;
+  completedPlanets: number[];
+  completedPreStarter?: number[];
+  completedPET?: number[];
+  badges: string[];
+  accessories: string[];
+  equippedAccessory: string;
+  passedRevisions: number[];
+  lastCheckIn?: string;
+  checkInStreak?: number;
+  checkInHistory?: string[];
+  lastGreetingDate?: string;
+  dailyInteractions?: Array<{ date: string; mood: string; message: string }>;
+}
+
 interface Props {
-  userName: string;
+  astronaut: Astronaut;
+  onUpdateAstronaut: (updated: Astronaut) => void;
   onLogout: () => void;
 }
 
@@ -44,12 +68,26 @@ const mergedUnits = petUnitsData.map(unit => {
   };
 });
 
-export default function PETApp({ userName, onLogout }: Props) {
+export default function PETApp({ astronaut, onUpdateAstronaut, onLogout }: Props) {
+  const userName = astronaut.name;
   const storageKey = `pet_profile_${userName}`;
   const [profile, setProfile] = useState<UserProfile>(() => {
     const stored = localStorage.getItem(storageKey);
     if (stored) return JSON.parse(stored);
-    return { name: userName, xp: 0, level: 1, completedUnits: [], sectionProgress: {} };
+    
+    // Fallback from astronaut profile
+    const completed = astronaut.completedPET || [];
+    const initialProgress: Record<string, string[]> = {};
+    completed.forEach(u => {
+      initialProgress[String(u)] = ['vocab', 'grammar', 'reading', 'writing', 'cloze'];
+    });
+    return { 
+      name: userName, 
+      xp: astronaut.stars * 5, 
+      level: 1, 
+      completedUnits: completed, 
+      sectionProgress: initialProgress 
+    };
   });
   const [selectedUnit, setSelectedUnit] = useState<number | null>(null);
   const [activeView, setActiveView] = useState<'units' | 'progress'>('units');
@@ -59,17 +97,53 @@ export default function PETApp({ userName, onLogout }: Props) {
     setProfile(updated);
   };
 
-  const handleSectionComplete = (unitId: number, section: string) => {
+  const handleSectionComplete = async (unitId: number, section: string) => {
     const key = String(unitId);
     const currentSections = profile.sectionProgress[key] || [];
     if (currentSections.includes(section)) return;
     const newSections = [...currentSections, section];
     const newProgress = { ...profile.sectionProgress, [key]: newSections };
     const newXp = profile.xp + XP_PER_SECTION;
-    const newCompleted = newSections.length >= SECTIONS_PER_UNIT && !profile.completedUnits.includes(unitId)
+    const isUnitJustCompleted = newSections.length >= SECTIONS_PER_UNIT && !profile.completedUnits.includes(unitId);
+    const newCompleted = isUnitJustCompleted
       ? [...profile.completedUnits, unitId]
       : profile.completedUnits;
+    
     saveProfile({ ...profile, xp: newXp, completedUnits: newCompleted, sectionProgress: newProgress });
+
+    // Sync to backend (convert 20 XP to 4 stars)
+    const earnedStars = Math.round(XP_PER_SECTION / 5);
+    try {
+      const res = await fetch('/api/astronaut/complete-mission', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: userName,
+          planetNumber: unitId,
+          earnedStars,
+          system: 'pet'
+        })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        onUpdateAstronaut(data.astronaut);
+      } else {
+        const updatedAstronaut = {
+          ...astronaut,
+          stars: astronaut.stars + earnedStars,
+          completedPET: newCompleted
+        };
+        onUpdateAstronaut(updatedAstronaut);
+      }
+    } catch (err) {
+      console.error('Error syncing section progress:', err);
+      const updatedAstronaut = {
+        ...astronaut,
+        stars: astronaut.stars + earnedStars,
+        completedPET: newCompleted
+      };
+      onUpdateAstronaut(updatedAstronaut);
+    }
   };
 
   const units = mergedUnits;

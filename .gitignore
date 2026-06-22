@@ -42,3 +42,6 @@ lerna-debug.log*
 
 # Large files
 *.pdf
+
+# Local Data
+backend/data/

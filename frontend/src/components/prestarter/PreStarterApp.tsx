@@ -30,12 +30,25 @@ interface Unit {
 
 interface Astronaut {
   name: string;
+  password?: string;
+  displayName?: string;
+  birthYear?: number;
+  parentEmail?: string;
+  parentPhone?: string;
+  avatar?: string;
   stars: number;
   completedPlanets: number[];
+  completedPreStarter?: number[];
+  completedPET?: number[];
   badges: string[];
   accessories: string[];
   equippedAccessory: string;
   passedRevisions: number[];
+  lastCheckIn?: string;
+  checkInStreak?: number;
+  checkInHistory?: string[];
+  lastGreetingDate?: string;
+  dailyInteractions?: Array<{ date: string; mood: string; message: string }>;
 }
 
 interface PreStarterAppProps {
@@ -87,21 +100,31 @@ export default function PreStarterApp({
     // Sync to DB/Profile
     const amount = 1;
     const nextStars = astronaut.stars + amount;
+    const nextCompleted = [...(astronaut.completedPreStarter || [])];
+    if (!nextCompleted.includes(selectedUnitId)) {
+      nextCompleted.push(selectedUnitId);
+    }
     const updated: Astronaut = {
       ...astronaut,
-      stars: nextStars
+      stars: nextStars,
+      completedPreStarter: nextCompleted
     };
 
     if (!offlineMode) {
       try {
-        const res = await fetch('/api/astronaut/add-stars', {
+        const res = await fetch('/api/astronaut/complete-mission', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name: astronaut.name, stars: amount })
+          body: JSON.stringify({ 
+            name: astronaut.name, 
+            planetNumber: selectedUnitId, 
+            earnedStars: amount, 
+            system: 'prestarter' 
+          })
         });
         if (!res.ok) throw new Error('API failed');
         const data = await res.json();
-        onUpdateAstronaut(data);
+        onUpdateAstronaut(data.astronaut);
       } catch (err) {
         // Fallback local update
         localStorage.setItem(`astronaut_profile_${astronaut.name}`, JSON.stringify(updated));

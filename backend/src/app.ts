@@ -41,15 +41,8 @@ app.get('/api/health', (req: Request, res: Response) => {
   });
 });
 
-// Middleware to fail fast if MongoDB is disconnected
+// Middleware to check database status but not block requests since we have file-based DB fallback
 const checkDbConnection = (req: Request, res: Response, next: NextFunction) => {
-  if (mongoose.connection.readyState !== 1) {
-    res.status(503).json({
-      message: 'Database is offline',
-      error: 'ECONNREFUSED'
-    });
-    return;
-  }
   next();
 };
 
